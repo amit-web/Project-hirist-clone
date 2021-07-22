@@ -1,25 +1,7 @@
 {
-  "logindata": [
-    {
-      "id": 1
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    }
-  ],
-  "data": [
+   
+  "data":[
+    
     {
       "url": "https://staticlogo.hirist.com/3173-100X100.png",
       "workat": "Greenlight Planet - Data Analyst - Tableau/Qlikview",
@@ -240,5 +222,71 @@
       "openfor": "Multiple Locations",
       "id": 20
     }
+
+
+  ],
+  "featuredata":[
+
+    {
+      "url":"https://staticlogo.hirist.com/1407-100X100.png",
+      "id":1
+    },
+    {
+      "url":"https://staticlogo.hirist.com/123-100X100.png",
+      "id":2
+    },
+    {
+      "url":"https://staticlogo.hirist.com/13-100X100.png",
+      "id":3
+    },
+    {
+      "url":"https://staticlogo.hirist.com/5718-100X100.png",
+      "id":4
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1613741690270.jpeg",
+      "id":5
+    },
+    {
+      "url":"https://staticlogo.hirist.com/289-100X100.png",
+      "id":6
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602152738705.jpeg",
+      "id":7
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602220820025.jpeg",
+      "id":8
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602220904715.jpeg",
+      "id":9
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602220977718.jpeg",
+      "id":10
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602220977718.jpeg",
+      "id":11
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602221156215.jpeg",
+      "id":12
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602221216424.jpeg",
+      "id":13
+    },
+    {
+      "url":"https://d3qr48lsanmyop.cloudfront.net/1602221347320.jpeg",
+      "id":14
+    }
+
+
   ]
+  
+
+ 
 }
