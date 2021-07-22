@@ -1,0 +1,39 @@
+{
+   
+  "data":[
+    
+      {
+        "image":"https://staticlogo.hirist.com/753-100X100.png",
+        "post":"Greenlight Planet - Data Analyst - Tableau/Qlikview",
+        "companyname":"Greenlight Planet India Pvt Ltd",
+        "experiance":"0-2 years",
+        "loaction":"delhi",
+        "Date":"7/152021",
+        "id":1,
+        "jobs":"dataanalyst"
+      },
+      {
+        "image":"https://staticlogo.hirist.com/753-100X100.png",
+        "post":"Greenlight Planet - Data Analyst - Tableau/Qlikview",
+        "companyname":"Greenlight Planet India Pvt Ltd",
+        "experiance":"0-4 years",
+        "loaction":"mumbai",
+        "Date":"7/152021",
+        "id":2,
+        "jobs":"dataanalyst"
+      },
+
+      {
+        "image":"https://staticlogo.hirist.com/753-100X100.png",
+        "post":"Greenlight Planet - Data Analyst - Tableau/Qlikview",
+        "companyname":"Greenlight Planet India Pvt Ltd",
+        "experiance":"0-2 years",
+        "loaction":"Multiple Location",
+        "Date":"7/152021",
+        "id":3,
+        "jobs":"testing"
+      }
+
+  ]
+  
+}

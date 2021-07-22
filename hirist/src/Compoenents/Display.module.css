@@ -1,0 +1,47 @@
+.display{
+    display:flex;
+    gap:15px;
+    margin-left:25px;
+    margin-top:10px;
+   
+    
+    font-size:7px;
+    font-weight:530;
+}
+.company_image{
+ display:flex;
+ justify-content:space-around;
+ 
+ border-radius: 10px;
+ background-color: white;
+ height:40px;
+ width:100%;
+}
+.imagecom{
+    border-radius: 25px;
+    margin-top: 5px;
+    margin-left:-19px;
+}
+.display>input{
+    margin-top: 15px;
+    margin-right: 15px;
+
+}
+.middledata{ 
+    width:80%;
+}
+
+.requirement_data{
+  display:flex;
+  gap:15px;
+  margin-top: -10px;
+}
+
+.last_button{
+    display:flex;
+    gap: 10px;
+    margin-left:80px;
+}
+.small_image>img{
+  margin-left:5px;
+}
