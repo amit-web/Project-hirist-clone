@@ -1,0 +1,61 @@
+{
+  "userLogin": [
+    {
+      "id": "d57de79b-2411-4ed0-bc57-19fa7b94975d",
+      "email": "akarnawal0001@gmail.com",
+      "password": "Amar@123",
+      "confirmPassword": "Amar@123"
+    }
+  ],
+  "allData": [
+    {
+      "title": "Electricity management system",
+      "location": "India",
+      "minExp": "10",
+      "maxExp": "12",
+      "description": "the passage is attributed to an unknown typesetter in the century who is thought ---- Read more",
+      "category": "Semiconductor/VLSI/EDA",
+      "functionalArea": "Other",
+      "minSalary": "14",
+      "maxSalary": "13",
+      "DND": "",
+      "batch": "2010",
+      "tag": "",
+      "type": "",
+      "id": 1
+    },
+    {
+      "title": "Electricity management system",
+      "location": "India",
+      "minExp": "10",
+      "maxExp": "12",
+      "description": "the passage is attributed to an unknown typesetter in the century who is thought ---- Read more",
+      "category": "Semiconductor/VLSI/EDA",
+      "functionalArea": "Other",
+      "minSalary": "14",
+      "maxSalary": "13",
+      "DND": "",
+      "batch": "2010",
+      "tag": "",
+      "type": "",
+      "id": 2
+    },
+    {
+      "title": "IIIT Hyderabad | PG Certification in Software Engineering for Data Science",
+      "location": "delhi",
+      "minExp": "8",
+      "maxExp": "5",
+      "description": "In order to empower today's technology professionals to build practical skills in this in-demand domain, IIIT-Hyderabad and Great Learning have collaborated to offer this Post Graduate Certificate in Software Systems for Data Science. Offered in a blended learning format of live online classes and classroom residencies at IIIT-Hyderabad (optional to attend), the program offers the perfect combination of convenient online learning with short immersive classroom sessions. This enables learners to upskill without quitting their jobs, and learn from one of India's top technology institutes and leading faculty. On program completion, learners get a certificate from IIIT-H along with alumni status. This program will empower learners with the right skills to build the next generation of data science systems.",
+      "category": "Semiconductor/VLSI/EDA",
+      "functionalArea": "Technical Writer",
+      "minSalary": "11",
+      "maxSalary": "17",
+      "DND": "",
+      "batch": "2012",
+      "tag": "",
+      "type": "",
+      "": true,
+      "id": 3
+    }
+  ]
+}
