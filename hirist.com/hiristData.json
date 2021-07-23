@@ -32,6 +32,12 @@
       "location": "[{\"label\":\"Pune\",\"value\":\"Pune\"}]",
       "experience": "1-3",
       "id": 5
+    },
+    {
+      "jobRole": "Frontend Developer",
+      "location": "[{\"label\":\"Pune\",\"value\":\"Pune\"},{\"label\":\"Nashik\",\"value\":\"Nashik\"}]",
+      "experience": "1-3",
+      "id": 6
     }
   ]
 }
