@@ -1,228 +1,217 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 /*--------------------------------------- header start------------------------------------- */
-.header{
-    display: flex;
-    height: 75px;
-    width: 100%;
-    background-color: black;
-    /* justify-content: space-between;
+.header {
+  display: flex;
+  height: 75px;
+  width: 100%;
+  background-color: black;
+  /* justify-content: space-between;
     text-align: center; */
-    
 }
-.logo{
-    color: white;
-    margin-left: 20px;
+.logo {
+  color: white;
+  margin-left: 20px;
 }
-.login{
-    color: white;
-    margin-left: 70%;
-    
+.login {
+  color: white;
+  margin-left: 70%;
 }
-.login>button{
-    height: 40px;
-    width: 180px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    margin-top: 15px;
+.login > button {
+  height: 40px;
+  width: 180px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  margin-top: 15px;
 }
 /*--------------------------------------- Header End------------------------------------- */
 
-
 /*--------------------------------------- Main start------------------------------------- */
-.we{
-    display: flex;
-    margin-top: 50px;
+.we {
+  display: flex;
+  margin-top: 50px;
 }
-.recruting{
-height: 500px;
-width: 40%;
-margin-left: 150px;
+.recruting {
+  height: 500px;
+  width: 40%;
+  margin-left: 150px;
+}
+.recruting > h1 {
+  font-size: 66px;
+}
+.recruting > img {
+  width: 85%;
+  height: 150px;
+  margin-top: 25px;
+}
+.Signup {
+  height: 500px;
+  width: 40%;
+}
+.signupSecond {
+  height: 420px;
+  margin-top: 10px;
+  background-color: #fafafa;
+  width: 90%;
+  margin-left: 40px;
+  border: 1px solid #e8e8e8;
+}
+.form > input {
+  border: none;
+  width: 80%;
+  height: 50px;
+  border-bottom: 1px solid #e8e8e8;
+  background-color: #fafafa;
+  margin-left: 60px;
+}
+.form > button {
+  width: 80%;
+  height: 50px;
+  border-color: #8f8a8a;
+  border-radius: 4px;
+  background-color: #0c9175;
+  margin-left: 60px;
+  color: white;
+}
+.signupSecond > p > a {
+  text-decoration: none;
+}
+.heigh {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+.first {
+  width: 420px;
+  border-top: 2px solid #8f8a8a;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+.Second {
+  width: 310px;
+  margin: 0px;
 
+  margin-left: -120px;
 }
-.recruting>h1{
-    font-size: 66px;
+.third {
+  width: 420px;
+  border-top: 2px solid #8f8a8a;
+  margin-top: 20px;
+  margin-left: -140px;
 }
-.recruting>img{
-    height: 150px;
-    margin-top: 25px;
+.post {
+  display: grid;
+  margin-left: 9%;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  margin-top: 50px;
 }
-.Signup{
-    height: 500px;
-    width: 40%;
-
+.div {
+  width: 90%;
 }
-.signupSecond{
-    height: 420px;
-    margin-top: 10px;
-    background-color: #fafafa;
-    width: 90%;
-    margin-left: 40px;
-    border: 1px solid #e8e8e8;;
+.div > img {
+  width: 600px;
 }
-.form>input{
-    border: none;
-    width: 80%;
-    height: 50px;
-    border-bottom:1px solid #e8e8e8 ;
-    background-color:#fafafa ;
-    margin-left: 60px;
+.div > h1 {
+  margin-top: 100px;
+  color: #149075;
+  font-size: 24px;
+  font-weight: bold;
 }
-.form>button{
-   
-    width: 80%;
-    height: 50px;
-    border-color: #8f8a8a;
-    border-radius: 4px;
-    background-color:#0c9175; ;
-    margin-left: 60px;
-    color: white;
+.service {
+  background-color: #e8e8e8;
+  height: 500px;
 }
-.signupSecond>p>a{
-    text-decoration: none;
-}
-.heigh{
-    display: grid;
-    grid-template-columns: repeat(3,auto);
- 
-}
-.first{
-    width: 420px;
-    border-top: 2px solid #8f8a8a;
-    margin-top: 20px;
-    margin-left: 150px;
-}.Second{
-    width:310px;
-    margin:0px;
-    
-    margin-left: -120px;
-}.third{
-    width: 420px;
-    border-top: 2px solid #8f8a8a;
-    margin-top: 20px;
-    margin-left: -140px;
-    
-}
-.post{
-    display: grid;
-    margin-left:9%;
-    grid-template-columns: repeat(2,auto);
-    grid-template-rows: repeat(4,auto);
-    margin-top: 50px;
-}
-.div{
-    width:90%;
-    
-  
-}
-.div>img{
-    width: 600px;
-}
-.div>h1{
-    margin-top: 100px;
-    color: #149075;
-    font-size: 24px;
-    font-weight: bold;
-}.service{
-    background-color:#e8e8e8 ;
-    height: 500px;
-}
-.service>h1{
-    text-align: center;
-    padding-top: 50px;
+.service > h1 {
+  text-align: center;
+  padding-top: 50px;
 }
 
-
-.content1{
-    width: 80%;
-    margin-left: 150px;
-    display: grid;
-    grid-template-columns: repeat(4 ,auto);
-    grid-template-rows: repeat(2,auto);
-    gap: 0px;
-    margin-top: 50px;
+.content1 {
+  width: 80%;
+  margin-left: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 0px;
+  margin-top: 50px;
 }
-.content1>div{
-    height: 150px;
-    width:100%;
-
+.content1 > div {
+  height: 150px;
+  width: 100%;
 }
-.content1>div>h3{
+.content1 > div > h3 {
   margin-top: 30px;
   text-align: center;
-
 }
-.mobile{
-    display: flex;
-    margin:0 auto;
+.mobile {
+  display: flex;
+  margin: 0 auto;
 }
-.mobile>div{
-    margin:0 auto;
+.mobile > div {
+  margin: 0 auto;
 }
-.mobile>div>img{
-    height: 600px;
+.mobile > div > img {
+  height: 600px;
+  width: 40%;
 }
-.mobile2>h1{
-    margin-top:80px;
-
-   
+.mobile2 > h1 {
+  margin-top: 80px;
 }
-.mobile2>button{
-    height: 40px;
-    width: 120px;
-    margin-left: 20px;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
+.mobile2 > button {
+  height: 40px;
+  width: 120px;
+  margin-left: 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
 }
-.mobile1>img{
-    margin-top: 50px; 
-    margin-left: 300px;
+.mobile1 > img {
+  margin-top: 50px;
+  margin-left: 300px;
 }
-.popup{
-    display: inline;
-    position: absolute;
-    width: 500px;
-    height: 550px;
-    border: 1px solid #e8e8e8 ;
-    margin-left: 600px;
-    margin-top: -500px;
-    background: white;
-    box-shadow:  100px 500px 500px 500px rgba(0,0,0,0.4);
-
-   
+.popup {
+  display: inline;
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  border: 1px solid #e8e8e8;
+  margin-left: 600px;
+  margin-top: -500px;
+  background: white;
+  box-shadow: 100px 500px 500px 500px rgba(0, 0, 0, 0.4);
 }
-.popup>form>input,select,button{  border: none;
-    width: 90%;
-    height: 50px;
-    border-bottom:1px solid #e8e8e8 ;
-    /* background-color:#fafafa ; */
-    margin-left: 20px;
+.popup > form > input,
+select,
+button {
+  border: none;
+  width: 90%;
+  height: 50px;
+  border-bottom: 1px solid #e8e8e8;
+  /* background-color:#fafafa ; */
+  margin-left: 20px;
 }
-.popup>h2{
-    margin-left: 20px;
+.popup > h2 {
+  margin-left: 20px;
 }
 
 /*--------------------------------------- Main End------------------------------------- */
 /*--------------------------------------- Footer START------------------------------------- */
-.footer{
-    background-color: black;
-    color: white;
+.footer {
+  background-color: black;
+  color: white;
 }
-.footerFirst{
-    display: flex;
-    margin-left: 180px;
-    gap:170px;
-    padding-top: 20px;
-    
+.footerFirst {
+  display: flex;
+  margin-left: 180px;
+  gap: 170px;
+  padding-top: 20px;
 }
-.footerSecond{
-    text-align: center;
-   color: white;
-    
+.footerSecond {
+  text-align: center;
+  color: white;
 }
 
 /*--------------------------------------- Footer End------------------------------------- */

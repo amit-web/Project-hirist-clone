@@ -7,6 +7,7 @@ import api from "../../../src/api/Contact"
 import { SelectTag } from "./SelectTag"
 import { Bottom } from "./Bottom"
 import React from 'react'
+import styles from "./RecruiterCss.module.css";
 
 const PageContent = styled.div`
     min-height: 100%;
@@ -257,8 +258,7 @@ export const PostForm = () => {
           <JobPost>
             <JobPostHeading>
               <h1>
-                Great! Now let's fill other details to complete your job
-                posting
+                Great! Now let's fill other details to complete your job posting
               </h1>
             </JobPostHeading>
             <Form>
@@ -289,12 +289,12 @@ export const PostForm = () => {
                 <Label>Years of experience*</Label>
                 <Field>
                   <select
-                    className="half left"
+                    className={`${styles.half} ${styles.left}`}
                     name="minExp"
                     onChange={handleChange}
                     value={minExp}
                   >
-                    <option className="extra-info-color" value="">
+                    <option className={styles.extraInfoColor} value="">
                       Select Min
                     </option>
                     <option value="0">0</option>
@@ -331,12 +331,12 @@ export const PostForm = () => {
                   </select>
 
                   <select
-                    className="half right"
+                    className={`${styles.half} ${styles.left}`}
                     name="maxExp"
                     onChange={handleChange}
                     value={maxExp}
                   >
-                    <option className="extra-info-color" value="">
+                    <option className={`${styles.extraInfoColor}`} value="">
                       Select Max
                     </option>
                     <option value="0">0</option>
@@ -386,7 +386,7 @@ export const PostForm = () => {
               </FieldContainer>
               <FieldContainer>
                 <Label for="file">Showcase your brand</Label>
-                <span className="sub-heading">
+                <span className={`${styles.subHeading}`}>
                   Add a video to tell your brand's story and show candidates
                   what it is like to work at your company
                 </span>
@@ -394,7 +394,6 @@ export const PostForm = () => {
                   onClick={(event) => {
                     event.preventDefault();
                     fileInputRef.current.click();
-
                   }}
                 >
                   {" "}
@@ -408,13 +407,19 @@ export const PostForm = () => {
               </FieldContainer>
 
               <div>
-                <div className="youtube-field-accordian" onClick={changeList}>
-                  <div className="text">
+                <div
+                  className={`${styles.youtubeFieldAccordian}`}
+                  onClick={changeList}
+                >
+                  <div className={`${styles.text}`}>
                     {" "}
-                    <i className="far fa-lightbulb"></i> Ideas for videos that
-                    you can add <i className="icon-down_arrow"></i>{" "}
+                    <i
+                      className={`${styles.far} ${styles.faLightbulb}`}
+                    ></i>{" "}
+                    Ideas for videos that you can add{" "}
+                    <i className={`${styles.iconDown_arrow}`}></i>{" "}
                   </div>
-                  <div className="more-text hidden">
+                  <div className={`${styles.moreText} ${styles.hidden}`}>
                     {showList && (
                       <ul>
                         <li>
@@ -426,8 +431,7 @@ export const PostForm = () => {
                         <li>
                           <b>Employee Testimonials:</b> Your potential
                           candidates can hear directly from your current
-                          employees, about their experiences and their
-                          journey.
+                          employees, about their experiences and their journey.
                         </li>
                         <li>
                           <b>Showcase company culture:</b> Talk about your
@@ -445,9 +449,9 @@ export const PostForm = () => {
               </SectionHead>
               <FieldContainer>
                 <Label for="file">Screening Questions</Label>
-                <span className="sub-heading">
-                  You can ask some questions before the candidates apply to
-                  your job!
+                <span className={styles.subHeading}>
+                  You can ask some questions before the candidates apply to your
+                  job!
                 </span>
                 <br />
                 <Filebutton
@@ -463,7 +467,9 @@ export const PostForm = () => {
                 <SectionHeading>Targeting</SectionHeading>
               </SectionHead>
               <FieldContainer>
-                <div className="formgroup half left">
+                <div
+                  className={`${styles.formgroup} ${styles.half} ${styles.left}`}
+                >
                   <Label for="category">Category*</Label>
 
                   <Select
@@ -471,7 +477,7 @@ export const PostForm = () => {
                     onChange={handleChange}
                     value={category}
                   >
-                    <option className="extra-info-color" value="">
+                    <option className={`${styles.extraInfoColor}`} value="">
                       Select
                     </option>
                     <option value="Analytics Data Science">
@@ -484,16 +490,12 @@ export const PostForm = () => {
                     <option value="Frontend Developer">
                       Frontend Developer
                     </option>
-                    <option value="Backend Developer">
-                      Backend Developer
-                    </option>
+                    <option value="Backend Developer">Backend Developer</option>
                     <option value="Emerging Technologies Roles">
                       Emerging Technologies Roles
                     </option>
                     <option value="UI Design">UI Design</option>
-                    <option value="Quality Assurance">
-                      Quality Assurance
-                    </option>
+                    <option value="Quality Assurance">Quality Assurance</option>
                     <option value="Product Management Jobs">
                       Product Management Jobs
                     </option>
@@ -515,11 +517,13 @@ export const PostForm = () => {
                     <option value="Legal">Legal</option>
                     <option value="BPO">BPO</option>
                   </Select>
-                  <div className="error hidden"></div>
+                  <div className={`${styles.error} ${styles.hidden} `}></div>
                 </div>
 
-                <div className="formgroup half right">
-                  <div className="label">
+                <div
+                  className={`${styles.formgroup} ${styles.half} ${styles.left}`}
+                >
+                  <div className={styles.label}>
                     <Label for="functional_area">Functional Area*</Label>
                   </div>
 
@@ -529,7 +533,7 @@ export const PostForm = () => {
                     data-attribute="mandatory"
                     name="functionalArea"
                   >
-                    <option className="extra-info-color" value="">
+                    <option className={styles.extraInfoColor} value="">
                       Select
                     </option>
                     <option value="Software Developer">
@@ -543,9 +547,7 @@ export const PostForm = () => {
                     </option>
                     <option value="Product Manager">Product Manager</option>
                     <option value="QA Testing">QA Testing</option>
-                    <option value="Design / Graphics">
-                      Design / Graphics
-                    </option>
+                    <option value="Design / Graphics">Design / Graphics</option>
                     <option value="Network Administrator">
                       Network Administrator
                     </option>
@@ -555,14 +557,10 @@ export const PostForm = () => {
                     <option value="Database Administrator (DBA)">
                       Database Administrator (DBA)
                     </option>
-                    <option value="Technical Support">
-                      Technical Support
-                    </option>
+                    <option value="Technical Support">Technical Support</option>
                     <option value="Technical Writer">Technical Writer</option>
                     <option value="Business Analyst">Business Analyst</option>
-                    <option value="Senior Management">
-                      Senior Management
-                    </option>
+                    <option value="Senior Management">Senior Management</option>
                     <option value="Other">Other</option>
                     <option value="Software Developer">
                       Software Developer
@@ -575,9 +573,7 @@ export const PostForm = () => {
                     </option>
                     <option value="Product Manager">Product Manager</option>
                     <option value="QA Testing">QA Testing</option>
-                    <option value="Design / Graphics">
-                      Design / Graphics
-                    </option>
+                    <option value="Design / Graphics">Design / Graphics</option>
                     <option value="Network Administrator">
                       Network Administrator
                     </option>
@@ -587,24 +583,22 @@ export const PostForm = () => {
                     <option value="Database Administrator (DBA)">
                       Database Administrator (DBA)
                     </option>
-                    <option value="Technical Support">
-                      Technical Support
-                    </option>
+                    <option value="Technical Support">Technical Support</option>
                     <option value="Technical Writer">Technical Writer</option>
                     <option value="Business Analyst">Business Analyst</option>
-                    <option value="Senior Management">
-                      Senior Management
-                    </option>
+                    <option value="Senior Management">Senior Management</option>
                     <option value="Other">Other</option>
                   </Select>
-                  {/* <div id="functional_area-label" className="error hidden"></div> */}
+                  {/* <div id="functional_area-label" className={`${}`"error hidden"></div> */}
                 </div>
-                {/* <div className="clearfix"></div> */}
+                {/* <div className={`${}`"clearfix"></div> */}
               </FieldContainer>
 
               <FieldContainer>
-                <div className="formgroup half left">
-                  <div className="label">
+                <div
+                  className={`${styles.formgroup} ${styles.half} ${styles.left}`}
+                >
+                  <div className={styles.label}>
                     <Label for="category">Min Salary*</Label>
                   </div>
 
@@ -614,9 +608,7 @@ export const PostForm = () => {
                     onChange={handleChange}
                     value={minSalary}
                   >
-                    <option value="Minimum salary">
-                      Min Salary(in lakhs)
-                    </option>
+                    <option value="Minimum salary">Min Salary(in lakhs)</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -719,11 +711,16 @@ export const PostForm = () => {
                     <option value="100">100</option>
                     <option value="101">100+</option>
                   </Select>
-                  <div id="category-label" className="error hidden"></div>
+                  <div
+                    id="category-label"
+                    className={`${styles.error} ${styles.hidden} `}
+                  ></div>
                 </div>
 
-                <div className="formgroup half right">
-                  <div className="label">
+                <div
+                  className={`${styles.formgroup} ${styles.half} ${styles.left}`}
+                >
+                  <div className={styles.label}>
                     <Label for="functional_area">Max Salary*</Label>
                   </div>
 
@@ -733,9 +730,7 @@ export const PostForm = () => {
                     data-attribute="mandatory"
                     name="maxSalary"
                   >
-                    <option value="Maximum salary">
-                      Max Salary(in lakhs)
-                    </option>
+                    <option value="Maximum salary">Max Salary(in lakhs)</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -850,8 +845,10 @@ export const PostForm = () => {
               </div>
 
               <FieldContainer>
-                <div className="formgroup half left">
-                  <div className="label">
+                <div
+                  className={`${styles.formgroup} ${styles.half} ${styles.left}`}
+                >
+                  <div className={styles.label}>
                     <Label for="category">Graduation Year</Label>
                   </div>
 
@@ -911,7 +908,10 @@ export const PostForm = () => {
                     <option value="1971">1971</option>
                     <option value="1970">1970</option>
                   </Select>
-                  <div id="category-label" className="error hidden"></div>
+                  <div
+                    id="category-label"
+                    className={`${styles.error} ${styles.hidden} `}
+                  ></div>
                 </div>
               </FieldContainer>
               <br />
@@ -927,31 +927,39 @@ export const PostForm = () => {
 
               <FieldContainer style={{ display: "flex" }}>
                 <div>
-                  <div className="course-option full-time">
+                  <div className={`${styles.courseOption} ${styles.fullTime} `}>
                     <input type="checkbox" id="course-type-full-time" />
-                    <label for="course-type-full-time" className="crsLabel">
-                      <div className="course-content">
-                        <span className="course-icon">
+                    <label
+                      for="course-type-full-time"
+                      className={styles.crsLabel}
+                    >
+                      <div className={styles.courseContent}>
+                        <span className={styles.courseIcon}>
                           <img src="/full-time-job.png" alt="" />
                         </span>
-                        <span className="course-option-label">Full time</span>
+                        <span className={styles.courseOptionLabel}>
+                          Full time
+                        </span>
                       </div>
-                      <span className="course-selected">
-                        <i className="icon-checked_icon"></i>
+                      <span className={styles.courseSelected}>
+                        <i className={styles.iconCheckedIcon}></i>
                       </span>
                     </label>
                   </div>
                 </div>
 
                 <div>
-                  <div class="course-option  part-time">
+                  <div className={`${styles.courseOption} ${styles.partTime}`}>
                     <input
                       type="checkbox"
                       id="course-type-part-time"
                       data-id="2"
                     />
-                    <label for="course-type-part-time" className="crsLabel">
-                      <div class="course-content">
+                    <label
+                      for="course-type-part-time"
+                      className={styles.crsLabel}
+                    >
+                      <div className={styles.courseContent}>
                         <span class="course-icon">
                           <img src="/002-part-time.png" alt="" />
                         </span>
@@ -964,7 +972,9 @@ export const PostForm = () => {
                   </div>
                 </div>
                 <div>
-                  <div class="course-option distance-learning">
+                  <div
+                    className={`${styles.courseOption} ${styles.distanceLearning}`}
+                  >
                     <input
                       type="checkbox"
                       id="course-type-distance-learning"
@@ -972,9 +982,9 @@ export const PostForm = () => {
                     />
                     <label
                       for="course-type-distance-learning"
-                      className="crsLabel"
+                      className={styles.crsLabel}
                     >
-                      <div class="course-content">
+                      <div className={styles.courseContent}>
                         <span class="course-icon">
                           <img src="/full-time-job.png" alt="" />
                         </span>
@@ -992,13 +1002,15 @@ export const PostForm = () => {
 
               <FieldContainer style={{ display: "flex" }}>
                 <div>
-                  <div class="course-option executive-learning">
+                  <div
+                    className={`${styles.courseOption} ${styles.exicutiveLearning}`}
+                  >
                     <input type="checkbox" data-id="4" />
                     <label
                       for="course-type-executive-learning"
-                      className="crsLabel"
+                      className={styles.crsLabel}
                     >
-                      <div class="course-content">
+                      <div className={styles.courseContent}>
                         <span class="course-icon">
                           <img
                             src="/004-businessman.png"
@@ -1016,10 +1028,12 @@ export const PostForm = () => {
                   </div>
                 </div>
                 <div>
-                  <div class="course-option distance-learning">
+                  <div
+                    className={`${styles.courseOption} ${styles.distanceLearning}`}
+                  >
                     <input type="checkbox" data-id="5" />
-                    <label className="crsLabel">
-                      <div class="course-content">
+                    <label className={styles.crsLabel}>
+                      <div className={styles.courseContent}>
                         <span class="course-icon">
                           <img src="/005-document.png" alt="" />
                         </span>
@@ -1055,10 +1069,7 @@ export const PostForm = () => {
                       value="0"
                       disabled="disabled"
                     />
-                    <Label
-                      for="isPremium"
-                      id="planDeactivatedToolTipJobsPage"
-                    >
+                    <Label for="isPremium" id="planDeactivatedToolTipJobsPage">
                       <span>Make Job 'Premium'</span>
                     </Label>
                     <p class="" id="creditsText">
@@ -1087,7 +1098,6 @@ export const PostForm = () => {
                 </ButtonWrapper>
               </SubmitSection>
             </Form>
-
           </JobPost>
         </JobFormContent>
         <PostDetails></PostDetails>

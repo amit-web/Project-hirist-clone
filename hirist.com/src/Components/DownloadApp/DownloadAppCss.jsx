@@ -60,10 +60,10 @@ export const DownloadAppCss = styled.div`
     .DownloadApp-pic {
     }
     .DownloadApp-pic > img {
-      width: 45rem;
-      position: relative;
-      top: 0rem;
-      left: 7rem;
+          width: 43rem;
+    position: relative;
+    top: -3rem;
+    left: 7rem;
     }
   }
 `;

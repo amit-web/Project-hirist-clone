@@ -1,9 +1,6 @@
-// import { Navbar } from './Components/Navbar'
-// import { Category } from './Components/CategoryCompo/Category'
-// import { PremiumJobs } from './Components/PremiumJobsCompo/PremiumJobs'
-// import { DownloadApp } from './Components/DownloadApp/DownloadApp';
-// import { Opportunity } from './Components/Opportunity/Opportunity'
-// import { Implinks } from './Components/Implinks/Implinks';
+import { Homepage } from './Components/Homepage'
+import { Switch, Route, Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 // import { RecruiterNavbar } from './Components/RecruiterNavbar/RecruiterNavbar';
 //Amit"s files
 import logo from './logo.svg';
@@ -21,22 +18,28 @@ import { Show } from './Components/Recruiter/Show';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Navbar />
-      <Category />
-      <PremiumJobs />
-      <DownloadApp />
-      <Opportunity />
-      <Implinks /> */}
-      {/* <RecruiterNavbar /> */}
-      {/* amit files */}
-      {/* <SearchData /> */}
-      {/* <Recruter /> */}
-      {/* <RegiForm /> */}
-      {/* <LoginForm /> */}
-      {/* <ShowNavbar></ShowNavbar> */}
-      <Show />
-    </div>
+    <>
+      <div>
+        <Switch >
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/Recruter" component={Recruter} />
+          <Route exact path="/Show" component={Show} />
+          <Route exact path="/Recruter/Show" component={Show} />
+        </Switch>
+      </div>
+      <div className="App">
+
+
+        {/* <RecruiterNavbar /> */}
+        {/* amit files */}
+        {/* <SearchData /> */}
+        {/* <Recruter /> */}
+        {/* <RegiForm /> */}
+        {/* <LoginForm /> */}
+        {/* <ShowNavbar></ShowNavbar> */}
+        {/* <Show /> */}
+      </div>
+    </>
   );
 }
 
