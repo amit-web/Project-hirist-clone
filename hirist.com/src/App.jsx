@@ -9,9 +9,14 @@
 import logo from './logo.svg';
 import './App.css';
 import SearchData from './Components/SearchData'
+import Recruter from './Components/Recruter';
 
 
-
+//amarjeet
+// import { RegiForm } from './Components/UserRegister/RegiForm';
+// import { LoginForm } from './Components/UserLogin/LoginForm';
+// import { ShowNavbar } from './Components/Navbar/ShowNavbar';
+import { Show } from './Components/Recruiter/Show';
 
 
 function App() {
@@ -25,7 +30,12 @@ function App() {
       <Implinks /> */}
       {/* <RecruiterNavbar /> */}
       {/* amit files */}
-      <SearchData />
+      {/* <SearchData /> */}
+      {/* <Recruter /> */}
+      {/* <RegiForm /> */}
+      {/* <LoginForm /> */}
+      {/* <ShowNavbar></ShowNavbar> */}
+      <Show />
     </div>
   );
 }
