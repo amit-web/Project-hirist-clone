@@ -5,7 +5,7 @@ import styles from "./Display.module.css";
 const DisplayJobs = ({ data }) => {
   const JobsData = styled.div`
     width: 100%;
-    margin-left: 10px;
+    margin-left: 30px;
   `;
 
   const LastButton = styled.div`
@@ -30,7 +30,7 @@ const DisplayJobs = ({ data }) => {
           <input type="checkbox" />
           <div className={styles.company_image}>
             <div className={styles.imagecom}>
-              <img height="30px" width="30px" src={data.url} alt="" />
+              <img height="50px" width="50px" src={data.url} alt="" />
             </div>
 
             <div className={styles.middledata}>

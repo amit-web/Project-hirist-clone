@@ -1,22 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import Company from './Compoenents/Company';
-//import Searching from './Compoenents/Searching';
+//import Navbar  from "./Compoenents/Navbar";
+//import Recruter from "./Compoenents/Recruter";
+import SearchData from "./Compoenents/SearchData";
 
-//import RightFeeature from './Compoenents/RightFeeature';
-// import Navbar from './Compoenents/Navbar';
-//import DropDown from './Compoenents/DropDown';
+
 
 function App() {
-  
   return (
-    <div >
-      {/* <Navbar /> */}
-      {/* <Searching /> */}
-      {/* <RightFeeature/> */}
-      {/* <DropDown selected={selected} setSelected={setSelected}/> */}
-       <Company/>
-    </div>
+<>
+    {/* <Recruter/> */}
+    <SearchData/>
+</>
   );
 }
 
