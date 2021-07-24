@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarWrapper = styled.div`
-  width: 96%;
+  width: 95.4vw;
   padding: 1rem 3rem;
   display: grid;
   background-color: rgb(254, 250, 241);
@@ -24,7 +24,7 @@ export const NavbarWrapper = styled.div`
     .navbarTop-buttons {
       display: flex;
       justify-content: space-between;
-      width: 60%;
+      width: 100%;
       padding-left: 20rem;
       padding-right: 1rem;
 
@@ -36,15 +36,28 @@ export const NavbarWrapper = styled.div`
 
         button {
           color: rgb(233, 99, 12);
+          position: relative;
+          top: -10px;
+          left: -1rem;
           font-size: 0.9rem;
-          /* word-spacing: 6px; */
+          -webkit-letter-spacing: 1px;
+          -moz-letter-spacing: 1px;
+          -ms-letter-spacing: 1px;
           letter-spacing: 1px;
-          /* width: 7rem; */
           width: 100%;
           height: 2.5rem;
           text-align: start;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-pack: justify;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
           justify-content: space-between;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
           border-radius: 2rem;
           border: 1px solid rgb(233, 99, 12);
@@ -79,6 +92,9 @@ export const NavbarWrapper = styled.div`
       .jobseeker-anchor > a {
         background-color: rgb(233, 99, 12);
         color: white;
+        position: relative;
+        top: -3px;
+        left: -18px;
         img {
           width: 18px;
           margin-right: 6px;
@@ -95,10 +111,11 @@ export const NavbarWrapper = styled.div`
     }
     & > div:nth-child(1) {
       display: flex;
-      width: 700px;
+      width: 70%;
       margin: auto;
       text-align: center;
       font-size: 35px;
+      margin-left: 21rem;
     }
     & > div:nth-child(1) > span {
       margin-left: -2rem;
@@ -113,7 +130,7 @@ export const NavbarWrapper = styled.div`
     }
     .search-jobs {
       width: 20rem;
-      height: 40px;
+      height: 49px;
       border: 1px solid rgb(229, 229, 228);
       text-align: start;
       padding: 4px 6px;
@@ -249,8 +266,8 @@ export const NavbarWrapper = styled.div`
       button {
         border: none;
         position: relative;
-        top: 4px;
-        right: 5px;
+        top: 2px;
+        right: 27px;
         width: 50px;
         color: white;
         font-size: 1rem;
