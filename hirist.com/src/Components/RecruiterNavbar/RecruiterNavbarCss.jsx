@@ -27,6 +27,9 @@ export const RecruiterNavbarCss = styled.div`
       color: white;
       font-size: 15px;
       font-weight: bolder;
+      :hover {
+        text-decoration: underline;
+      }
     }
   }
   .navbar-info-logo {
@@ -35,22 +38,24 @@ export const RecruiterNavbarCss = styled.div`
     justify-content: flex-end;
     padding-right: 10px;
     .callingdetails {
-        position: relative;
-    left: -70px;
-    top: 7px;
-    div>div{
-            text-align: start;
-    margin-top: -7px;
-    font-weight: bolder;
-    }
+      position: relative;
+      left: -70px;
+      top: 7px;
+      div > div {
+        text-align: start;
+        margin-top: -30px;
+        margin-left: 54px;
+        font-weight: bolder;
+      }
       p {
         font-size: 12px;
+        margin-top: 17px;
       }
       img {
-            width: 13px;
-    position: relative;
-    top: 1px;
-    left: -3px;
+        width: 13px;
+        position: relative;
+        top: 1px;
+        left: -3px;
       }
       span {
         font-size: 16px;
@@ -60,17 +65,19 @@ export const RecruiterNavbarCss = styled.div`
       margin-left: 6px;
       margin-right: 6px;
     }
-    /* div:nth-child(2) img,div:nth-child(3) img,div:nth-child(4) img {
-            left: -50px;
-    width: 22px;
-    position: relative;
-    top: 30px;
-
-    } */
+    div:nth-child(2),
+    div:nth-child(3),
     div:nth-child(4) {
-        
+      position: relative;
+      left: -50px;
+      top: 23px;
+      height: 40px;
+    }
+    div:nth-child(4) {
       img {
         width: 40px;
+
+        margin-top: -6px;
       }
     }
   }
