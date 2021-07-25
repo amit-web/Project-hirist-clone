@@ -63,6 +63,9 @@ export const CategoryCss = styled.div`
     .company-list {
       padding: 3rem 25px;
       width: 40%;
+      img{
+        width: 60%;
+      }
     }
   
   }

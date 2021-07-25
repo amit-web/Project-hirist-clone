@@ -5,6 +5,7 @@ import * as yup from "yup"
 import { useState } from 'react'
 import { v4 as uuid } from "uuid"
 import api from "../../../src/api/Contact"
+import { useHistory } from 'react-router-dom';
 
 const RegiContainer = styled.div`
 display:flex;
@@ -174,7 +175,8 @@ min-height:10px;
 
 
 export const RegiForm = () => {
-    const [userDetails , setUserDetails] = useState([])
+    const history = useHistory();
+    const [userDetails, setUserDetails] = useState([])
 
     const PASSWORD_REGEX = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
@@ -183,29 +185,30 @@ export const RegiForm = () => {
         password: yup.string().matches(PASSWORD_REGEX, "Please enter a strong password").required(),
         confirmPassword: yup.string().when("password", {
             is: val => (val && val.length > 0 ? true : false),
-            then:yup.string().oneOf([yup.ref("password")],"Password does not match")
+            then: yup.string().oneOf([yup.ref("password")], "Password does not match")
         })
     })
 
     const onSubmit = async (values) => {
-          
+
         console.log(values);
         const request = {
             id: uuid(),
             ...values
         }
         const response = await api.post("/userLogin", request)
-        setUserDetails([...userDetails,response])
+        setUserDetails([...userDetails, response])
+        history.push('/LoginForm')
     }
     const formik = useFormik({
         initialValues: { email: "", password: "", confirmPassword: "" },
         validateOnBlur: true,
         onSubmit,
-        validationSchema:validationSchema,
+        validationSchema: validationSchema,
     })
 
-    console.log("Error" , formik.errors);
-    const {email,password,confirmPassword} = formik.errors 
+    console.log("Error", formik.errors);
+    const { email, password, confirmPassword } = formik.errors
     return (
         <RegiContainer>
             <LeftDiv>
@@ -221,23 +224,23 @@ export const RegiForm = () => {
                     <p>Companies you might love to work with</p>
                 </CompanyList>
                 <CompanyLogos>
-                    <a style={{marginLeft:"6%"}}>
-                        <img src="https://hirist-logos.s3.ap-south-1.amazonaws.com/Amazon+Login.png" alt="Amazon"/>
+                    <a style={{ marginLeft: "6%" }}>
+                        <img src="https://hirist-logos.s3.ap-south-1.amazonaws.com/Amazon+Login.png" alt="Amazon" />
 
                     </a>
-                    <a style={{marginLeft:"6%"}}>
-                        <img src="https://hirist-logos.s3.ap-south-1.amazonaws.com/Amex+Login.png" alt="Amazon"/>
+                    <a style={{ marginLeft: "6%" }}>
+                        <img src="https://hirist-logos.s3.ap-south-1.amazonaws.com/Amex+Login.png" alt="Amazon" />
                     </a>
-                    <a style={{marginLeft:"6%"}}>
-                        <img src="https://hirist-logos.s3.ap-south-1.amazonaws.com/Zycus+Login.png" alt="Amazon"/>
+                    <a style={{ marginLeft: "6%" }}>
+                        <img src="https://hirist-logos.s3.ap-south-1.amazonaws.com/Zycus+Login.png" alt="Amazon" />
                     </a>
                 </CompanyLogos>
 
             </LeftDiv>
             <RightDiv>
-                
+
                 <TopBtn>
-                    <BtnImg src="data:image/png;base64,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"/>
+                    <BtnImg src="data:image/png;base64,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" />
                     <SpanBtnText>Download App</SpanBtnText>
                 </TopBtn>
 
@@ -249,24 +252,24 @@ export const RegiForm = () => {
 
                     <FieldContainer>
                         <FieldContainer2>
-                        <FieldLabel for="email" >Email Address</FieldLabel>
-                        <FieldInp type="text" placeholder="you@example.com" name="email"
+                            <FieldLabel for="email" >Email Address</FieldLabel>
+                            <FieldInp type="text" placeholder="you@example.com" name="email"
                                 value={formik.values.email}
                                 onBlur={formik.handleBlur}
                                 onChange={formik.handleChange} />
-                            <FieldError>{formik.touched.email && formik.errors.email ? email : "" }</FieldError>
+                            <FieldError>{formik.touched.email && formik.errors.email ? email : ""}</FieldError>
                         </FieldContainer2>
                     </FieldContainer>
                     <FieldContainer>
                         <FieldContainer2>
-                        <FieldLabel for="password" >Password</FieldLabel>
-                        <FieldInp type="password" placeholder="Enter 8 character or more" name="password"
-                            value={formik.values.password}
+                            <FieldLabel for="password" >Password</FieldLabel>
+                            <FieldInp type="password" placeholder="Enter 8 character or more" name="password"
+                                value={formik.values.password}
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                             />
-                            <FieldError>{formik.touched.password && formik.errors.password ? password : "" }</FieldError>
-                            </FieldContainer2>
+                            <FieldError>{formik.touched.password && formik.errors.password ? password : ""}</FieldError>
+                        </FieldContainer2>
                     </FieldContainer>
                     <FieldContainer>
                         <FieldLabel for="email" >Confirm Password</FieldLabel>
@@ -275,7 +278,7 @@ export const RegiForm = () => {
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                         />
-                        <FieldError>{formik.touched.confirmPassword && formik.errors.confirmPassword ? confirmPassword : "" }</FieldError>
+                        <FieldError>{formik.touched.confirmPassword && formik.errors.confirmPassword ? confirmPassword : ""}</FieldError>
                     </FieldContainer>
 
                     <SubBtn type="submit">
@@ -285,11 +288,14 @@ export const RegiForm = () => {
 
                 <p style={{
                     marginLeft: "0",
-                        textAlign:"center",
-                        fontSize: "16px",
-                        fontWeight: "400",
-                        color:"#7e7e7e"}}>Already have an account?
-                            <PSpan>Sign In</PSpan></p>
+                    textAlign: "center",
+                    fontSize: "16px",
+                    fontWeight: "400",
+                    color: "#7e7e7e"
+                }}>Already have an account?
+                    <PSpan onClick={() => {
+                        history.push('/LoginForm')
+                    }}>Sign In</PSpan></p>
             </RightDiv>
         </RegiContainer>
     )

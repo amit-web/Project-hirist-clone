@@ -16,10 +16,10 @@ export const RecruiterNavbarCss = styled.div`
     align-items: center;
     div:nth-child(1) {
       span {
-        position: relative;
-        top: -28px;
-        font-weight: bold;
-        left: 14px;
+            position: relative;
+    top: -7px;
+    font-weight: bold;
+    left: 38px;
       }
     }
     a {
@@ -43,9 +43,9 @@ export const RecruiterNavbarCss = styled.div`
       top: 7px;
       div > div {
         text-align: start;
-        margin-top: -30px;
-        margin-left: 54px;
-        font-weight: bolder;
+    margin-top: -17px;
+    margin-left: 54px;
+    font-weight: bolder;
       }
       p {
         font-size: 12px;

@@ -8,22 +8,22 @@ import 'react-responsive-select/dist/react-responsive-select.css';
 
 export const LocationSelect = (props) => {
     const options = [
-        { label: "Mumbai", value: "Mumbai" },
-        { label: "Pune", value: "Pune" },
-        { label: "Nashik", value: "Nashik" },
-        { label: "Ahemedabad", value: "Ahemedabad" },
-        { label: "Delhi", value: "Delhi" },
-        { label: "Kolkata", value: "Kolkata" },
-        { label: "Gurgaon", value: "Gurgaon" },
-        { label: "Noyda", value: "Noyda" },
-        { label: "Hyderabad", value: "Hyderabad" },
-        { label: "Chennai", value: "Chennai" },
-        { label: "Bangalore", value: "Bangalore" },
-        { label: "Nagpur", value: "Nagpur" },
-        { label: "Bhopal", value: "Bhopal" },
-        { label: "Gandhinagar", value: "Gandhinagar" },
-        { label: "Chandigadh", value: "Chandigadh" },
-        { label: "Lakhnow", value: "Lakhnow" },
+        { label: "Mumbai", value: "mumbai" },
+        { label: "Pune", value: "pune" },
+        { label: "Nashik", value: "nashik" },
+        { label: "Ahemedabad", value: "ahemedabad" },
+        { label: "Delhi", value: "delhi" },
+        { label: "Kolkata", value: "kolkata" },
+        { label: "Gurgaon", value: "gurgaon" },
+        { label: "Noyda", value: "noyda" },
+        { label: "Hyderabad", value: "hyderabad" },
+        { label: "Chennai", value: "chennai" },
+        { label: "Bangalore", value: "bangalore" },
+        { label: "Nagpur", value: "nagpur" },
+        { label: "Bhopal", value: "bhopal" },
+        { label: "Gandhinagar", value: "gandhinagar" },
+        { label: "Chandigadh", value: "chandigadh" },
+        { label: "Lakhnow", value: "lakhnow" },
     ];
 
     const [selected, setSelected] = useState([]);
@@ -62,12 +62,13 @@ export const Form = (props) => (
             options={[
                 { value: '', text: 'Experience' },
                 { value: 'anyexp', text: 'Any Exp. Level' },
-                { value: '0-1', text: '0-1 yrs' },
-                { value: '1-3', text: '1-3 yrs' },
-                { value: '4-6', text: '4-6 yrs' },
-                { value: '7-10', text: '7-10 yrs' },
-                { value: '11-15', text: '11-15 yrs' },
-                { value: '15+', text: '15+ yrs' },
+                { value: '0-1 Years', text: '0-1 yrs' },
+                { value: '1-3 Years', text: '1-3 yrs' },
+                { value: '4-6 Years', text: '4-6 yrs' },
+                { value: '7-10 Years', text: '7-10 yrs' },
+                { value: '11-15 Years', text: '11-15 yrs' },
+                { value: '15+ Years', text: '15+ yrs' },
+
 
             ]}
             caretIcon={<CaretIcon />}

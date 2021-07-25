@@ -5,6 +5,8 @@ import * as yup from "yup"
 import { useState } from 'react'
 import { v4 as uuid } from "uuid"
 import api from "../../../src/api/Contact"
+import { useHistory } from 'react-router-dom'
+
 
 
 const RegiContainer = styled.div`
@@ -175,6 +177,7 @@ min-height:10px;
 
 
 export const LoginForm = () => {
+    const history = useHistory();
     const [userData, setUserData] = useState([])
     const [loginData, setLoginData] = useState()
 
@@ -197,12 +200,13 @@ export const LoginForm = () => {
     const checkValidation = (userData, loginData) => {
         userData.map((e) => {
             if (e.email === loginData.email && e.password === loginData.password) {
-                alert("ok")
-                return
-            } else {
-                alert("Enter a valid id or password")
-                return
-            }
+
+                return history.push('/SearchData')
+
+            }// } else {
+            //     return alert("Enter a valid id or password")
+
+            // }
         })
     }
 
@@ -289,8 +293,10 @@ export const LoginForm = () => {
                     fontSize: "16px",
                     fontWeight: "400",
                     color: "#7e7e7e"
-                }}>Already have an account?
-                    <PSpan>Sign In</PSpan></p>
+                }}>Don't have an account?
+                    <PSpan onClick={() => {
+                        history.push('/Regiform')
+                    }}>Sign Up</PSpan></p>
             </RightDiv>
         </RegiContainer>
     )

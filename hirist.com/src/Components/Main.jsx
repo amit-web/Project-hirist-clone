@@ -86,18 +86,18 @@ const Main = () => {
                 <h2>New Recruiter Registration</h2>
                 <form >
 
-                    <input type="text" name="name" value={user.name} onChange={handleInput} placeholder="Name" /> <br />
-                    <input type="text" name="email" value={user.email} onChange={handleInput} placeholder="Your Work Email Id (Not Gmail Yahoo) " /><br />
-                    <input type="text" name="phone" value={user.phone} onChange={handleInput} placeholder="Phone" /><br />
-                    <input type="text" name="designation" value={user.designation} onChange={handleInput} placeholder="Designation" /><br />
-                    <input type="text" name="organization" value={user.organization} onChange={handleInput} placeholder="Organization" /><br />
-                    <input type="text" name="password" value={user.password} onChange={handleInput} placeholder="Password" /><br />
-                    <input type="text" name="cpassword" value={user.cpassword} onChange={handleInput} placeholder="Confirm password" /><br />
+                    <input type="text" name="name" value={user.name} onChange={handleInput} placeholder="Name" required /> <br />
+                    <input type="text" name="email" value={user.email} onChange={handleInput} required placeholder="Your Work Email Id (Not Gmail Yahoo) " /><br />
+                    <input type="text" name="phone" value={user.phone} onChange={handleInput} required placeholder="Phone" /><br />
+                    <input type="text" name="designation" value={user.designation} onChange={handleInput} placeholder="Designation" required /><br />
+                    <input type="text" name="organization" value={user.organization} onChange={handleInput} placeholder="Organization" required /><br />
+                    <input type="password" name="password" value={user.password} onChange={handleInput} placeholder="Password" required /><br />
+                    <input type="password" name="cpassword" value={user.cpassword} onChange={handleInput} placeholder="Confirm password" required /><br />
                     <select placeholder="Select Recruter Type" id="">
                         <option value="">Direct Employer</option>
                         <option value="">Recruitment Firm</option>
                     </select><br /><br />
-                    <button style={{ background: "#0c9175", color: "white" }} onClick={getData}>Rrgister</button>
+                    <button style={{ background: "#0c9175", color: "white" }} onClick={getData}>Register</button>
                 </form>
             </div>
             <div className="heigh">

@@ -1,157 +1,165 @@
-import styled from "styled-components"
-import { useFormik } from "formik"
-import * as yup from "yup"
-import { useState, useRef } from 'react'
-import { PostDetails } from "./PostDetails"
-import api from "../../../src/api/Contact"
-import { SelectTag } from "./SelectTag"
-import { Bottom } from "./Bottom"
-import React from 'react'
+import styled from "styled-components";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import { useState, useRef } from "react";
+import { PostDetails } from "./PostDetails";
+import api from "../../../src/api/Contact";
+import { SelectTag } from "./SelectTag";
+import { Bottom } from "./Bottom";
+import React from "react";
 import styles from "./RecruiterCss.module.css";
+import { useHistory } from "react-router-dom"
 
 const PageContent = styled.div`
-    min-height: 100%;
-    width:100%;
-    padding: 0;
-    overflow: auto;
-    position: relative;
-    padding: 20px;
-    position:absolute;
-`
+  min-height: 100%;
+  width: 100%;
+  padding: 0;
+  overflow: auto;
+  position: relative;
+  padding: 20px;
+  position: absolute;
+`;
 
 const MainWrapper = styled.div`
-    max-width: auto;
-    display:flex;
-    width:auto;
-    margin: 0 auto;
-    position: relative; 
-`
+  max-width: auto;
+  display: flex;
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+  img{
+    width:40%;
+  }
+  input {
+    flex: 1;
+    border: none;
+    height: 46px;
+    font-size: 14px;
+    padding: 4px 0 0 0;
+  }
+ 
+`;
 
 const JobFormContent = styled.div`
-padding: 30px 30px 10px 30px;
-    max-width: 1440px;
-    margin: 0 auto;
-`
+  padding: 30px 30px 10px 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+`;
 
 const JobPost = styled.div`
-display: inline-block;
-    width: 70%;
-    padding-right: 30px;
-`
+  display: inline-block;
+  width: 70%;
+  padding-right: 30px;
+`;
 const JobPostHeading = styled.div`
-    margin: 10px 0 0 0;
-    color: #2b2b2b;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1;
-`
-const Form = styled.form`
-
-`
-const SectionHead = styled.div`
-
-`
+  margin: 10px 0 0 0;
+  color: #2b2b2b;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+`;
+const Form = styled.form``;
+const SectionHead = styled.div``;
 const SectionHeading = styled.h3`
-    margin: 0;
-    font-size: 26px;
-    color: #149075;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e8e8e8;
-`
+  margin: 0;
+  font-size: 26px;
+  color: #149075;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
+`;
 
 const FieldContainer = styled.div`
-    padding: 0;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: visible;
-    width: 70%;
-    max-width:70%;
-`
+  padding: 0;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: visible;
+  width: 70%;
+  max-width: 70%;
+`;
 const Label = styled.label`
-    display: block;
-    font-size: 16px;
-    color: #4b4b4b;
-    cursor: pointer;
-    margin-bottom: 10px;
-`
+  display: block;
+  font-size: 16px;
+  color: #4b4b4b;
+  cursor: pointer;
+  margin-bottom: 10px;
+`;
 
 const Input = styled.input`
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearanance: none;
-    border-radius: 3px;
-    background: #FFF;
-    width: 100%;
-    border: 1px solid #e8e8e8;
-    cursor: pointer;
-    padding: 16px 22px;
-    font-size: 14px;
-    line-height: 1.5;
-    border-radius: 0;
-    padding: 16px 15px;
-`
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearanance: none;
+  border-radius: 3px;
+  background: #fff;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+  padding: 16px 22px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-radius: 0;
+  padding: 16px 15px;
+`;
 
 const Field = styled.div`
-display: block;
-    font-size: 0;
-`
+  display: block;
+  font-size: 0;
+`;
 const InputDes = styled.input`
-    width: 100%;
-    max-width: 100%;
-    min-height: 150px;
-    height: auto;
-    padding: 12px 15px;
-    box-sizing: border-box;
-    border: 1px solid #e8e8e8;
-    border-radius: 0;
-    background-color: inherit;
-    font-size: 14px;
-    line-height: 1.5;
-    overflow-y: hidden;
-    text-align: start;
-`
+  width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  height: auto;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  border: 1px solid #e8e8e8;
+  border-radius: 0;
+  background-color: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-y: hidden;
+  text-align: start;
+`;
 const Filebutton = styled.button`
-color: #2b2b2b;
-    margin-top: 1rem;
-    background: #FFF;
-    font-size: 13px;
-    display: inline-block;
-    vertical-align: top;
-    cursor: pointer;
-    padding: 6.5px 15px;
-    border-radius: 3px;
-    outline: 0;
-    border: 1px solid #8f8a8a;
-`
+  color: #2b2b2b;
+  margin-top: 1rem;
+  background: #fff;
+  font-size: 13px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  padding: 6.5px 15px;
+  border-radius: 3px;
+  outline: 0;
+  border: 1px solid #8f8a8a;
+`;
 const Select = styled.select`
- font-family: inherit;
- margin-left:0;
-    display: inline-block;
-    font-size: 14px;
-    color: #818181;
-    padding: 16px 15px;
-    border-radius: 3px;
-    background: #FFF;
-    width: 100%;
-    border: 1px solid #e8e8e8;
-    /* background-image: url(/static/images/down-caret.svg); */
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-    cursor: pointer;
-    border-color: #e8e8e8;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearanance: none;
-    line-height: 1.5;
-        outline: 0;
-`
+  font-family: inherit;
+  margin-left: 0;
+  display: inline-block;
+  font-size: 14px;
+  color: #818181;
+  padding: 16px 15px;
+  border-radius: 3px;
+  background: #fff;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  /* background-image: url(/static/images/down-caret.svg); */
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+  cursor: pointer;
+  border-color: #e8e8e8;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearanance: none;
+  line-height: 1.5;
+  outline: 0;
+`;
 const PremiumSection = styled.div`
   clear: both;
   margin: 0;
   padding: 30px;
   width: 100%;
   background: #f3fbfb;
-`
+`;
 const PremiumContant = styled.div`
   max-width: 1400px;
   margin: 0 auto;
@@ -163,9 +171,9 @@ const JobVisibleHead = styled.div`
   border-bottom: 1px solid #e8e8e8;
 `;
 const LogoImg = styled.img`
-width:7%;
-margin-right:1rem;
-`
+  width: 7% !important;
+  margin-right: 1rem;
+`;
 const JobVisibleSubInfo = styled.p`
   margin-top: 15px;
   margin-left: 0;
@@ -179,11 +187,11 @@ const SubmitSection = styled.div`
   margin: 30px auto;
 `;
 const ButtonWrapper = styled.div`
-display: inline-block;
+  display: inline-block;
 
-    margin-top: 2px;
-    text-align: center;
-    outline: 0;
+  margin-top: 2px;
+  text-align: center;
+  outline: 0;
 `;
 const SbtBtn = styled.input`
   margin: 0;
@@ -212,45 +220,57 @@ export const PostForm = () => {
     DND: "",
     batch: "",
     tag: "",
-    type: ""
+    type: "",
   };
+  const history = useHistory();
 
-  const [data, setData] = useState(initial)
-  const [allData, setAllData] = useState([])
-  const fileInputRef = useRef()
-  const [showList, setShowList] = useState(false)
+  const [data, setData] = useState(initial);
+  const [allData, setAllData] = useState([]);
+  const fileInputRef = useRef();
+  const [showList, setShowList] = useState(false);
 
-  const handleChange = e => {
-    let { name, value, checked, type, files } = e.target
+  const handleChange = (e) => {
+    let { name, value, checked, type, files } = e.target;
 
     if (type === "file") {
       let reader = new FileReader();
-      reader.readAsDataURL(files[0])
+      reader.readAsDataURL(files[0]);
       reader.onload = (el) => {
-        setData({ ...data, [name]: e.target.result })
-      }
+        setData({ ...data, [name]: e.target.result });
+      };
     }
 
     value = type === "checkbox" ? checked : value;
-    setData((prev) => ({ ...prev, [name]: value }))
-  }
-  const changeList = () => [
-    setShowList(!showList)
-  ]
-
-
+    setData((prev) => ({ ...prev, [name]: value }));
+  };
+  const changeList = () => [setShowList(!showList)];
 
   const onSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     console.log(data);
     const request = {
       ...data,
     };
     const response = await api.post("/allData", request);
     setAllData([...allData, response]);
+    history.push('/')
   };
 
-  const { title, location, minExp, maxExp, description, category, functionalArea, minSalary, maxSalary, DND, batch, tag, type } = data
+  const {
+    title,
+    location,
+    minExp,
+    maxExp,
+    description,
+    category,
+    functionalArea,
+    minSalary,
+    maxSalary,
+    DND,
+    batch,
+    tag,
+    type,
+  } = data;
   return (
     <PageContent>
       <MainWrapper>
@@ -289,7 +309,8 @@ export const PostForm = () => {
                 <Label>Years of experience*</Label>
                 <Field>
                   <select
-                    className={`${styles.half} ${styles.left}`}
+                    // className={`${styles.half} ${styles.left}`}
+                    className={styles.shortBox}
                     name="minExp"
                     onChange={handleChange}
                     value={minExp}
@@ -331,7 +352,8 @@ export const PostForm = () => {
                   </select>
 
                   <select
-                    className={`${styles.half} ${styles.left}`}
+                    // className={`${styles.half} ${styles.left}`}
+                    className={styles.shortBox}
                     name="maxExp"
                     onChange={handleChange}
                     value={maxExp}
@@ -1105,4 +1127,4 @@ export const PostForm = () => {
       <Bottom />
     </PageContent>
   );
-}
+};

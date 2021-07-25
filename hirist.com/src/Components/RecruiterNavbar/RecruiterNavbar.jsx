@@ -4,6 +4,7 @@ import styled from "styled-components";
 import chatLogo from "../../logos/chat.png";
 import { useState } from "react";
 import { RecruiterNavbarCss } from "./RecruiterNavbarCss";
+import { useHistory } from 'react-router-dom'
 
 const InputWrapper = styled.div`
   width: 500px;
@@ -24,6 +25,7 @@ const InputWrapper = styled.div`
   }
 `;
 export function RecruiterNavbar() {
+    const history = useHistory();
     const [showInput, setShowInput] = useState(true);
     const handleshowInput = () => {
         setShowInput(!showInput);
@@ -31,7 +33,9 @@ export function RecruiterNavbar() {
     return (
         <RecruiterNavbarCss>
             <div className="navbar-menu-links">
-                <div>
+                <div style={{ cursor: 'pointer' }} onClick={() => {
+                    history.push('/')
+                }}>
                     <h1>hirist</h1>
                     <span>.com</span>
                 </div>

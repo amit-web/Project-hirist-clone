@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const NavbarWrapper = styled.div`
   width: 95.4vw;
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   display: grid;
   background-color: rgb(254, 250, 241);
   height: 14rem;
@@ -22,11 +22,26 @@ export const NavbarWrapper = styled.div`
       width: 85px;
     }
     .navbarTop-buttons {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      padding-left: 20rem;
-      padding-right: 1rem;
+     display: -webkit-box;
+  
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 50%;
+    padding-left: 4rem;
+    padding-right: 1rem;
+    position: relative;
+    left: -3rem;
+}
 
       a {
         text-decoration: none;
@@ -110,12 +125,12 @@ export const NavbarWrapper = styled.div`
       justify-content: center;
     }
     & > div:nth-child(1) {
-      display: flex;
-      width: 70%;
-      margin: auto;
-      text-align: center;
-      font-size: 35px;
-      margin-left: 21rem;
+        display: flex;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 35px;
+    margin-left: 22rem;
     }
     & > div:nth-child(1) > span {
       margin-left: -2rem;
@@ -129,12 +144,12 @@ export const NavbarWrapper = styled.div`
       color: rgb(233, 99, 12);
     }
     .search-jobs {
-      width: 20rem;
-      height: 49px;
-      border: 1px solid rgb(229, 229, 228);
-      text-align: start;
-      padding: 4px 6px;
-      background-color: white;
+         width: 20rem;
+    height: 57px;
+    border: 1px solid rgb(229,229,228);
+    text-align: start;
+    padding: 4px 6px;
+    background-color: white;
 
       img {
         width: 13px;
@@ -165,17 +180,45 @@ export const NavbarWrapper = styled.div`
         --rmsc-main: none;
         text-align: start;
         --rmsc-h: 45px;
+        .dropdown-heading {
+          position: relative;
+          padding: 0 var(--rmsc-p);
+          display: grid;
+          grid-template-columns: 3fr 1fr 1fr;
+          align-items: center;
+          width: 100%;
+          height: var(--rmsc-h);
+          cursor: default;
+          outline: 0;
+        }
+        .clear-selected-button {
+          cursor: pointer;
+          background: none;
+          border: 0;
+          padding: 0;
+          display: flex;
+          position: relative;
+          top: 12px;
+          font-weight: 100;
+          top: 1;
+        }
       }
       .rmsc .dropdown-container {
-        position: relative;
-        outline: 0;
-        background-color: white;
-        border: 1px solid rgb(229, 229, 228);
-        border-radius: 0px;
-        height: 49px;
+           position: relative;
+    outline: 0;
+    background-color: white;
+    border: 1px solid rgb(229,229,228);
+    border-radius: 0px;
+    height: 58px;
+      }
+      input {
+        border: none;
+        height: 20px;
+        font-size: 16px;
+        padding: 4px 0 0 0;
       }
       .dropdown-content {
-        width: 14rem;
+        width: 16rem;
       }
       select {
         width: 100%;
@@ -185,11 +228,14 @@ export const NavbarWrapper = styled.div`
       }
     }
     .experience-select {
-      width: 15rem;
-      height: 48px;
-      background-color: white;
-      border: 1px solid rgb(229, 229, 228);
-      display: flex;
+     width: 15rem;
+    height: 56px;
+    background-color: white;
+    border: 1px solid rgb(229,229,228);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
       select {
         width: 80%;
         height: 100%;
@@ -264,18 +310,18 @@ export const NavbarWrapper = styled.div`
         border: 1px solid none;
       }
       button {
-        border: none;
-        position: relative;
-        top: 2px;
-        right: 27px;
-        width: 50px;
-        color: white;
-        font-size: 1rem;
-        font-weight: bold;
-        border-radius: 7px;
-        height: 41px;
-        background-color: rgb(233, 99, 12);
+          border: none;
+    position: relative;
+    top: 6px;
+    right: 27px;
+    width: 51px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 7px;
+    height: 44px;
+    background-color: rgb(233,99,12);
       }
     }
-  }
+  
 `;

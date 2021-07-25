@@ -10,42 +10,52 @@ const RightFeeature = () => {
     divercitydata();
   }, []);
   const RightSide = styled.div`
-    height: 140px;
-    width: 200px;
+    height: 190px;
+    width: 280px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
     background-color: white;
     border-radius: 15px;
-    padding: 0px 0px 0px 10px;
-    padding: 20px 10px 5px 10px;
+   
+    padding: 10px 0px 5px 25px;
     div {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       border: 0.2px solid grey;
       border-radius: 10px;
       background-color: white;
-      margin-top: -10px;
+     
+     
     }
     img {
       border-radius: 10px;
     }
   `;
   const Second = styled.div`
-    height: 80px;
-    width: 200px;
-    height: 100px;
-    margin-top: 20px;
+       height: 123px;
+    width: 285px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 25px;
     background-color: white;
     border-radius: 15px;
-
-    padding: 15px 10px 10px 10px;
+    padding: 10px 0px 5px 25px;
+    position: relative;
+    top: 5px;
     div {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       border: 0.2px solid grey;
       border-radius: 10px;
       background-color: white;
@@ -57,12 +67,12 @@ const RightFeeature = () => {
   `;
 
   const getfeatureData = async () => {
-    let feturedData = await axios.get("http://localhost:3032/featuredata");
+    let feturedData = await axios.get("http://localhost:8000/featuredata");
     setFeature(feturedData.data);
   };
 
   const divercitydata = async () => {
-    let diveredata = await axios.get("http://localhost:3032/employerdata");
+    let diveredata = await axios.get("http://localhost:8000/employerdata");
     setDivercity(diveredata.data);
   };
   return (
@@ -71,7 +81,7 @@ const RightFeeature = () => {
         {feature.map((item) => {
           return (
             <div>
-              <img height="30" src={item.url} alt="" />
+              <img height="40" src={item.url} alt="" />
               <p>{item.name}</p>
             </div>
           );
@@ -82,7 +92,7 @@ const RightFeeature = () => {
         {divercity.map((item) => {
           return (
             <div>
-              <img height="30" src={item.url} alt="" />
+              <img height="40" src={item.url} alt="" />
             </div>
           );
         })}

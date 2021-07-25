@@ -101,7 +101,7 @@ export const PremiumJobsCss = styled.div`
           margin-left: -1.3rem;
         }
         .exp-margin {
-          margin-left: -10rem;
+          margin-left: -7rem;
         }
       }
       .job-view-btn {

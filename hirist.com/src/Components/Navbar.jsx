@@ -2,12 +2,14 @@ import { NavbarWrapper } from './NavbarCss'
 import { ExampleComponent } from './TextAnimation'
 import { LocationSelect, Form } from './LocationSelect'
 import userLogo from '../logos/icons8-user-24.png'
+import { useHistory } from 'react-router-dom'
 import { useState } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import Recruter from "./Recruter"
 
 export function Navbar() {
+    const history = useHistory();
     const [searchtext, setSearchtext] = useState("")
     const [locationarr, setLocationarr] = useState([])
     const [experience, setExperience] = useState("")
@@ -25,6 +27,7 @@ export function Navbar() {
         axios.post("http://localhost:8000/searchData", payload).then(() => {
             getData()
         })
+        history.push('/SearchData')
     }
 
 
@@ -47,7 +50,7 @@ export function Navbar() {
 
                 </div>
                 <div className="jobseeker-anchor">
-                    <a href="/Show"><img src={userLogo} alt="" />Jobseeker Login</a>
+                    <a href="/RegiForm"><img src={userLogo} alt="" />Jobseeker Login</a>
                 </div>
             </div>
         </div>

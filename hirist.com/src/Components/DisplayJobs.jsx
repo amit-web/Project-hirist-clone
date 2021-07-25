@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import styles from "./Display.module.css";
+import { useHistory } from "react-router-dom";
 
 const DisplayJobs = ({ data }) => {
   const JobsData = styled.div`
     width: 100%;
-    margin-left: 10px;
+    margin-left: 30px;
   `;
 
   const LastButton = styled.div`
@@ -16,21 +17,23 @@ const DisplayJobs = ({ data }) => {
       background: none;
     }
     p {
-      margin-top: 2px;
-      margin-right: 4px;
+       margin-top: 2px;
+    margin-right: -18px;
+    margin-left: 29px;
     }
   `;
+  const history = useHistory();
 
   return (
     <>
       <JobsData>
-        <div className={styles.display} onClick={((e)=>{
-            console.log("Amit")
+        <div className={styles.display} onClick={((e) => {
+          history.push("/company")
         })}>
           <input type="checkbox" />
           <div className={styles.company_image}>
             <div className={styles.imagecom}>
-              <img height="30px" width="30px" src={data.url} alt="" />
+              <img height="50px" width="50px" src={data.url} alt="" />
             </div>
 
             <div className={styles.middledata}>
