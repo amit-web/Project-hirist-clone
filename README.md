@@ -27,4 +27,4 @@ Omkar Gavade:https://github.com/omkarvgavade
 
 Amit Mehta:https://github.com/amit-web
 
-Amarjeet Singh:
+Amarjeet Singh:https://github.com/ajkarnawal0001
