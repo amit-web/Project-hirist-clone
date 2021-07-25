@@ -1,5 +1,5 @@
 # Project-hirist-clone
-Hiris is a platform that helps jobseekers connect with their dream job. Hirist.com connected with over 13,00,000 jobseekers already and this is just the beginning...they feature some of the best jobs in Banking & Finance, Consulting, Research & Analytics, Sales & Marketing, HR, IT and Operations.And also on hirist.com recruiters can post their jobs here and choose the jobseeker with best skills.
+Hirist is a platform that helps jobseekers connect with their dream job. Hirist.com connected with over 13,00,000 jobseekers already and this is just the beginning...they feature some of the best jobs in Banking & Finance, Consulting, Research & Analytics, Sales & Marketing, HR, IT and Operations.And also on hirist.com recruiters can post their jobs here and choose the jobseeker with best skills.
              
 Technology Stack we used in building this Project :
 
