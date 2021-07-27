@@ -50,10 +50,10 @@ npm run start
 ## Technologies Used
 
 <p float="left">
-  <img src="public/1200px-HTML5_logo_and_wordmark.svg.png" height="150"/>
-  <img src="public/css3-logo.png"  height="150"/> 
-  <img src="public/313-3133777_javascript-transparent-background-svg-hd-png-download.png"  height="150"/>
-  <img src="public/reactjs.png" height="150"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png" height="150"/>
+  <img src="https://cdn.freebiesupply.com/logos/thumbs/2x/css3-logo.png"  height="150"/> 
+  <img src="https://i.pinimg.com/originals/50/a6/42/50a6428d99f98e808074cceaf4c755e7.png"  height="150"/>
+  <img src="https://easybase.io/assets/images/posts_images/5-great-react-libraries-1.png" height="150"/>
 </p>
 
 ## Features
@@ -67,7 +67,7 @@ npm run start
 1.Landing Page
 
 <h4>This is our landing page </h4>
-<img src="Screenshot (867).png" width="400"/>
+<img src="hirist.com/public/Screenshot (867).png" width="400"/>
 
 2.Job searching page 
 
