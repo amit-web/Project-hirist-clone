@@ -75,22 +75,21 @@ npm run start
 <img src="Screenshot (869).png" width="400"/>
 3. Jobseeker Login & Signup Page 
 <h4> Users Login page </h4>
-<img src="Screenshot (870).png" width="400"/>
+<img src="hirist.com/public/Screenshot (869).png" width="400"/>
 
 4.Company Description page
-<img src="Screenshot (871).png" width="400"/>
+<img src="hirist.com/public/Screenshot (871).png" width="400"/>
 
 5. RecruiterLogin & Signup Page 
- <img src="Screenshot (872).png" width="400"/>
+ <img src="hirist.com/public/Screenshot (872).png" width="400"/>
 6. Recruiter job posting page 
-<img src="Screenshot (874).png" width="400"/>
+<img src="hirist.com/public/Screenshot (874).png" width="400"/>
+
+
 
 ## Team Members and Contributors
 
-Noor Muhammed:https://github.com/NOORMUHAMM
-
-Omkar Gavade:https://github.com/omkarvgavade
-
-Amit Mehta:https://github.com/amit-web
-
-Amarjeet Singh:https://github.com/ajkarnawal0001
+- [@Amit Mehta](https://github.com/amit-web)
+- [@Noor Muhammed](https://github.com/NOORMUHAMM)
+- [@Amarjeet Singh](https://github.com/ajkarnawal0001)
+- [@Omkar Gavade](https://github.com/omkarvgavade)
