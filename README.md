@@ -47,13 +47,13 @@ npm run start
 - ### iconify/react
 - ### react-elastic-corousel [![react-elastic-corousel](https://camo.githubusercontent.com/f02d7ddafecce45e5c6e5d24ac76753cc2560e27eb41e347b4aed935392a32eb/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f72656163742d656c61737469632d6361726f7573656c2e7376673f7374796c653d666c61742d737175617265)](https://github.com/sag1v/react-elastic-carousel)
 
-T## Technologies Used
+## Technologies Used
 
 <p float="left">
-  <img src="PreviewImageGallery/html.png" height="150"/>
-  <img src="PreviewImageGallery/css.png"  height="150"/> 
-  <img src="PreviewImageGallery/JavaScript.png"  height="150"/>
-  <img src="PreviewImageGallery/React.png" height="150"/>
+  <img src="public/1200px-HTML5_logo_and_wordmark.svg.png" height="150"/>
+  <img src="public/css3-logo.png"  height="150"/> 
+  <img src="public/313-3133777_javascript-transparent-background-svg-hd-png-download.png"  height="150"/>
+  <img src="public/reactjs.png" height="150"/>
 </p>
 
 ## Features
