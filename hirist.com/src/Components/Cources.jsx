@@ -16,15 +16,13 @@ const Cources = () => {
     gap: 25px;
     background-color: white;
     border-radius: 15px;
-    padding: 0px 0px 0px 10px;
-    display: inline-end;
     padding: 15px 0px 0px 10px;
   
   `;
 
   const Image = styled.div`
-    height: 40px;
-    width: 50px;
+    height: 55px;
+    width: 60px;
     border: 0.2px solid grey;
     border-radius: 10px;
     background-color: white;
@@ -76,19 +74,18 @@ const Cources = () => {
   const Mobile = styled.div`
     display: flex;
     margin-top: 20px;
-    input {
-      height: 30px;
-      width: 100px;
-      font-size: 16px;
-      color: grey;
-      border: 0.5px solid grey;
-    }
+    margin-left: -10px;
+   
     button {
       font-size: 16px;
       background-color: #e9630c;
       color: white;
-      border: 0;
-      padding: 5px 3px 5px 5px;
+     
+      border-radius: 5px;
+      height:40px;
+      width:100px;
+      border:none;
+      padding: 5px 5px 7px 5px;
     }
   `;
   const Download = styled.div`
@@ -105,6 +102,26 @@ const Cources = () => {
       height: 45px;
     }
   `;
+  const CountryCode = styled.div`
+
+input {
+     height: 40px;
+      width: 40px;
+      font-size: 16px;
+      color: grey;
+      border: 0.5px solid grey;
+    }
+      
+  `
+  const MobileNumber = styled.div`
+     input{
+      height: 40px;
+      width: 150px;
+      font-size: 16px;
+      color: grey;
+      border: 0.5px solid grey;
+     }
+  `
 
   const CourcesData = async () => {
     let courcedata = await axios.get("http://localhost:8000/courcesdata");
@@ -119,7 +136,7 @@ const Cources = () => {
             <>
               <Main>
                 <Image>
-                  <img height="40" src={item.url} alt="" />
+                  <img height="50" width="50" src={item.url} alt="" />
                 </Image>
                 <Name>
                   <p>{item.name}</p>
@@ -147,8 +164,13 @@ const Cources = () => {
         </Icon>
 
         <Mobile>
+
+          <CountryCode>
           <input type="text" placeholder="+91" />
-          <input type="text" placeholder="Mobile number" />
+          </CountryCode>
+          <MobileNumber>
+             <input type="text" placeholder="Mobile number" />
+          </MobileNumber>
           <button>Share App Link</button>
         </Mobile>
 

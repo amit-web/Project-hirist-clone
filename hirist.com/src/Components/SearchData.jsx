@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import "./navbar.css";
+import "./searchData.css";
 import Searching from "./Searching";
 import axios from "axios";
 import RightFeeature from "./RightFeeature";
 import Cources from "./Cources";
-import { useHistory } from 'react-router-dom'
+import { useHistory } from "react-router-dom";
 const SearchData = () => {
   const history = useHistory();
   const [selected, setSelected] = useState("All jobs");
@@ -15,31 +15,57 @@ const SearchData = () => {
   const [selection, setSelection] = useState("Experiance");
   const [activate, setActivate] = useState(false);
   const [jobdata, setJobdata] = useState([]);
-
+  const [research, setResearch] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  // const [empty, setEmpty] = useState("")
   useEffect(() => {
     axios.get("http://localhost:8000/searchData").then(({ data }) => {
-      const recentSearch = data[data.length - 1]
+      const recentSearch = data[data.length - 1];
       setSelected(recentSearch.jobRole);
-      console.log(recentSearch.location)
-      setSelect('delhi');
-      setSelection(recentSearch.experience)
+      console.log(recentSearch.location);
+      setSelect("delhi");
+      setSelection(recentSearch.experience);
       getData();
-    })
-
+    });
   }, []);
-
+  // selection!=="posting" :`http://localhost:8000/data?jobs=${selected}&location=${select}&experiance=${}
   const getData = async () => {
     const urls =
       selected !== "All jobs"
         ? `http://localhost:8000/data?jobs=${selected}&location=${select}&experiance=${selection}`
         : "http://localhost:8000/data";
 
-    let data = await axios.get(urls);
-    setJobdata(data.data);
+    try {
+      
+      let data = await axios.get(urls);
+      
+      setJobdata(data.data);
+      console.log(data)
+     if(data.data.length===0){
+       
+       setIsLoading(false);
+     }
+     else{
+      setIsLoading(true);
+     }
+      
+    } catch (error) {
+      console.log(error);
+    }
   };
+
+ 
+
+ 
   const options = ["data analyst", "testing", "ReactJs Developer", "All jobs"];
   const options2 = ["delhi", "mumbai", "hyderabad", "pune", "banglore"];
-  const options3 = ["0-1 Years", "1-3 Years", "4-6 Years", "7-10 Years"];
+  const options3 = [
+    "posting",
+    "0-1 Years",
+    "1-3 Years",
+    "4-6 Years",
+    "7-10 Years",
+  ];
   const Navbar = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -107,7 +133,6 @@ const SearchData = () => {
     margin-left: 65px;
     color: grey;
     border: 0px;
-   
   `;
 
   const P = styled.div`
@@ -149,6 +174,40 @@ const SearchData = () => {
     left: 65%;
     margin-top: 5px;
   `;
+  const AgainSearch = styled.div`
+    width: 80%;
+    padding: 40px 0px 0px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 16px;
+    input {
+      height: 35px;
+      width: 195px;
+      padding: 0px 20px 0px 60px;
+      border-radius: 15px;
+      font-size: 16px;
+      font-family: "Nunito Sans";
+      background-color: white;
+      color: grey;
+      margin-top: -15px;
+      border: 0;
+    }
+
+    img {
+      padding: 0px 10px 0px 0px;
+    }
+    p {
+      margin-top: -20px;
+      margin-left: -220px;
+    }
+  `;
+  const I = styled.div`
+    position: relative;
+    left: 300px;
+    bottom: 0px;
+  `;
 
   return (
     <div style={{ backgroundColor: "#F2F5FA", height: "auto" }}>
@@ -158,7 +217,7 @@ const SearchData = () => {
           src="https://job-static.hirist.com/V2/static/media/hirist_logo.03e14260.svg"
           alt=""
           onClick={() => {
-            history.push('/')
+            history.push("/");
           }}
         />
         <p>Mobile Applications</p>
@@ -176,9 +235,11 @@ const SearchData = () => {
         <Search>
           <img height="15" src="icons8-search (1).gif" alt="" />
         </Search>
-        <button onClick={() => {
-          history.push('/LoginForm')
-        }}>
+        <button
+          onClick={() => {
+            history.push("/LoginForm");
+          }}
+        >
           <img height="10" src="icons8-administrator-male-16.png" alt="" />{" "}
           Login
         </button>
@@ -292,12 +353,29 @@ const SearchData = () => {
         </Clearall>
       </div>
 
-      <div style={{ display: "flex" }}>
-        <div style={{ marginTop: "-10px", marginLeft: "2%" }}>
-          <Searching selected={selected} jobdata={jobdata} />
+      <AgainSearch>
+        <p>Search for - {selected}</p>
+        <I>
+          <i class="fas fa-search"></i>
+        </I>
+        <div>
+          <input
+            type="text"
+            value={research}
+            onChange={(e) => setResearch(e.target.value)}
+          />
+        </div>
+      </AgainSearch>
+      <div style={{ display: "flex", gap: "10px" }}>
+        <div style={{ height: "auto", width: "70%", marginLeft: "4.5%" }}>
+          <Searching
+            selected={selected}
+            jobdata={jobdata}
+            isLoading={isLoading}
+          />
         </div>
 
-        <div style={{ marginLeft: "70px", marginTop: "40px" }}>
+        <div style={{ marginTop: "45px" }}>
           <p style={{ fontSize: "16px", marginBottom: "10px" }}>
             Featured Employers
           </p>

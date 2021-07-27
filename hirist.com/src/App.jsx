@@ -14,7 +14,7 @@ import { RegiForm } from './Components/UserRegister/RegiForm';
 import { LoginForm } from './Components/UserLogin/LoginForm';
 // import { ShowNavbar } from './Components/Navbar/ShowNavbar';
 import { Show } from './Components/Recruiter/Show';
-
+import Company from "./Components/Company"
 
 function App() {
   return (
@@ -22,13 +22,18 @@ function App() {
       <div>
         <Switch >
           <Route exact path="/" component={Homepage} />
+          <Route exact path="/Homepage" component={Homepage} />
           <Route exact path="/Recruter" component={Recruter} />
           <Route exact path="/Show" component={Show} />
           <Route exact path="/Recruter/Show" component={Show} />
           <Route exact path="/SearchData" component={SearchData} />
           <Route exact path="/Regiform" component={RegiForm} />
           <Route exact path="/LoginForm" component={LoginForm} />
+          <Route exact path="/Company" component={Company} />
         </Switch>
+        
+        {/* <Company/> */}
+
       </div>
       <div>
 

@@ -122,6 +122,36 @@
       "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
       "experience": "1-3 Years",
       "id": 20
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 21
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 22
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 23
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 24
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 25
     }
   ],
   "data": [
@@ -344,6 +374,50 @@
       "postedon": "20/7/2021",
       "openfor": "Multiple Locations",
       "id": 20
+    },
+    {
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "workat": "Wobot.ai - Data Engineer - Computer Vision/Data Visualization",
+      "companyname": "Octro Inc",
+      "jobs": "data analyst",
+      "location": "banglore",
+      "experiance": "4-6 Years",
+      "postedon": "20/7/2021",
+      "openfor": "Multiple Locations",
+      "id": 21
+    },
+    {
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "workat": "Wobot.ai - Data Engineer - Computer Vision/Data Visualization",
+      "companyname": "Octro Inc",
+      "jobs": "data analyst",
+      "location": "banglore",
+      "experiance": "7-10 Years",
+      "postedon": "20/7/2021",
+      "openfor": "Multiple Locations",
+      "id": 22
+    },
+    {
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "workat": "Wobot.ai - Data Engineer - Computer Vision/Data Visualization",
+      "companyname": "Octro Inc",
+      "jobs": "data analyst",
+      "location": "banglore",
+      "experiance": "7-10 Years",
+      "postedon": "20/7/2021",
+      "openfor": "Multiple Locations",
+      "id": 23
+    },
+    {
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "workat": "Wobot.ai - Data Engineer - Computer Vision/Data Visualization",
+      "companyname": "Octro Inc",
+      "jobs": "data analyst",
+      "location": "banglore",
+      "experiance": "4-6 Years",
+      "postedon": "20/7/2021",
+      "openfor": "Multiple Locations",
+      "id": 24
     }
   ],
   "featuredata": [
@@ -467,6 +541,18 @@
       "email": "omkarvgawade@gmail.com",
       "password": "Omkar@123",
       "confirmPassword": "Omkar@123"
+    },
+    {
+      "id": "1c50b46d-a562-42f4-add3-3931d5d0a1c0",
+      "email": "amit@gmail.com",
+      "password": "Amit@121",
+      "confirmPassword": "Amit@121"
+    },
+    {
+      "id": "5bf0f385-1fb9-4994-8998-30f9c589b9d8",
+      "email": "amit@gmail.com",
+      "password": "Amit@121",
+      "confirmPassword": "Amit@121"
     }
   ],
   "allData": [

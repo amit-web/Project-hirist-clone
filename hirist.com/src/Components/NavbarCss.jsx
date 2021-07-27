@@ -209,7 +209,7 @@ export const NavbarWrapper = styled.div`
     background-color: white;
     border: 1px solid rgb(229,229,228);
     border-radius: 0px;
-    height: 58px;
+    height: 57px;
       }
       input {
         border: none;

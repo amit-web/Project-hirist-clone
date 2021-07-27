@@ -1,20 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import "./Company.css"
+import "./Company.css";
+import { useHistory } from "react-router-dom";
 const Company = () => {
+  const his = useHistory()
   const Navbar = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding: 7px;
+    padding: 10px;
     font-family: "Nunito Sans";
-    font-size: 9px;
+    font-size: 17px;
     font-style: normal;
     font-variant: normal;
     font-weight: 530;
     letter-spacing: normal;
     line-height: 15.4px;
     text-decoration: none solid rgb(33, 37, 41);
-    height: 40px;
+    height: 50px;
     width: 91%;
 
     background-color: #ffffff;
@@ -28,15 +30,14 @@ const Company = () => {
     margin: auto;
     button {
       margin-left: 20px;
-      height: 25px;
-      width: 70px;
+      height: 35px;
+      width: 120px;
       border-radius: 5px;
       border: 0.5px solid #e9630c;
       background-color: white;
       color: #e9630c;
-
       font-family: "Nunito Sans";
-      font-size: 10px;
+      font-size: 18px;
       font-style: normal;
       font-variant: normal;
       font-weight: 500;
@@ -62,16 +63,16 @@ const Company = () => {
   `;
 
   const Home = styled.div`
-    font-size: 7px;
+    font-size: 12px;
     display: flex;
     gap:10px;
-    margin-left:40px;
-    height:20px;
+    margin-left:70px;
+    height:40px;
     width:91%;
     background-color:white;
-
+     padding: 10px 0px 0px 0px;
     img{
-        margin-top:7px;
+        margin-top:3px;
         margin-left:30px;
     }
   `
@@ -80,10 +81,10 @@ const Company = () => {
      display: flex;
      gap :20px ;
      width:91%;
-     height: 110px;
+     height: 120px;
      background-color:#13355C;
      color: white;
-     margin-left:40px;
+     margin-left:70px;
 
      img{
          position: relative;
@@ -115,9 +116,11 @@ const Company = () => {
           <Search>
             <img height="15" src="icons8-search (1).gif" alt="" />
           </Search>
-          <button>
+          <button onClick={(()=>{
+            return his.push("/Homepage")
+          })}>
             <img height="10" src="icons8-administrator-male-16.png" alt="" />{" "}
-            Login
+            Logout
           </button>
         </Navbar>
 
@@ -133,7 +136,7 @@ const Company = () => {
 
         <Description>
 
-          <img height="50" width="50" src="https://staticlogo.hirist.com/1407-100X100.png" alt="" />
+          <img height="60" width="60" src="https://staticlogo.hirist.com/1407-100X100.png" alt="" />
           <div className="description">
             <p className="designation">Data Analyst - Python/Data Mining</p>
             <div className="locations">
@@ -155,7 +158,24 @@ const Company = () => {
 
             <p className="posted">Posted on : 23/07/2021</p>
           </div>
+
+            
         </Description>
+
+       <div style={{display:"flex",justifyContent:"space-between"}}>
+          <div style={{width:"65%",height:"auto",marginLeft:"4.6%"}}>
+            <img style={{marginTop:"20px",borderRadius:"10px"}} width="98%" src="decription page.png" alt="" />    
+          </div>
+
+
+          <div  style={{width:"30%",height:"auto",marginLeft:"10px"}}>
+           <img style={{marginTop:"15px"}} width="85%" src="Screenshot 2021-07-27 134037.png" alt="" />
+           <div>
+           <p style={{marginLeft:"15px",marginTop:"20px",fontSize:"20px"}}>Featured Institute</p>
+           <img  style={{marginTop:"15px"}} width="85%" src="instutute page.png" alt="" />
+          </div>
+        </div>
+       </div>
       </div>
     </>
   );

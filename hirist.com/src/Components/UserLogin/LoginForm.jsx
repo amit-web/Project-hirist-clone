@@ -201,7 +201,7 @@ export const LoginForm = () => {
         userData.map((e) => {
             if (e.email === loginData.email && e.password === loginData.password) {
 
-                return history.push('/SearchData')
+                return history.push('/Company')
 
             }// } else {
             //     return alert("Enter a valid id or password")

@@ -1,20 +1,25 @@
-import React from "react";
+import React,{ useState} from "react";
 import styled from "styled-components";
 import styles from "./Display.module.css";
 import { useHistory } from "react-router-dom";
 
 const DisplayJobs = ({ data }) => {
+ 
   const JobsData = styled.div`
-    width: 100%;
-    margin-left: 30px;
+    width: 95%;
+    margin: auto;
+    margin-top:7px;
+    
   `;
 
   const LastButton = styled.div`
     button {
       border: 0;
       height: 10px;
-      margin-top: 5px;
+      margin-top: 0px;
       background: none;
+      
+
     }
     p {
        margin-top: 2px;
@@ -23,13 +28,14 @@ const DisplayJobs = ({ data }) => {
     }
   `;
   const history = useHistory();
+  
 
-  return (
+  return  (
     <>
       <JobsData>
         <div className={styles.display} onClick={((e) => {
-          history.push("/company")
-        })}>
+          history.push("/LoginForm")
+          })}>
           <input type="checkbox" />
           <div className={styles.company_image}>
             <div className={styles.imagecom}>
@@ -90,6 +96,8 @@ const DisplayJobs = ({ data }) => {
           </div>
         </div>
       </JobsData>
+
+      
     </>
   );
 };
