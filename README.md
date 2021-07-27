@@ -72,11 +72,11 @@ npm run start
 2.Job searching page 
 
 <h4>Here user can search and filter the data as per their requirement:- </h4>
-<img src="Screenshot (869).png" width="400"/>
+<img src="hirist.com/public/Screenshot (869).png" width="400"/>
 
 3. Jobseeker Login & Signup Page
 <h4> Users Login page </h4>
-<img src="hirist.com/public/Screenshot (869).png" width="400"/>
+<img src="hirist.com/public/Screenshot (870).png" width="400"/>
 
 4.Company Description page
 <h4> Description page </h4>
