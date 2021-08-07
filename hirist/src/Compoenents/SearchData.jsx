@@ -5,7 +5,7 @@ import Searching from "./Searching";
 import axios from "axios";
 import RightFeeature from "./RightFeeature";
 import Cources from "./Cources";
-  const SearchData= () => {
+const SearchData = () => {
   const [selected, setSelected] = useState("Search jobs");
   const [isActive, setIsActive] = useState(false);
   const [select, setSelect] = useState("Location");
@@ -33,16 +33,16 @@ import Cources from "./Cources";
   const Navbar = styled.div`
     display: flex;
     justify-content: space-evenly;
-    padding: 7px;
+    padding: 15px;
     font-family: "Nunito Sans";
-    font-size: 9px;
+    font-size: 15px;
     font-style: normal;
     font-variant: normal;
     font-weight: 530;
     letter-spacing: normal;
     line-height: 15.4px;
     text-decoration: none solid rgb(33, 37, 41);
-    height: 40px;
+    height: 70px;
     width: 91%;
 
     background-color: #ffffff;
@@ -56,15 +56,15 @@ import Cources from "./Cources";
     margin: auto;
     button {
       margin-left: 20px;
-      height: 25px;
-      width: 70px;
+      height: 45px;
+      width: 110px;
       border-radius: 5px;
       border: 0.5px solid #e9630c;
       background-color: white;
       color: #e9630c;
 
       font-family: "Nunito Sans";
-      font-size: 10px;
+      font-size: 15px;
       font-style: normal;
       font-variant: normal;
       font-weight: 500;
@@ -83,22 +83,21 @@ import Cources from "./Cources";
   `;
 
   const Middle = styled.div`
-    height: 20px;
-    width: 89%;
+    display: flex;
+    gap: 15px;
+    height: 35px;
+    width: 90%;
     margin: auto;
     background-color: white;
     font-family: "Nunito Sans";
-    font-size: 9px;
+    font-size: 17px;
     font-style: normal;
     font-variant: normal;
     padding: 8px 0px 0px 20px;
-    button {
-      color: grey;
-      font-size: 9px;
-      border: 0px;
-      margin: 0px 7px 0px 0px;
-      background: none;
-    }
+    margin-left: 65px;
+    color: grey;
+    border: 0px;
+   
   `;
 
   const P = styled.div`
@@ -113,13 +112,12 @@ import Cources from "./Cources";
   //   gap: 30px;
   // `;
   const Refine = styled.div`
-    
     button {
-      height: 20px;
-      width: 65px;
+      height: 30px;
+      width: 95px;
       padding: 0px 10px 0px 10px;
       border-radius: 15px;
-      font-size: 9px;
+      font-size: 15px;
       font-family: "Nunito Sans";
       background-color: #f2f5fa;
       color: #e9630c;
@@ -134,7 +132,7 @@ import Cources from "./Cources";
   `;
   const Clearall = styled.p`
     margin-bottom: -20px;
-    font-size: 9px;
+    font-size: 15px;
     font-family: "Nunito Sans";
     color: #e9630c;
     position: absolute;
@@ -172,18 +170,17 @@ import Cources from "./Cources";
       </Navbar>
 
       <Middle>
-        <button>Jobs</button>
-        <button>Companies</button>
-        <button>Cources</button>
+        <p>Jobs</p>
+        <p>Companies</p>
+        <p>Cources</p>
       </Middle>
 
       <div
         style={{
           backgroundColor: "#E3E9F0",
-          height: "40px",
+          height: "60px",
           width: "91%",
           margin: "auto",
-         
         }}
       >
         <p className="filter">Filter By:</p>
@@ -280,16 +277,18 @@ import Cources from "./Cources";
         </Clearall>
       </div>
 
-      <div style={{display: 'flex'}}>
-        <div style={{ marginTop: "-10px",  }}>
+      <div style={{ display: "flex" }}>
+        <div style={{ marginTop: "-10px" }}>
           <Searching selected={selected} jobdata={jobdata} />
         </div>
 
-        <div style={{marginLeft:"70px",marginTop:"40px"}}>
-                  <p style={{fontSize:"9px",marginBottom:"10px"}}>Featured Employers</p>
-                  <RightFeeature/>
-                  <p style={{fontSize:"9px",margin:"10px"}}>Cources</p>
-                  <Cources/>
+        <div style={{ marginLeft: "70px", marginTop: "40px" }}>
+          <p style={{ fontSize: "16px", marginBottom: "10px" }}>
+            Featured Employers
+          </p>
+          <RightFeeature />
+          <p style={{ fontSize: "16px", margin: "10px" }}>Cources</p>
+          <Cources />
         </div>
       </div>
     </div>

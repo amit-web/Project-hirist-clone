@@ -10,30 +10,31 @@ const RightFeeature = () => {
     divercitydata();
   }, []);
   const RightSide = styled.div`
-    height: 140px;
-    width: 200px;
+    height: 190px;
+    width: 280px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
     background-color: white;
     border-radius: 15px;
-    padding: 0px 0px 0px 10px;
-    padding: 20px 10px 5px 10px;
+   
+    padding: 10px 0px 5px 25px;
     div {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       border: 0.2px solid grey;
       border-radius: 10px;
       background-color: white;
-      margin-top: -10px;
+     
+     
     }
     img {
       border-radius: 10px;
     }
   `;
   const Second = styled.div`
-    height: 80px;
-    width: 200px;
+    height: 120px;
+    width: 280px;
     height: 100px;
     margin-top: 20px;
     display: flex;
@@ -42,10 +43,10 @@ const RightFeeature = () => {
     background-color: white;
     border-radius: 15px;
 
-    padding: 15px 10px 10px 10px;
+    padding: 15px 0px 15px 15px;
     div {
-      height: 30px;
-      width: 30px;
+      height: 40px;
+      width: 40px;
       border: 0.2px solid grey;
       border-radius: 10px;
       background-color: white;
@@ -71,7 +72,7 @@ const RightFeeature = () => {
         {feature.map((item) => {
           return (
             <div>
-              <img height="30" src={item.url} alt="" />
+              <img height="40" src={item.url} alt="" />
               <p>{item.name}</p>
             </div>
           );
@@ -82,7 +83,7 @@ const RightFeeature = () => {
         {divercity.map((item) => {
           return (
             <div>
-              <img height="30" src={item.url} alt="" />
+              <img height="40" src={item.url} alt="" />
             </div>
           );
         })}

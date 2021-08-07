@@ -1,19 +1,18 @@
 .display {
   display: flex;
   gap: 15px;
-  margin-left: 25px;
+  margin-left: 35px;
   margin-top: 10px;
-  font-size: 7.5px;
+  font-size: 15px;
   font-weight: 530;
 }
 .company_image {
   display: flex;
   justify-content: space-around;
-
   border-radius: 10px;
   background-color: white;
-  height: 40px;
-  width: 100%;
+  height: 70px;
+  width: 950px;
 }
 .imagecom {
   border-radius: 25px;

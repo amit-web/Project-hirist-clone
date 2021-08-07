@@ -10,7 +10,7 @@ const Cources = () => {
   }, []);
   const RightSide = styled.div`
     height: auto;
-    width: 220px;
+    width: 320px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -19,22 +19,24 @@ const Cources = () => {
     padding: 0px 0px 0px 10px;
     display: inline-end;
     padding: 15px 0px 0px 10px;
+  
   `;
 
   const Image = styled.div`
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 50px;
     border: 0.2px solid grey;
     border-radius: 10px;
     background-color: white;
     margin-top: 0px;
+    
     img {
       border-radius: 10px;
     }
   `;
   const Name = styled.div`
     p {
-      font-size: 9px;
+      font-size: 13px;
       margin-top: 0px;
       overflow: hidden;
     }
@@ -45,12 +47,12 @@ const Cources = () => {
     padding: 10px 20px 10px 10px;
   `;
   const GetApp = styled.div`
-    height: 150px;
-    width: 220px;
+    height: 200px;
+    width: 320px;
     background-color: white;
     margin-top: 20px;
     border-radius: 10px;
-    padding: 10px 0px 10px 10px;
+    padding: 10px 0px 10px 20px;
   `;
   const Icon = styled.div`
     display: flex;
@@ -58,8 +60,13 @@ const Cources = () => {
     div {
       margin-top: 10px;
     }
+    h6{
+      font-weight: 550px;
+      font-size: 16px;
+
+    }
     p {
-      font-size: 9px;
+      font-size: 17px;
       margin-top: 0px;
     }
     img {
@@ -70,30 +77,32 @@ const Cources = () => {
     display: flex;
     margin-top: 20px;
     input {
-      height: 20px;
-      width: 70px;
-      font-size: 9px;
+      height: 30px;
+      width: 100px;
+      font-size: 16px;
       color: grey;
       border: 0.5px solid grey;
     }
     button {
-      font-size: 9px;
+      font-size: 16px;
       background-color: #e9630c;
       color: white;
       border: 0;
+      padding: 5px 3px 5px 5px;
     }
   `;
   const Download = styled.div`
     p {
-      font-size: 9px;
+      font-size: 16px;
       color: grey;
-      margin-top: 20px;
+      margin-top: 10px;
+      margin-bottom: 8px;
     }
     div {
       display: flex;
     }
     img {
-      height: 30px;
+      height: 45px;
     }
   `;
 
@@ -110,7 +119,7 @@ const Cources = () => {
             <>
               <Main>
                 <Image>
-                  <img height="30" src={item.url} alt="" />
+                  <img height="40" src={item.url} alt="" />
                 </Image>
                 <Name>
                   <p>{item.name}</p>
@@ -125,7 +134,7 @@ const Cources = () => {
       <GetApp>
         <Icon>
           <img
-            height="30"
+            height="40"
             src="data:image/png;base64,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"
             alt=""
           />
