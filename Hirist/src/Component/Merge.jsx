@@ -1,1 +1,0 @@
-// Hey there This is Noor ,I'm here to tell you how to merge RecruterLogin page in Landing page
