@@ -187,11 +187,17 @@
 select,
 button {
   border: none;
-  width: 90%;
+
   height: 50px;
-  border-bottom: 1px solid #e8e8e8;
+ 
   /* background-color:#fafafa ; */
   margin-left: 20px;
+      background-color: transparent;
+    font-size: 14px;
+    border: 0;
+    border-bottom: 2px solid #e8e8e8;
+    padding: 10px 10px 7px 0;
+    width: 100%;
 }
 .popup > h2 {
   margin-left: 20px;
