@@ -231,7 +231,7 @@ const SearchData = () => {
         </P>
         <p>Internship</p>
         <p>|</p>
-        <p>Courses</p>
+        <p>Cources</p>
         <Search>
           <img height="15" src="icons8-search (1).gif" alt="" />
         </Search>
