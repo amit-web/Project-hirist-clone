@@ -80,7 +80,7 @@ npm run start
 
 4.Company Description page
 <h4> Description page </h4>
-<img src="hirist.com/public/Screenshot (871).png" width="400"/>
+<img src="public/Screenshot (871).png" width="400"/>
 
 5. RecruiterLogin & Signup Page 
  <img src="hirist.com/public/Screenshot (872).png" width="400"/>
