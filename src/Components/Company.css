@@ -1,0 +1,38 @@
+.locations{
+    display:flex;
+    gap: 20px;
+    font-size: 14px;
+    margin-top:10px;
+}
+
+.category{
+   
+    display:flex;
+    gap: 5px;
+    margin-top:5px;
+     margin-left: -20px;
+}
+
+.category>button{
+    font-size:12px;
+    border-radius:10px;
+    border: 0;
+    background-color:white;
+    color:grey;
+    padding:0px 0px 0px 5px;
+    height:25px;
+    width:120px;
+  
+}
+
+.posted{
+    font-size:13px;
+    margin-top:5px;
+}
+.designation{
+    font-weight: 540;
+    font-size:30px;
+}
+.description{
+    margin-left: 40px;
+}
