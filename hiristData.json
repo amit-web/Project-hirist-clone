@@ -170,6 +170,42 @@
       "location": "[]",
       "experience": "",
       "id": 28
+    },
+    {
+      "jobRole": "react",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 29
+    },
+    {
+      "jobRole": "mobile ",
+      "location": "[{\"label\":\"Mumbai\",\"value\":\"mumbai\"}]",
+      "experience": "1-3 Years",
+      "id": 30
+    },
+    {
+      "jobRole": "react ",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 31
+    },
+    {
+      "jobRole": "data anlayst ",
+      "location": "[{\"label\":\"Delhi\",\"value\":\"delhi\"}]",
+      "experience": "0-1 Years",
+      "id": 32
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[{\"label\":\"Mumbai\",\"value\":\"mumbai\"},{\"label\":\"Pune\",\"value\":\"pune\"},{\"label\":\"Nashik\",\"value\":\"nashik\"},{\"label\":\"Ahemedabad\",\"value\":\"ahemedabad\"},{\"label\":\"Delhi\",\"value\":\"delhi\"},{\"label\":\"Kolkata\",\"value\":\"kolkata\"},{\"label\":\"Gurgaon\",\"value\":\"gurgaon\"},{\"label\":\"Noyda\",\"value\":\"noyda\"},{\"label\":\"Hyderabad\",\"value\":\"hyderabad\"},{\"label\":\"Chennai\",\"value\":\"chennai\"},{\"label\":\"Bangalore\",\"value\":\"bangalore\"},{\"label\":\"Nagpur\",\"value\":\"nagpur\"},{\"label\":\"Bhopal\",\"value\":\"bhopal\"},{\"label\":\"Gandhinagar\",\"value\":\"gandhinagar\"},{\"label\":\"Chandigadh\",\"value\":\"chandigadh\"},{\"label\":\"Lakhnow\",\"value\":\"lakhnow\"}]",
+      "experience": "0-1 Years",
+      "id": 33
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[{\"label\":\"Mumbai\",\"value\":\"mumbai\"},{\"label\":\"Pune\",\"value\":\"pune\"},{\"label\":\"Nashik\",\"value\":\"nashik\"},{\"label\":\"Ahemedabad\",\"value\":\"ahemedabad\"},{\"label\":\"Delhi\",\"value\":\"delhi\"},{\"label\":\"Kolkata\",\"value\":\"kolkata\"},{\"label\":\"Gurgaon\",\"value\":\"gurgaon\"},{\"label\":\"Noyda\",\"value\":\"noyda\"},{\"label\":\"Hyderabad\",\"value\":\"hyderabad\"},{\"label\":\"Chennai\",\"value\":\"chennai\"},{\"label\":\"Bangalore\",\"value\":\"bangalore\"},{\"label\":\"Nagpur\",\"value\":\"nagpur\"},{\"label\":\"Bhopal\",\"value\":\"bhopal\"},{\"label\":\"Gandhinagar\",\"value\":\"gandhinagar\"},{\"label\":\"Chandigadh\",\"value\":\"chandigadh\"},{\"label\":\"Lakhnow\",\"value\":\"lakhnow\"}]",
+      "experience": "0-1 Years",
+      "id": 34
     }
   ],
   "data": [
@@ -549,6 +585,42 @@
       "postedon": "2016",
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "id": 29
+    },
+    {
+      "companyname": "masai school",
+      "location": "dehradun",
+      "minExp": "0",
+      "experiance": "1",
+      "workat": "",
+      "jobs": "Mobile Applications",
+      "openfor": "Software Developer",
+      "minSalary": "5",
+      "maxSalary": "8",
+      "DND": "",
+      "postedon": "",
+      "tag": "",
+      "type": "",
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "": true,
+      "id": 30
+    },
+    {
+      "companyname": "masai school",
+      "location": "dehradun",
+      "minExp": "0",
+      "experiance": "1",
+      "workat": "",
+      "jobs": "Analytics Data Science",
+      "openfor": "Software Developer",
+      "minSalary": "5",
+      "maxSalary": "8",
+      "DND": "",
+      "postedon": "2021",
+      "tag": "",
+      "type": "",
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "": true,
+      "id": 31
     }
   ],
   "featuredata": [
@@ -684,6 +756,12 @@
       "email": "amit@gmail.com",
       "password": "Amit@121",
       "confirmPassword": "Amit@121"
+    },
+    {
+      "id": "ed8fdc74-d5b5-4c08-8390-9f03ec6ae3b4",
+      "email": "noormuhammed14@gmail.com",
+      "password": "1234@jack",
+      "confirmPassword": "1234@jack"
     }
   ],
   "allData": [

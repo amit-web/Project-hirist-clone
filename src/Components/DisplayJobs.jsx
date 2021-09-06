@@ -2,14 +2,20 @@ import React,{ useState} from "react";
 import styled from "styled-components";
 import styles from "./Display.module.css";
 import { useHistory } from "react-router-dom";
+import "./Search.css";
 
 const DisplayJobs = ({ data }) => {
  
   const JobsData = styled.div`
-    width: 95%;
+    width: 85%;
     margin: auto;
     margin-top:7px;
-    
+    height:auto
+    border:1px solid black;
+    p{
+      font-size:13px;
+      color:grey;
+    }
   `;
 
   const LastButton = styled.div`
@@ -25,21 +31,25 @@ const DisplayJobs = ({ data }) => {
        margin-top: 2px;
     margin-right: -18px;
     margin-left: 29px;
+  
     }
   `;
+
   const history = useHistory();
   
 
   return  (
     <>
       <JobsData>
-        <div className={styles.display} onClick={((e) => {
-          history.push("/LoginForm")
+        <div className={styles.display}  onClick={((e) => {
+          // history.push("/LoginForm")
           })}>
-          <input type="checkbox" />
-          <div className={styles.company_image}>
-            <div className={styles.imagecom}>
-              <img height="50px" width="50px" src={data.url} alt="" />
+          <input type="checkbox" style={{marginRight:"25px",marginTop:"15px"}}/>
+          <div className={styles.company_image} style={{ height:"70px"}}>
+            
+            <div className="hover" style={{marginLeft:"-50px",marginTop:"5px", background:"white", height:"50px",width:"50px",cursor:"pointer",borderRadius:"10px",border:"1px solid #ececec"}}>
+            
+              <img height="50px" width="50px" src={data.url} alt="loading" />
             </div>
 
             <div className={styles.middledata}>
@@ -54,7 +64,7 @@ const DisplayJobs = ({ data }) => {
                   />{" "}
                   {data.companyname}
                 </p>
-                <p>{data.experiance}</p>
+                <p >{data.experiance}</p>
                 <p>{data.openfor}</p>
                 <p>{data.postedon}</p>
               </div>

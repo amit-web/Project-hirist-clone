@@ -2,7 +2,6 @@ import React,{useState} from 'react';
 //import axios from "axios"
 import DisplayJobs from "./DisplayJobs";
 import styled from "styled-components";
-
 const Searching = ({ isLoading, jobdata }) => {
  
   const Multi = styled.div`
