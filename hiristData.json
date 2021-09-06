@@ -170,6 +170,18 @@
       "location": "[]",
       "experience": "",
       "id": 28
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[]",
+      "experience": "",
+      "id": 29
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[]",
+      "experience": "",
+      "id": 30
     }
   ],
   "data": [
@@ -684,6 +696,12 @@
       "email": "amit@gmail.com",
       "password": "Amit@121",
       "confirmPassword": "Amit@121"
+    },
+    {
+      "id": "ea3e1cd6-815e-4f7a-84f2-decb9791f9eb",
+      "email": "naren@gmail.com",
+      "password": "Naren@123",
+      "confirmPassword": "Naren@123"
     }
   ],
   "allData": [
