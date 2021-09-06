@@ -561,6 +561,42 @@
       "postedon": "2016",
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "id": 29
+    },
+    {
+      "companyname": "masai school",
+      "location": "dehradun",
+      "minExp": "0",
+      "experiance": "1",
+      "workat": "",
+      "jobs": "Mobile Applications",
+      "openfor": "Software Developer",
+      "minSalary": "5",
+      "maxSalary": "8",
+      "DND": "",
+      "postedon": "",
+      "tag": "",
+      "type": "",
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "": true,
+      "id": 30
+    },
+    {
+      "companyname": "masai school",
+      "location": "dehradun",
+      "minExp": "0",
+      "experiance": "1",
+      "workat": "",
+      "jobs": "Analytics Data Science",
+      "openfor": "Software Developer",
+      "minSalary": "5",
+      "maxSalary": "8",
+      "DND": "",
+      "postedon": "2021",
+      "tag": "",
+      "type": "",
+      "url": "https://staticlogo.hirist.com/5718-100X100.png",
+      "": true,
+      "id": 31
     }
   ],
   "featuredata": [
