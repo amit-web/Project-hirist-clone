@@ -1,9 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-}
-
 body {
   background: #f2f5fa;
 }
@@ -26,8 +20,8 @@ body {
 .dropdown .dropdown-btn {
   padding: 0px 0px 0px 19px;
   background: #fff;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
-  font-weight: 400;
+  box-shadow: 3px 3px 10px 8px rgb(0 0 0 / 6%);
+  font-weight: 600;
   color: #333;
   display: flex;
   align-items: center;
@@ -35,8 +29,8 @@ body {
   justify-content: space-between;
   border-radius: 15px;
   height: 28px;
-  width: 120px;
-  font-size: 12px;
+  width: 9rem;
+  font-size: 14px;
 }
 
 .dropdown .dropdown-content {
@@ -45,12 +39,12 @@ body {
   left: 0%;
   padding: 10px;
   background: #fff;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 3px 3px 10px 6px rgb(0 0 0 / 6%);
   font-weight: 500;
   color: #333;
-  width: 140px;
+  width: 12rem;
   font-size: 15px;
-  height: 183px;
+  height: auto;
   border-radius: 5px;
 }
 .dropdown .dropdown-content .dropdown-item {
@@ -77,8 +71,8 @@ body {
 .dropdowns .dropdowns-btn {
   padding: 0px 0px 0px 19px;
   background: #fff;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
-  font-weight: 400;
+  box-shadow: 3px 3px 10px 8px rgb(0 0 0 / 6%);
+  font-weight: 600;
   color: #333;
   display: flex;
   align-items: center;
@@ -86,8 +80,8 @@ body {
   justify-content: space-between;
   border-radius: 15px;
   height: 28px;
-  width: 120px;
-  font-size: 12px;
+  width: 9rem;
+  font-size: 14px;
 }
 
 .dropdowns .dropdowns-content {
@@ -96,14 +90,15 @@ body {
   left: 0%;
   padding: 10px;
   background: #fff;
-  box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 3px 3px 10px 6px rgb(0 0 0 / 6%);
   font-weight: 500;
   color: #333;
-  width: 140px;
+  width: 12rem;
   font-size: 15px;
-  height: 150px;
+  height: auto;
   border-radius: 5px;
-  overflow: scroll;
+
+  overflow-y: scroll;
 }
 .dropdowns .dropdowns-content .dropdowns-item {
   padding: 10px;
@@ -166,8 +161,9 @@ body {
 }
 
 .filter {
-  font-size: 15px;
+  font-size: 14px;
   position: relative;
   left: 10px;
   top: 19px;
+  font-weight: bold;
 }

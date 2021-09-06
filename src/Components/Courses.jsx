@@ -4,130 +4,14 @@ import styled from "styled-components";
 
 const Courses = () => {
   const [data, setData] = useState([]);
-
-  useEffect(() => {
-    CourcesData();
-  }, []);
-  const RightSide = styled.div`
-    height: auto;
-    width: 320px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 25px;
-    background-color: white;
-    border-radius: 15px;
-    padding: 15px 0px 0px 10px;
-    
-  
-  `;
-
-  const Image = styled.div`
-    height: 55px;
-    width: 60px;
-    border: 0.2px solid grey;
-    border-radius: 10px;
-    background-color: white;
-    margin-top: 0px;
-    
-    img {
-      border-radius: 10px;
-    }
-  `;
-  const Name = styled.div`
-    p {
-      font-size: 13px;
-      margin-top: 0px;
-      overflow: hidden;
-    }
-  `;
-  const Main = styled.div`
-    display: flex;
-    gap: 20px;
-    padding: 10px 20px 10px 10px;
-  `;
-  const GetApp = styled.div`
-    height: 200px;
-    width: 320px;
-    background-color: white;
-    margin-top: 20px;
-    border-radius: 10px;
-    padding: 10px 0px 10px 20px;
-  `;
-  const Icon = styled.div`
-    display: flex;
-    gap: 15px;
-    div {
-      margin-top: 10px;
-    }
-    h6{
-      font-weight: 550px;
-      font-size: 16px;
-
-    }
-    p {
-      font-size: 17px;
-      margin-top: 0px;
-    }
-    img {
-      margin-top: 10px;
-    }
-  `;
-  const Mobile = styled.div`
-    display: flex;
-    margin-top: 20px;
-    margin-left: -10px;
-   
-    button {
-      font-size: 16px;
-      background-color: #e9630c;
-      color: white;
-     
-      border-radius: 5px;
-      height:40px;
-      width:100px;
-      border:none;
-      padding: 5px 5px 7px 5px;
-    }
-  `;
-  const Download = styled.div`
-    p {
-      font-size: 16px;
-      color: grey;
-      margin-top: 10px;
-      margin-bottom: 8px;
-    }
-    div {
-      display: flex;
-    }
-    img {
-      height: 45px;
-    }
-  `;
-  const CountryCode = styled.div`
-
-input {
-     height: 40px;
-      width: 40px;
-      font-size: 16px;
-      color: grey;
-      border: 0.5px solid grey;
-    }
-      
-  `
-  const MobileNumber = styled.div`
-     input{
-      height: 40px;
-      width: 150px;
-      font-size: 16px;
-      color: grey;
-      border: 0.5px solid grey;
-     }
-  `
-
   const CourcesData = async () => {
     let courcedata = await axios.get("http://localhost:8000/courcesdata");
     setData(courcedata.data);
   };
+
+  useEffect(() => {
+    CourcesData();
+  }, []);
 
   return (
     <>
@@ -192,5 +76,122 @@ input {
     </>
   );
 };
+const RightSide = styled.div`
+    height: auto;
+    width: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 0px 0px 10px;
+    
+  
+  `;
+
+const Image = styled.div`
+    height: 55px;
+    width: 60px;
+    border: 0.2px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 0px;
+    
+    img {
+      border-radius: 10px;
+    }
+  `;
+const Name = styled.div`
+    p {
+      font-size: 13px;
+      margin-top: 0px;
+      overflow: hidden;
+    }
+  `;
+const Main = styled.div`
+    display: flex;
+    gap: 20px;
+    padding: 10px 20px 10px 10px;
+  `;
+const GetApp = styled.div`
+    height: 200px;
+    width: 320px;
+    background-color: white;
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 10px 0px 10px 20px;
+  `;
+const Icon = styled.div`
+    display: flex;
+    gap: 15px;
+    div {
+      margin-top: 10px;
+    }
+    h6{
+      font-weight: 550px;
+      font-size: 16px;
+
+    }
+    p {
+      font-size: 17px;
+      margin-top: 0px;
+    }
+    img {
+      margin-top: 10px;
+    }
+  `;
+const Mobile = styled.div`
+    display: flex;
+    margin-top: 20px;
+    margin-left: -10px;
+   
+    button {
+      font-size: 16px;
+      background-color: #e9630c;
+      color: white;
+     
+      border-radius: 5px;
+      height:40px;
+      width:100px;
+      border:none;
+      padding: 5px 5px 7px 5px;
+    }
+  `;
+const Download = styled.div`
+    p {
+      font-size: 16px;
+      color: grey;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+    div {
+      display: flex;
+    }
+    img {
+      height: 45px;
+    }
+  `;
+const CountryCode = styled.div`
+
+input {
+     height: 40px;
+      width: 40px;
+      font-size: 16px;
+      color: grey;
+      border: 0.5px solid grey;
+    }
+      
+  `
+const MobileNumber = styled.div`
+     input{
+      height: 40px;
+      width: 150px;
+      font-size: 16px;
+      color: grey;
+      border: 0.5px solid grey;
+     }
+  `
+
+
 
 export default Courses;

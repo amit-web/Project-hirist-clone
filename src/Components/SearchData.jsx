@@ -6,53 +6,47 @@ import axios from "axios";
 import RightFeeature from "./RightFeeature";
 import Courses from "./Courses";
 import { useHistory } from "react-router-dom";
+import SearchDataImage from "./SearchDataImage";
+import { MobileApp } from "./Data/Photos";
+import { useContext } from "react";
+import { SearchDataContext } from "../Context/searchDataContext";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { getAllJobs } from "../store/actions";
 const SearchData = () => {
   const history = useHistory();
+  const { searchData, handleSearchData } = useContext(SearchDataContext)
+
   const [selected, setSelected] = useState("All jobs");
   const [isActive, setIsActive] = useState(false);
   const [select, setSelect] = useState("Location");
   const [active, setActive] = useState(false);
   const [selection, setSelection] = useState("Experiance");
   const [activate, setActivate] = useState(false);
-  const [jobdata, setJobdata] = useState([]);
   const [research, setResearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [mobileApp, setMobileApp] = useState(false);
+  const [frontend, setFrontend] = useState(false);
+  const [backengJobs, setBackendJobs] = useState(false);
+  const [jobs, setJobs] = useState(false);
+
+  const [companies, setCompanies] = useState(false);
+  const [courses, setCourses] = useState(false)
   // const [empty, setEmpty] = useState("")
+  const { jobsData } = useSelector((state) => state.activities, shallowEqual);
+
+  const dispatch = useDispatch()
   useEffect(() => {
-    axios.get("http://localhost:8000/searchData").then(({ data }) => {
-      const recentSearch = data[data.length - 1];
-      setSelected(recentSearch.jobRole);
-      console.log(recentSearch.location);
-      setSelect("delhi");
-      setSelection(recentSearch.experience);
-      getData();
-    });
-  }, []);
-  // selection!=="posting" :`http://localhost:8000/data?jobs=${selected}&location=${select}&experiance=${}
-  const getData = async () => {
-    const urls =
-      selected !== "All jobs"
-        ? `http://localhost:8000/data?jobs=${selected}&location=${select}&experiance=${selection}`
-        : "http://localhost:8000/data";
+    getData()
 
-    try {
+  }, [searchData]);
 
-      let data = await axios.get(urls);
+  const getData = () => {
+    dispatch(getAllJobs(searchData));
 
-      setJobdata(data.data);
-      console.log(data)
-      if (data.data.length === 0) {
 
-        setIsLoading(false);
-      }
-      else {
-        setIsLoading(true);
-      }
-
-    } catch (error) {
-      console.log(error);
-    }
   };
+
+
 
 
 
@@ -66,149 +60,30 @@ const SearchData = () => {
     "4-6 Years",
     "7-10 Years",
   ];
-  const Navbar = styled.div`
-    display: flex;
-    justify-content: space-evenly;
-    padding: 15px;
-    font-family: "Nunito Sans";
-    font-size: 15px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 530;
-    letter-spacing: normal;
-    line-height: 15.4px;
-    text-decoration: none solid rgb(33, 37, 41);
-    height: 70px;
-    width: 91%;
+  const handleMobapp = () => {
+    handleSearchData("Mobile Applications")
+    getData()
+    setMobileApp(true)
+    setFrontend(false)
+    setBackendJobs(false)
 
-    background-color: #ffffff;
-    color: #212529;
-    cursor: auto;
-    visibility: visible;
-    box-sizing: border-box;
-    resize: none;
-    text-shadow: none;
-    border-bottom: 1px solid grey;
-    margin: auto;
-    button {
-      margin-left: 20px;
-      height: 45px;
-      width: 110px;
-      border-radius: 5px;
-      border: 0.5px solid #e9630c;
-      background-color: white;
-      color: #e9630c;
+  }
+  const handleFrontendJobs = () => {
+    handleSearchData("Frontend Developer")
+    getData()
+    setMobileApp(false)
+    setFrontend(true)
+    setBackendJobs(false)
 
-      font-family: "Nunito Sans";
-      font-size: 15px;
-      font-style: normal;
-      font-variant: normal;
-      font-weight: 500;
-    }
-    button:hover {
-      background-color: #e9630c;
-      color: white;
-    }
-  `;
+  }
+  const handleBackendJobs = () => {
+    handleSearchData("Backend Developer")
+    getData()
+    setMobileApp(false)
+    setFrontend(false)
+    setBackendJobs(true)
 
-  const Search = styled.div`
-    img {
-      margin-top: 5px;
-      margin-left: 100px;
-    }
-  `;
-
-  const Middle = styled.div`
-    display: flex;
-    gap: 15px;
-    height: 35px;
-    width: 91.3%;
-    margin: auto;
-    background-color: white;
-    font-family: "Nunito Sans";
-    font-size: 17px;
-    font-style: normal;
-    font-variant: normal;
-    padding: 8px 0px 0px 20px;
-    margin-left: 65px;
-    color: grey;
-    border: 0px;
-  `;
-
-  const P = styled.div`
-    p {
-      font-weight: 600;
-      font-family: "Nunito Sans";
-    }
-  `;
-
-  // const Bottom = styled.div`
-  //   display: flex;
-  //   gap: 30px;
-  // `;
-  //sdjhfisuedhjiru
-  const Refine = styled.div`
-    button {
-      height: 30px;
-      width: 95px;
-      padding: 0px 10px 0px 10px;
-      border-radius: 15px;
-      font-size: 15px;
-      font-family: "Nunito Sans";
-      background-color: #f2f5fa;
-      color: #e9630c;
-      border: 1px solid #e9630c;
-      position: absolute;
-      left: 55%;
-    }
-    button:hover {
-      background-color: #e9630c;
-      color: white;
-    }
-  `;
-  const Clearall = styled.p`
-    margin-bottom: -20px;
-    font-size: 15px;
-    font-family: "Nunito Sans";
-    color: #e9630c;
-    position: absolute;
-    left: 65%;
-    margin-top: 5px;
-  `;
-  const AgainSearch = styled.div`
-    width: 80%;
-    padding: 40px 0px 0px 30px;
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 35px;
-    margin-top: 10px;
-    font-size: 16px;
-    input {
-      height: 35px;
-      width: 195px;
-      padding: 0px 20px 0px 60px;
-      border-radius: 15px;
-      font-size: 16px;
-      font-family: "Nunito Sans";
-      background-color: white;
-      color: grey;
-      margin-top: -15px;
-      border: 0;
-    }
-
-    img {
-      padding: 0px 10px 0px 0px;
-    }
-    p {
-      margin-top: -20px;
-      margin-left: -220px;
-    }
-  `;
-  const I = styled.div`
-    position: relative;
-    left: 300px;
-    bottom: 0px;
-  `;
+  }
 
   return (
     <div style={{ backgroundColor: "#F2F5FA", height: "auto" }}>
@@ -221,9 +96,9 @@ const SearchData = () => {
             history.push("/");
           }}
         />
-        <p>Mobile Applications</p>
-        <p>Frontend Developer</p>
-        <p>Backend Developer</p>
+        <p onClick={handleMobapp} className={mobileApp ? "par-toggle" : ""}>Mobile Applications</p>
+        <p onClick={handleFrontendJobs} className={frontend ? `${'par-toggle'}` : ""}>Frontend Developer</p>
+        <p onClick={handleBackendJobs} className={backengJobs ? `${'par-toggle'}` : ""}>Backend Developer</p>
         <p>More</p>
         <p>|</p>
         <P>
@@ -245,6 +120,7 @@ const SearchData = () => {
           Login
         </button>
       </Navbar>
+      <SearchDataImage photosData={MobileApp} />
 
       <Middle>
         <p>Jobs</p>
@@ -367,11 +243,17 @@ const SearchData = () => {
           />
         </div>
       </AgainSearch>
-      <div style={{ display: "flex", gap: "10px" }}>
-        <div style={{ height: "auto", width: "70%", marginLeft: "4.5%" }}>
+      <div style={{
+        display: "flex",
+        justifyContent: " space-between",
+
+        width: "91%",
+        margin: "auto"
+      }}>
+        <div style={{ height: "auto", width: "70%" }}>
           <Searching
             selected={selected}
-            jobdata={jobdata}
+            jobdata={jobsData}
             isLoading={isLoading}
           />
         </div>
@@ -381,12 +263,165 @@ const SearchData = () => {
             Featured Employers
           </p>
           <RightFeeature />
-          <p style={{ fontSize: "16px", margin: "10px" }}>Cources</p>
+          <p style={{ fontSize: "16px", margin: "10px" }}>Courses</p>
           <Courses />
         </div>
       </div>
     </div>
   );
 };
+const Navbar = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    font-family: "Nunito Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 530;
+    letter-spacing: normal;
+    line-height: 15.4px;
+    text-decoration: none solid rgb(33, 37, 41);
+    height: 70px;
+    width: 91%;
+    align-items: center;
+    background-color: #ffffff;
+    color: #212529;
+    cursor: auto;
+    visibility: visible;
+    box-sizing: border-box;
+    resize: none;
+    text-shadow: none;
+    border-bottom: 1px solid grey;
+    margin: auto;
+    button {
+  margin-left: 20px;
+    height: 29px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 110px;
+    border-radius: 5px;
+    border: 0.5px solid #e9630c;
+    background-color: white;
+    color: #e9630c;
+    font-family: "Nunito Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    }
+    p:hover{
+      color: rgb(233, 99, 12);
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e9630c;
+      color: white;
+    }
+  `;
+
+const Search = styled.div`
+    img {
+      margin-top: 5px;
+      margin-left: 100px;
+    }
+  `;
+
+const Middle = styled.div`
+    display: flex;
+    gap: 15px;
+    height: 35px;
+    width: 91.3%;
+    margin: auto;
+    background-color: white;
+    font-family: "Nunito Sans";
+    font-size: 17px;
+    font-style: normal;
+    font-variant: normal;
+    padding: 8px 0px 0px 20px;
+    margin-left: 65px;
+    color: grey;
+    border: 0px;
+      p:hover{
+      color: rgb(233, 99, 12);
+      cursor: pointer;
+    }
+  `;
+
+const P = styled.div`
+    p {
+      font-weight: 600;
+      font-family: "Nunito Sans";
+    }
+  `;
+
+// const Bottom = styled.div`
+//   display: flex;
+//   gap: 30px;
+// `;
+//sdjhfisuedhjiru
+const Refine = styled.div`
+    button {
+      height: 30px;
+      width: 95px;
+      padding: 0px 10px 0px 10px;
+      border-radius: 15px;
+      font-size: 15px;
+      font-family: "Nunito Sans";
+      background-color: #f2f5fa;
+      color: #e9630c;
+      border: 1px solid #e9630c;
+      position: absolute;
+      left: 55%;
+    }
+    button:hover {
+      background-color: #e9630c;
+      color: white;
+    }
+  `;
+const Clearall = styled.p`
+    margin-bottom: -20px;
+    font-size: 15px;
+    font-family: "Nunito Sans";
+    color: #e9630c;
+    position: absolute;
+    left: 65%;
+    margin-top: 5px;
+  `;
+const AgainSearch = styled.div`
+    width: 80%;
+    padding: 40px 0px 0px 30px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 16px;
+    input {
+      height: 35px;
+      width: 195px;
+      padding: 0px 20px 0px 60px;
+      border-radius: 15px;
+      font-size: 16px;
+      font-family: "Nunito Sans";
+      background-color: white;
+      color: grey;
+      margin-top: -15px;
+      border: 0;
+    }
+
+    img {
+      padding: 0px 10px 0px 0px;
+    }
+    p {
+      margin-top: -20px;
+      margin-left: -220px;
+    }
+  `;
+const I = styled.div`
+    position: relative;
+    left: 300px;
+    bottom: 0px;
+  `;
 
 export default SearchData;

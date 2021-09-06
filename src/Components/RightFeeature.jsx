@@ -9,17 +9,56 @@ const RightFeeature = () => {
     getfeatureData();
     divercitydata();
   }, []);
-  const RightSide = styled.div`
-    height: 250px;
+
+
+  const getfeatureData = async () => {
+    let feturedData = await axios.get("http://localhost:8000/featuredata");
+    setFeature(feturedData.data);
+  };
+
+  const divercitydata = async () => {
+    let diveredata = await axios.get("http://localhost:8000/employerdata");
+    setDivercity(diveredata.data);
+  };
+  return (
+    <>
+      <RightSide>
+        {feature.map((item) => {
+          return (
+            <div>
+              <img height="50" width="50" src={item.url} alt="" />
+
+            </div>
+          );
+        })}
+      </RightSide>
+      <p style={{ fontSize: "16px" }}>Diversity Conscious Employers</p>
+      <Second>
+        {divercity.map((item) => {
+          return (
+            <div>
+              <img height="50" width="50" src={item.url} alt="" />
+            </div>
+          );
+        })}
+      </Second>
+    </>
+  );
+};
+const RightSide = styled.div`
+height: 200px;
     width: 320px;
+
     display: flex;
+  
     flex-wrap: wrap;
-    gap: 20px;
+    /* gap: 13px; */
+    -webkit-column-gap: 12px;
+    column-gap: 26px;
     background-color: white;
     border-radius: 15px;
     margin-bottom: 30px;
-   
-    padding: 10px 0px 5px 25px;
+    padding: 17px;
     div {
       height: 50px;
       width: 50px;
@@ -33,7 +72,7 @@ const RightFeeature = () => {
       border-radius: 10px;
     }
   `;
-  const Second = styled.div`
+const Second = styled.div`
     height: 140px;
     width: 320px;
     display: flex;
@@ -57,40 +96,4 @@ const RightFeeature = () => {
       border-radius: 10px;
     }
   `;
-
-  const getfeatureData = async () => {
-    let feturedData = await axios.get("http://localhost:8000/featuredata");
-    setFeature(feturedData.data);
-  };
-
-  const divercitydata = async () => {
-    let diveredata = await axios.get("http://localhost:8000/employerdata");
-    setDivercity(diveredata.data);
-  };
-  return (
-    <>
-      <RightSide>
-        {feature.map((item) => {
-          return (
-            <div>
-              <img height="50" width="50" src={item.url} alt="" />
-            
-            </div>
-          );
-        })}
-      </RightSide>
-       <p style={{fontSize:"16px"}}>Diversity Conscious Employers</p>
-      <Second>
-        {divercity.map((item) => {
-          return (
-            <div>
-              <img height="50" width="50" src={item.url} alt="" />
-            </div>
-          );
-        })}
-      </Second>
-    </>
-  );
-};
-
 export default RightFeeature;

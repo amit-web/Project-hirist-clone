@@ -182,6 +182,12 @@
       "location": "[]",
       "experience": "",
       "id": 30
+    },
+    {
+      "jobRole": "data analyst",
+      "location": "[]",
+      "experience": "",
+      "id": 31
     }
   ],
   "data": [
@@ -586,7 +592,7 @@
       "minExp": "0",
       "experiance": "1",
       "workat": "",
-      "jobs": "Analytics Data Science",
+      "jobs": "Mobile Applications",
       "openfor": "Software Developer",
       "minSalary": "5",
       "maxSalary": "8",

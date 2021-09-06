@@ -3,13 +3,14 @@ import { ExampleComponent } from './TextAnimation'
 import { LocationSelect, Form } from './LocationSelect'
 import userLogo from '../logos/icons8-user-24.png'
 import { useHistory } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import Recruter from "./Recruter"
-
+import { SearchDataContext } from '../Context/searchDataContext'
 export function Navbar() {
     const history = useHistory();
+    const { handleLocations, handleExperience, handleSearchData } = useContext(SearchDataContext)
     const [searchtext, setSearchtext] = useState("")
     const [locationarr, setLocationarr] = useState([])
     const [experience, setExperience] = useState("")
@@ -19,14 +20,10 @@ export function Navbar() {
         })
     }
     const handleGo = () => {
-        const payload = {
-            "jobRole": searchtext,
-            "location": locationarr,
-            "experience": experience,
-        }
-        axios.post("http://localhost:8000/searchData", payload).then(() => {
-            getData()
-        })
+        handleSearchData(searchtext)
+        handleLocations(locationarr)
+        handleExperience(experience)
+
         history.push('/SearchData')
     }
 

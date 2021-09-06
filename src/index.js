@@ -4,12 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
-
+import { GlobalStyle } from '../src/Styles/Globalstyle'
+import { Provider } from "react-redux";
+import { store } from '../src/store/store'
+import { SearchDataProvider } from '../src/Context/searchDataContext'
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <SearchDataProvider>
+        <BrowserRouter>
+          <GlobalStyle />
+          <App />
+
+        </BrowserRouter>
+      </SearchDataProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
