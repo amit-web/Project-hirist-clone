@@ -7,5 +7,29 @@ export const GlobalStyle = createGlobalStyle`
          font-weight: bold;
  
 }
+.simple-card-mobApp,.simple-card-frontend,.simple-card-backend{
+     position: absolute;
+    width: 350px;
+    height: 177px;
+    box-shadow: 11px 2px 12px black;
+    z-index: 1000;
+}
+.simple-card-mobApp{
 
+    left: 8rem;
+    top: 4rem;
+
+}
+.simple-card-frontend{
+        left: 18rem;
+    top: 4rem;
+
+}
+.simple-card-backend{
+     left: 28rem;
+    top: 4rem;
+}
+.cardDisplayNone{
+        display: none !important;
+}
 `
