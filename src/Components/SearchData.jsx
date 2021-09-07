@@ -153,6 +153,7 @@ const SearchData = () => {
                 <div
                   onClick={(e) => {
                     setSelected(option);
+
                     setIsActive(false);
                   }}
                   className="dropdown-item"
@@ -222,7 +223,9 @@ const SearchData = () => {
         </div>
 
         <Refine>
-          <button onClick={getData}>Refine</button>
+          <button onClick={() => {
+            handleSearchData(selected)
+          }}>Refine</button>
         </Refine>
 
         <Clearall>
