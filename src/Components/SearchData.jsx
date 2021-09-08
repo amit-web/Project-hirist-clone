@@ -108,7 +108,7 @@ const SearchData = () => {
     setAllCards(true)
     setShowBackend(true)
     setShowFrontend(false)
-    setShowFrontend(false)
+    setShowMobApp(false)
 
   }
   const handleAllHover = () => {
@@ -368,6 +368,10 @@ const Navbar = styled.div`
     font-variant: normal;
     font-weight: 500;
     }
+    p{
+      color: rgb(0,0,0);
+      font-weight: bold;
+    }
     p:hover{
       color: rgb(233, 99, 12);
       cursor: pointer;
@@ -387,19 +391,24 @@ const Search = styled.div`
 
 const Middle = styled.div`
     display: flex;
-    gap: 15px;
+    gap: 39px;
     height: 35px;
+    font-weight: bold;
     width: 91.3%;
     margin: auto;
     background-color: white;
     font-family: "Nunito Sans";
-    font-size: 17px;
+    font-size: 15px;
     font-style: normal;
     font-variant: normal;
-    padding: 8px 0px 0px 20px;
+    padding: 8px 0px 0px 49px;
     margin-left: 65px;
     color: grey;
     border: 0px;
+    p:nth-child(1){
+      color: rgb(233, 99, 12);
+    }
+
       p:hover{
       color: rgb(233, 99, 12);
       cursor: pointer;

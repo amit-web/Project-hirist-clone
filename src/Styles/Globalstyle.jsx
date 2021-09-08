@@ -9,10 +9,22 @@ export const GlobalStyle = createGlobalStyle`
 }
 .simple-card-mobApp,.simple-card-frontend,.simple-card-backend{
      position: absolute;
-    width: 350px;
-    height: 177px;
+    width: 400px;
+    height: 200px;
     box-shadow: 11px 2px 12px black;
     z-index: 1000;
+     
+            animation: fadeInAnimation ease 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+          @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
 }
 .simple-card-mobApp{
 

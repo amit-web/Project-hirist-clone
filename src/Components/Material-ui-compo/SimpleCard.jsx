@@ -72,10 +72,11 @@ grid-gap: 2rem;
 .rightContent,.leftContent{
     display: flex;
     flex-direction: column;
-    row-gap:1rem;
+    row-gap:2rem;
     &>div{
         height: 2rem;
         background-color:rgb(242,245,250);
+        padding: 0.5rem;
         :hover {
             background-color:#fff;
             cursor: pointer;
