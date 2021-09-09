@@ -281,7 +281,7 @@ const SearchData = () => {
       <AgainSearch onMouseEnter={() => {
         setAllCards(false)
       }}>
-        <p>Search for - {selected}</p>
+        <p>Search for - {searchData}</p>
         <I>
           <i class="fas fa-search"></i>
         </I>

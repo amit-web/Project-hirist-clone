@@ -59,6 +59,7 @@ height: 200px;
     border-radius: 15px;
     margin-bottom: 30px;
     padding: 17px;
+    row-gap: 13px;
     div {
       height: 50px;
       width: 50px;
