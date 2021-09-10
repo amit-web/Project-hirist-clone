@@ -130,12 +130,13 @@ export const NavbarWrapper = styled.div`
 
     }
     & > div:nth-child(1) {
-        display: flex;
+           display: flex;
     width: 70%;
     margin: auto;
     text-align: center;
     font-size: 35px;
-    margin-left: 22rem;
+    position: relative;
+    left: 9.3rem;
     }
     & > div:nth-child(1) > span {
       margin-left: -2rem;

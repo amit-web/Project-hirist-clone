@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-//import axios from "axios"
+
 import DisplayJobs from "./DisplayJobs";
 import styled from "styled-components";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useSelector } from "react-redux";
 const Searching = ({ isLoading }) => {
   const { jobsData } = useSelector((state) => state.activities, shallowEqual);
 

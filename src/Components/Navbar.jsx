@@ -1,27 +1,31 @@
 import { NavbarWrapper } from './NavbarCss'
-import { ExampleComponent } from './TextAnimation'
+
 import { LocationSelect, Form } from './LocationSelect'
 import userLogo from '../logos/icons8-user-24.png'
 import { useHistory } from 'react-router-dom'
-import { useState, useContext } from 'react'
-import { Switch, Route, Link } from 'react-router-dom'
-import axios from 'axios'
-import Recruter from "./Recruter"
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
-import { getAllJobs, getDebouncing } from "../store/actions";
+import { useState, useContext, useEffect } from 'react'
+import { useDispatch } from "react-redux";
+import { getDebouncing } from "../store/actions";
 import { SearchDataContext } from '../Context/searchDataContext'
+import DebouncingCard from './Material-ui-compo/DebouncingCard'
+
+// import Typewriter from 'react-type-carousel'
 export function Navbar() {
     const dispatch = useDispatch()
     const history = useHistory();
-    const { handleLocations, handleExperience, handleSearchData, debouncing, handleDebouncing } = useContext(SearchDataContext)
+    const { handleLocations, handleExperience, handleSearchData, handleDebouncing } = useContext(SearchDataContext)
     const [searchtext, setSearchtext] = useState("")
     const [locationarr, setLocationarr] = useState([])
     const [experience, setExperience] = useState("")
-    const getData = () => {
-        axios.get("http://localhost:8000/searchData").then(({ data }) => {
-            console.log(data)
-        })
-    }
+    const [bouncing, setBouncing] = useState(false)
+    // const getData = () => {
+    //     axios.get("http://localhost:8000/searchData").then(({ data }) => {
+    //         console.log(data)
+    //     })
+    // }
+    useEffect(() => {
+        console.log(searchtext)
+    }, [searchtext, handleDebouncing])
     const handleGo = () => {
         if (searchtext.length === 0) {
             alert("please fill all require details")
@@ -36,7 +40,7 @@ export function Navbar() {
     }
 
 
-    return <NavbarWrapper>
+    return <><NavbarWrapper>
         <div className="navbarTop">
             <div className="navbarTop-hirist-logo">
                 <img src="https://job-static.hirist.com/V2/static/media/hirist_logo.03e14260.svg" alt="hiristLogo" />
@@ -62,21 +66,24 @@ export function Navbar() {
         <div className="navbarBottom">
 
             <div>
-                <span>Inspiring&nbsp;</span><div><span><ExampleComponent className="Typinganimation" /> </span>Jobs for the future!</div>
+                <span>Inspiring&nbsp;</span><div><span>
+                    <span>
+                        Golan Developer</span>&nbsp;
+                </span>Jobs for the future!</div>
             </div>
             <div className="navbarBottom-search-section">
                 <div className="search-jobs">
                     <img src="https://www.searchpng.com/wp-content/uploads/2019/03/Search-ico-715x715.png" alt="search-logo" />
-                    <input type="text" placeholder="Search Jobs" onChange={(e) => {
+                    <input value={searchtext} type="text" placeholder="Search Jobs" onChange={(e) => {
                         setSearchtext(e.target.value)
-                        if (e.target.value.length > 0) {
+                        setBouncing(false)
 
-                            handleDebouncing(searchtext)
+                        // handleDebouncing(searchtext)
 
-                            dispatch(getDebouncing(debouncing))
+                        dispatch(getDebouncing(searchtext))
 
 
-                        }
+
 
                     }} />
                 </div>
@@ -106,4 +113,8 @@ export function Navbar() {
 
         </div>
     </NavbarWrapper>
+        <div style={searchtext.length > 1 && !bouncing ? { display: "block" } : { display: "none" }}>
+            <DebouncingCard setBouncing={setBouncing} setSearchtext={setSearchtext} />
+        </div>
+    </>
 }
