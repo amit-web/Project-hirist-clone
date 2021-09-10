@@ -121,8 +121,13 @@ export const NavbarWrapper = styled.div`
   .navbarBottom {
     display: grid;
     .navbarBottom-search-section {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 57px;
+
     }
     & > div:nth-child(1) {
         display: flex;
@@ -144,8 +149,8 @@ export const NavbarWrapper = styled.div`
       color: rgb(233, 99, 12);
     }
     .search-jobs {
-         width: 20rem;
-    height: 57px;
+       width: 20rem;
+    height: 100%;
     border: 1px solid rgb(229,229,228);
     text-align: start;
     padding: 4px 6px;
@@ -172,24 +177,29 @@ export const NavbarWrapper = styled.div`
       }
     }
     .location-select {
-      width: 12rem;
-      background-color: white;
-      height: 50px;
+        width: 12rem;
+    background-color: white;
+    height: 100%;
+
 
       .rmsc {
         --rmsc-main: none;
         text-align: start;
         --rmsc-h: 45px;
         .dropdown-heading {
-          position: relative;
-          padding: 0 var(--rmsc-p);
-          display: grid;
-          grid-template-columns: 3fr 1fr 1fr;
-          align-items: center;
-          width: 100%;
-          height: var(--rmsc-h);
-          cursor: default;
-          outline: 0;
+             position: relative;
+    padding: 0 var(--rmsc-p);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: var(--rmsc-h);
+    cursor: default;
+    top: 4px;
+    outline: 0;
         }
         .clear-selected-button {
           cursor: pointer;
@@ -255,18 +265,19 @@ export const NavbarWrapper = styled.div`
       }
       .rrs__label {
         /* padding: 0 2rem 0 1rem; */
-        display: inline-flex;
-        height: 100%;
-        width: 100%;
-        max-width: 100%;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        font-size: inherit;
-        /* background: transparent; */
-        /* border-radius: 4px; */
-        border: none;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+       display: inline-flex;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: inherit;
+    border: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    top: 3px;
+    color: rgb(170,170,170);
       }
       .rrs__option {
         cursor: pointer;
@@ -310,16 +321,18 @@ export const NavbarWrapper = styled.div`
         border: 1px solid none;
       }
       button {
-          border: none;
+       border: none;
+    text-align: center;
     position: relative;
-    top: 6px;
+    top: 4px;
     right: 27px;
-    width: 51px;
+    width: 50px;
+    padding-right: 1px;
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 7px;
-    height: 44px;
+    border-radius: 5px;
+    height: 47px;
     background-color: rgb(233,99,12);
       }
     }

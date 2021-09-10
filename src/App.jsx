@@ -31,7 +31,7 @@ function App() {
           <Route exact path="/LoginForm" component={LoginForm} />
           <Route exact path="/Company" component={Company} />
         </Switch>
-        
+
         {/* <Company/> */}
 
       </div>

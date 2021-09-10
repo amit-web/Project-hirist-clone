@@ -12,6 +12,8 @@ import { useContext } from "react";
 import { SearchDataContext } from "../Context/searchDataContext";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getAllJobs } from "../store/actions";
+import { mobileAppCat, frontendCat, backendCat } from '../Components/Data/jobsCatArr'
+import SimpleCard from "./Material-ui-compo/SimpleCard";
 const SearchData = () => {
   const history = useHistory();
   const { searchData, handleSearchData } = useContext(SearchDataContext)
@@ -28,10 +30,14 @@ const SearchData = () => {
   const [frontend, setFrontend] = useState(false);
   const [backengJobs, setBackendJobs] = useState(false);
   const [jobs, setJobs] = useState(false);
-
+  const [allCards, setAllCards] = useState(false);
   const [companies, setCompanies] = useState(false);
   const [courses, setCourses] = useState(false)
   // const [empty, setEmpty] = useState("")
+
+  const [showMobApp, setShowMobApp] = useState(false);
+  const [showFrontend, setShowFrontend] = useState(false);
+  const [showBackend, setShowBackend] = useState(false);
   const { jobsData } = useSelector((state) => state.activities, shallowEqual);
 
   const dispatch = useDispatch()
@@ -84,6 +90,30 @@ const SearchData = () => {
     setBackendJobs(true)
 
   }
+  const handleMobappHover = () => {
+    setAllCards(true)
+    setShowMobApp(true)
+    setShowFrontend(false)
+    setShowBackend(false)
+
+  }
+  const handleFrontendHover = () => {
+    setAllCards(true)
+    setShowFrontend(true)
+    setShowBackend(false)
+    setShowMobApp(false)
+
+  }
+  const handleBackendHover = () => {
+    setAllCards(true)
+    setShowBackend(true)
+    setShowFrontend(false)
+    setShowMobApp(false)
+
+  }
+  const handleAllHover = () => {
+    setAllCards(false)
+  }
 
   return (
     <div style={{ backgroundColor: "#F2F5FA", height: "auto" }}>
@@ -96,9 +126,9 @@ const SearchData = () => {
             history.push("/");
           }}
         />
-        <p onClick={handleMobapp} className={mobileApp ? "par-toggle" : ""}>Mobile Applications</p>
-        <p onClick={handleFrontendJobs} className={frontend ? `${'par-toggle'}` : ""}>Frontend Developer</p>
-        <p onClick={handleBackendJobs} className={backengJobs ? `${'par-toggle'}` : ""}>Backend Developer</p>
+        <p onClick={handleMobapp} onMouseEnter={handleMobappHover} className={mobileApp ? "par-toggle" : ""}>Mobile Applications</p>
+        <p onClick={handleFrontendJobs} onMouseEnter={handleFrontendHover} className={frontend ? `${'par-toggle'}` : ""}>Frontend Developer</p>
+        <p onClick={handleBackendJobs} onMouseEnter={handleBackendHover} className={backengJobs ? `${'par-toggle'}` : ""}>Backend Developer</p>
         <p>More</p>
         <p>|</p>
         <P>
@@ -120,9 +150,18 @@ const SearchData = () => {
           Login
         </button>
       </Navbar>
-      <SearchDataImage photosData={MobileApp} />
+      <div style={!allCards ? { display: 'none' } : { display: "block", }} >
+        {showMobApp && <div className="simple-card-mobApp">  <SimpleCard jobsCatArr={mobileAppCat} /> </div>}
+        {showFrontend && <div className="simple-card-frontend"><SimpleCard jobsCatArr={frontendCat} /></div>}
+        {showBackend && <div className="simple-card-backend" ><SimpleCard jobsCatArr={backendCat} /></div>}
+      </div>
+      <SearchDataImage onMouseEnter={() => {
+        setAllCards(false)
+      }} photosData={MobileApp} />
 
-      <Middle>
+      <Middle onMouseEnter={() => {
+        setAllCards(false)
+      }}>
         <p>Jobs</p>
         <p>Companies</p>
         <p>Courses</p>
@@ -137,7 +176,9 @@ const SearchData = () => {
         }}
       >
         <p className="filter">Filter By:</p>
-        <div className="dropdown">
+        <div onMouseEnter={() => {
+          setAllCards(false)
+        }} className="dropdown">
           <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>
             {selected}
             <img
@@ -153,6 +194,7 @@ const SearchData = () => {
                 <div
                   onClick={(e) => {
                     setSelected(option);
+
                     setIsActive(false);
                   }}
                   className="dropdown-item"
@@ -222,7 +264,13 @@ const SearchData = () => {
         </div>
 
         <Refine>
-          <button onClick={getData}>Refine</button>
+          <button onClick={() => {
+            if (selected === "All jobs") {
+              handleSearchData("")
+            } else {
+              handleSearchData(selected)
+            }
+          }}>Refine</button>
         </Refine>
 
         <Clearall>
@@ -230,8 +278,10 @@ const SearchData = () => {
         </Clearall>
       </div>
 
-      <AgainSearch>
-        <p>Search for - {selected}</p>
+      <AgainSearch onMouseEnter={() => {
+        setAllCards(false)
+      }}>
+        <p>Search for - {searchData}</p>
         <I>
           <i class="fas fa-search"></i>
         </I>
@@ -252,6 +302,9 @@ const SearchData = () => {
       }}>
         <div style={{ height: "auto", width: "70%" }}>
           <Searching
+            onMouseEnter={() => {
+              setAllCards(false)
+            }}
             selected={selected}
             jobdata={jobsData}
             isLoading={isLoading}
@@ -262,9 +315,13 @@ const SearchData = () => {
           <p style={{ fontSize: "16px", marginBottom: "10px" }}>
             Featured Employers
           </p>
-          <RightFeeature />
+          <RightFeeature onMouseEnter={() => {
+            setAllCards(false)
+          }} />
           <p style={{ fontSize: "16px", margin: "10px" }}>Courses</p>
-          <Courses />
+          <Courses onMouseEnter={() => {
+            setAllCards(false)
+          }} />
         </div>
       </div>
     </div>
@@ -311,6 +368,10 @@ const Navbar = styled.div`
     font-variant: normal;
     font-weight: 500;
     }
+    p{
+      color: rgb(0,0,0);
+      font-weight: bold;
+    }
     p:hover{
       color: rgb(233, 99, 12);
       cursor: pointer;
@@ -330,19 +391,24 @@ const Search = styled.div`
 
 const Middle = styled.div`
     display: flex;
-    gap: 15px;
+    gap: 39px;
     height: 35px;
+    font-weight: bold;
     width: 91.3%;
     margin: auto;
     background-color: white;
     font-family: "Nunito Sans";
-    font-size: 17px;
+    font-size: 15px;
     font-style: normal;
     font-variant: normal;
-    padding: 8px 0px 0px 20px;
+    padding: 8px 0px 0px 49px;
     margin-left: 65px;
     color: grey;
     border: 0px;
+    p:nth-child(1){
+      color: rgb(233, 99, 12);
+    }
+
       p:hover{
       color: rgb(233, 99, 12);
       cursor: pointer;

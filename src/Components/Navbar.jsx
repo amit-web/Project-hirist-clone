@@ -7,10 +7,13 @@ import { useState, useContext } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import Recruter from "./Recruter"
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { getAllJobs, getDebouncing } from "../store/actions";
 import { SearchDataContext } from '../Context/searchDataContext'
 export function Navbar() {
+    const dispatch = useDispatch()
     const history = useHistory();
-    const { handleLocations, handleExperience, handleSearchData } = useContext(SearchDataContext)
+    const { handleLocations, handleExperience, handleSearchData, debouncing, handleDebouncing } = useContext(SearchDataContext)
     const [searchtext, setSearchtext] = useState("")
     const [locationarr, setLocationarr] = useState([])
     const [experience, setExperience] = useState("")
@@ -20,11 +23,16 @@ export function Navbar() {
         })
     }
     const handleGo = () => {
-        handleSearchData(searchtext)
-        handleLocations(locationarr)
-        handleExperience(experience)
+        if (searchtext.length === 0) {
+            alert("please fill all require details")
+        } else {
+            handleSearchData(searchtext)
+            handleLocations(locationarr)
+            handleExperience(experience)
 
-        history.push('/SearchData')
+            history.push('/SearchData')
+        }
+
     }
 
 
@@ -61,6 +69,15 @@ export function Navbar() {
                     <img src="https://www.searchpng.com/wp-content/uploads/2019/03/Search-ico-715x715.png" alt="search-logo" />
                     <input type="text" placeholder="Search Jobs" onChange={(e) => {
                         setSearchtext(e.target.value)
+                        if (e.target.value.length > 0) {
+
+                            handleDebouncing(searchtext)
+
+                            dispatch(getDebouncing(debouncing))
+
+
+                        }
+
                     }} />
                 </div>
                 <div className="location-select">

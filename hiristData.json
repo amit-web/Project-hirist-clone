@@ -2,10 +2,7 @@
   "searchData": [
     {
       "jobRole": "Data Anaylst",
-      "location": [
-        "Mumbai",
-        "Delhi"
-      ],
+      "location": ["Mumbai", "Delhi"],
       "experience": "1-3 yrs",
       "id": 1
     },
@@ -190,6 +187,74 @@
       "id": 31
     }
   ],
+  "jobsData": [
+    {
+      "jobs": "data analyst"
+    },
+    {
+      "jobs": "android developer"
+    },
+    {
+      "jobs": "reactJs developer"
+    },
+    {
+      "jobs": "ios developer"
+    },
+    {
+      "jobs": "openGl developer"
+    },
+    {
+      "jobs": "javascript"
+    },
+    {
+      "jobs": "ui"
+    },
+    {
+      "jobs": "redux"
+    },
+    {
+      "jobs": "ruby on trail"
+    },
+    {
+      "jobs": "R"
+    },
+    {
+      "jobs": "phoneGap"
+    },
+    {
+      "jobs": "ionic"
+    },
+    {
+      "jobs": "AngularJs"
+    },
+    {
+      "jobs": "BootStrap"
+    },
+    {
+      "jobs": "React Native"
+    },
+    {
+      "jobs": "Python"
+    },
+    {
+      "jobs": "Golang"
+    },
+    {
+      "jobs": "Java"
+    },
+    {
+      "jobs": "Mobile Application"
+    },
+    {
+      "jobs": "Frontend Developer"
+    },
+    {
+      "jobs": "Backend Developer"
+    },
+    {
+      "jobs": "Devops"
+    }
+  ],
   "data": [
     {
       "url": "https://staticlogo.hirist.com/3173-100X100.png",
@@ -204,7 +269,7 @@
     },
     {
       "url": "https://staticlogo.hirist.com/3173-100X100.png",
-      "workat": "Greenlight Planet - Data Analyst - Tableau/Qlikview",
+      "workat": "Greenlight Planet - ReactJs Developer- Tableau/Qlikview",
       "companyname": "Greenlight Planet India Pvt Ltd",
       "jobs": "ReactJs Developer",
       "location": "delhi",
@@ -270,7 +335,7 @@
     },
     {
       "url": "https://staticlogo.hirist.com/1948-100X100.png",
-      "workat": "Senior Business Analyst - Data Analytics/SQL",
+      "workat": "Senior Business Analyst - ReactJs Developer/SQL",
       "companyname": "Work Eagle",
       "jobs": "ReactJs Developer",
       "location": "banglore",
@@ -347,7 +412,7 @@
     },
     {
       "url": "https://staticlogo.hirist.com/3995-100X100.png",
-      "workat": "Wobot.ai - Data Engineer - Computer Vision/Data Visualization",
+      "workat": "Botera - ReactJs Developer-full stack",
       "companyname": "Wobot.ai",
       "jobs": "ReactJs Developer",
       "location": "pune",
@@ -391,7 +456,7 @@
     },
     {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat": "Wobot.ai - Data Engineer - Computer Vision/Data Visualization",
+      "workat": "Wobot.ai - ReactJs Developer",
       "company-name": "Octro Inc",
       "jobs": "ReactJs Developer",
       "location": "mumbai",
@@ -615,12 +680,12 @@
       "openfor": "Multiple Locations",
       "id": 32
     },
-  
-     {
+
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "workat": "DROR Labs - React Native Developer - Android/iOS Platform ",
-      "type":"mobile",
-      "job-type":"React native",
+      "type": "mobile",
+      "job-type": "React native",
       "companyname": "DROR Labs Pvt",
       "jobs": "React Native Developer",
       "location": "Gurgaon/Gurugram",
@@ -629,11 +694,11 @@
       "openfor": "Multiple Locations",
       "id": 33
     },
-     {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "workat": "DROR Labs - React Native Developer - Android/iOS Platform ",
-      "type":"mobile",
-      "job-type":"React native",
+      "type": "mobile",
+      "job-type": "React native",
       "companyname": "DROR Labs Pvt",
       "jobs": "React Native Developer",
       "location": "Pune",
@@ -642,11 +707,11 @@
       "openfor": "Multiple Locations",
       "id": 34
     },
-     {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "workat": "IntelliVision - React.js Developer - Web & Mobile Apps - Redux/Javascript",
-      "type":"mobile",
-      "job-type":"React native",
+      "type": "mobile",
+      "job-type": "React native",
       "companyname": "DROR Labs Pvt",
       "jobs": "React Native Developer",
       "location": "Bangalore",
@@ -655,11 +720,11 @@
       "openfor": "Multiple Locations",
       "id": 35
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "workat": "DROR Labs - React Native Developer - Android/iOS Platform",
-      "type":"mobile",
-      "job-type":"iOS",
+      "type": "mobile",
+      "job-type": "iOS",
       "companyname": "DROR Labs Pvt",
       "jobs": "iOS Developer",
       "location": "Bangalore",
@@ -668,11 +733,11 @@
       "openfor": "Multiple Locations",
       "id": 36
     },
-     {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "workat": "iOS Developer - SWIFT/Objective C",
-      "type":"mobile",
-      "job-type":"iOS",
+      "type": "mobile",
+      "job-type": "iOS",
       "companyname": "DROR Labs Pvt",
       "jobs": "iOS Developer",
       "location": "Anywhere in India/Multiple Locations",
@@ -684,8 +749,8 @@
     {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "workat": "Enpass Technologies - iOS Developer - Cocoa Touch/MVC ",
-      "type":"mobile",
-      "job-type":"iOS",
+      "type": "mobile",
+      "job-type": "iOS",
       "companyname": "Enpass Technologies Private Limited",
       "jobs": "iOS Developer",
       "location": "Anywhere in India/Multiple Locations",
@@ -694,11 +759,11 @@
       "openfor": "Multiple Locations",
       "id": 38
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
       "workat": "Imarticus Learning - iOS Developer - Objective C/SWIFT",
-      "type":"mobile",
-      "job-type":"iOS",
+      "type": "mobile",
+      "job-type": "iOS",
       "companyname": "Imarticus learning pvt ltd",
       "jobs": "iOS Developer",
       "location": "Anywhere in India/Multiple Locations",
@@ -707,11 +772,11 @@
       "openfor": "Multiple Locations",
       "id": 39
     },
-     {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Senior Software Engineer - Android & iOS Application Development - Kotlin/SWIFT",
-      "type":"mobile",
-      "job-type":"React native",
+      "workat": "Senior Software Engineer - Android & iOS Application Development - Kotlin/SWIFT",
+      "type": "mobile",
+      "job-type": "React native",
       "companyname": "JA Solutions India Private Limited",
       "jobs": "React Native Developer",
       "location": "Delhi NCR",
@@ -720,11 +785,11 @@
       "openfor": "Multiple Locations",
       "id": 40
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"DROR Labs - React Native Developer - Android/iOS Platform",
-      "type":"mobile",
-      "job-type":"Android",
+      "workat": "DROR Labs - React Native Developer - Android/iOS Platform",
+      "type": "mobile",
+      "job-type": "Android",
       "companyname": "JA Solutions India Private Limited",
       "jobs": "Android Developer",
       "location": "Gurgaon/Gurugram",
@@ -733,11 +798,11 @@
       "openfor": "Multiple Locations",
       "id": 41
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Mobile Application Developer - Native/Hybrid Apps",
-      "type":"mobile",
-      "job-type":"Android",
+      "workat": "Mobile Application Developer - Native/Hybrid Apps",
+      "type": "mobile",
+      "job-type": "Android",
       "companyname": "SYNC-STREAM SOLUTIONS INTERNATIONAL LLP",
       "jobs": "Android Developer",
       "location": "Delhi NCR",
@@ -746,11 +811,11 @@
       "openfor": "Multiple Locations",
       "id": 42
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"athi Technologies - Android Developer - Mobile App Designing",
-      "type":"mobile",
-      "job-type":"Android",
+      "workat": "athi Technologies - Android Developer - Mobile App Designing",
+      "type": "mobile",
+      "job-type": "Android",
       "companyname": "Brihaspathi Technologies Private Limited",
       "jobs": "Android Developer",
       "location": "Hyderabad",
@@ -759,11 +824,11 @@
       "openfor": "Multiple Locations",
       "id": 43
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Junior Android Developer - MVC/Kotlin/Design Patterns",
-      "type":"mobile",
-      "job-type":"Android",
+      "workat": "Junior Android Developer - MVC/Kotlin/Design Patterns",
+      "type": "mobile",
+      "job-type": "Android",
       "companyname": "JA Solutions India Private Limited",
       "jobs": "Android Developer",
       "location": "Bangalore",
@@ -772,11 +837,11 @@
       "openfor": "Multiple Locations",
       "id": 44
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Android Developer - Java/Kotlin",
-      "type":"mobile",
-      "job-type":"Android",
+      "workat": "Android Developer - Java/Kotlin",
+      "type": "mobile",
+      "job-type": "Android",
       "companyname": "JA Solutions India Private Limited",
       "jobs": "Android Developer",
       "location": "Delhi NCR",
@@ -785,11 +850,11 @@
       "openfor": "Multiple Locations",
       "id": 45
     },
-     {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Graphics Programmer - C++14",
-      "type":"mobile",
-      "job-type":"OpenGL",
+      "workat": "Graphics Programmer - C++14",
+      "type": "mobile",
+      "job-type": "OpenGL",
       "companyname": "JA Solutions India Private Limited",
       "jobs": "OpenGL",
       "location": "Bangalore",
@@ -798,11 +863,11 @@
       "openfor": "Multiple Locations",
       "id": 45
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Pattem Digital - Game Developer/Senior Developer - C/C++ Programming",
-      "type":"mobile",
-      "job-type":"OpenGL",
+      "workat": "Pattem Digital - Game Developer/Senior Developer - C/C++ Programming",
+      "type": "mobile",
+      "job-type": "OpenGL",
       "companyname": "JA Solutions India Private Limited",
       "jobs": "OpenGL",
       "location": "Bangalore",
@@ -811,11 +876,11 @@
       "openfor": "Multiple Locations",
       "id": 46
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"GPU Programming Professional - CUDA/jCUDA - Java/Image Processing",
-      "type":"mobile",
-      "job-type":"OpenGL",
+      "workat": "GPU Programming Professional - CUDA/jCUDA - Java/Image Processing",
+      "type": "mobile",
+      "job-type": "OpenGL",
       "companyname": "JA Solutions India Private Limited",
       "jobs": "OpenGL",
       "location": "Mumbai",
@@ -824,11 +889,11 @@
       "openfor": "Multiple Locations",
       "id": 47
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Architect - C++/Image Processing",
-      "type":"mobile",
-      "job-type":"OpenGL",
+      "workat": "Architect - C++/Image Processing",
+      "type": "mobile",
+      "job-type": "OpenGL",
       "companyname": "Career Makers",
       "jobs": "OpenGL",
       "location": "Delhi NCR",
@@ -837,11 +902,11 @@
       "openfor": "Multiple Locations",
       "id": 48
     },
-      {
+    {
       "url": "https://staticlogo.hirist.com/5718-100X100.png",
-      "workat":"Robosoft Technologies - Android Developer - Native Development Kit",
-      "type":"mobile",
-      "job-type":"OpenGL",
+      "workat": "Robosoft Technologies - Android Developer - Native Development Kit",
+      "type": "mobile",
+      "job-type": "OpenGL",
       "companyname": "Robosoft Technologies",
       "jobs": "OpenGL",
       "location": "Bangalore",
