@@ -5,13 +5,13 @@ import { DownloadApp } from './DownloadApp/DownloadApp';
 import { Opportunity } from './Opportunity/Opportunity'
 import { Implinks } from './Implinks/Implinks';
 
-import DebouncingCard from "./Material-ui-compo/DbouncingCard";
+// import DebouncingCard from "./Material-ui-compo/DebouncingCard";
 export function Homepage() {
     return (
         <>
             <div style={{ width: '95.4vw', padding: '0 2rem', textAlign: 'center' }}>
                 <Navbar />
-                <DebouncingCard />
+                {/* <DebouncingCard /> */}
                 <Category />
                 <PremiumJobs />
                 <DownloadApp />

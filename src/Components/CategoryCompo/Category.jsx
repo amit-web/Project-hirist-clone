@@ -5,10 +5,13 @@ import emergingIcon from "../../logos/search.png";
 import datascienceIcon from "../../logos/data.png";
 import devopsIcon from "../../logos/eternity.png";
 import { CategoryCss } from "../CategoryCompo/CategoryCss";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Backend, SubCatComp } from "./Backend";
-
+import { SearchDataContext } from "../../Context/searchDataContext";
+import { useHistory } from 'react-router-dom'
 export function Category() {
+    const history = useHistory();
+    const { handleSearchData } = useContext(SearchDataContext)
     const [frontend, setFrontend] = useState(false);
     const [backend, setBackend] = useState(false);
     const [mobapp, setMobapp] = useState(true);
@@ -288,42 +291,60 @@ export function Category() {
     return (
         <CategoryCss>
             <div className="category">
-                <span className="category-child" onMouseOver={handleMobapp}>
+                <span className="category-child" onClick={(e) => {
+                    handleSearchData("Mobile Applications")
+                    history.push('/SearchData')
+                }} onMouseOver={handleMobapp}>
                     <div>
                         <img src={mobAppIcon} alt="" />
                     </div>
                     <span>Mobile Applications</span>
                     <span></span>
                 </span>
-                <span className="category-child" onMouseOver={handleFrontend}>
+                <span className="category-child" onClick={(e) => {
+                    handleSearchData("Frontend Developer")
+                    history.push('/SearchData')
+                }} onMouseOver={handleFrontend}>
                     <div>
                         <img src={frontendIcon} alt="" />
                     </div>
                     <span>Frontend Developer</span>
                     <span></span>
                 </span>
-                <span className="category-child" onMouseOver={handleBackend}>
+                <span onClick={(e) => {
+                    handleSearchData("Backend Developer")
+                    history.push('/SearchData')
+                }} className="category-child" onMouseOver={handleBackend}>
                     <div>
                         <img src={backendIcon} alt="" />
                     </div>
                     <span>Backend Developer</span>
                     <span></span>
                 </span>
-                <span className="category-child" onMouseOver={handleDevops}>
+                <span onClick={(e) => {
+                    handleSearchData("DevOps")
+                    history.push('/SearchData')
+                }} className="category-child" onMouseOver={handleDevops}>
                     <div>
                         <img src={devopsIcon} alt="" />
                     </div>
                     <span>DevOps</span>
                     <span></span>
                 </span>
-                <span className="category-child" onMouseOver={handleEmerging}>
+                <span onClick={(e) => {
+                    handleSearchData("Emerging Technologies & Roles")
+                    history.push('/SearchData')
+                }} className="category-child" onMouseOver={handleEmerging}>
                     <div>
                         <img src={emergingIcon} alt="" />
                     </div>
                     <span>Emerging Technologies & Roles</span>
                     <span></span>
                 </span>
-                <span className="category-child" onMouseOver={handleDatascience}>
+                <span onClick={(e) => {
+                    handleSearchData("Analytics & Data Science")
+                    history.push('/SearchData')
+                }} className="category-child" onMouseOver={handleDatascience}>
                     <div>
                         <img src={datascienceIcon} alt="" />
                     </div>
