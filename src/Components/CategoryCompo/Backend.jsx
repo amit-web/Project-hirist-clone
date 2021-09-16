@@ -1,5 +1,8 @@
 import styled from "styled-components"
 import { v4 as uuid } from 'uuid';
+import { SearchDataContext } from "../../Context/searchDataContext";
+import { useHistory } from 'react-router-dom'
+import { useContext } from "react";
 const SubcatWrapper = styled.div`
   display: grid;
   width: 100%;
@@ -32,10 +35,15 @@ grid-gap: 1rem;
 
 `
 export function Backend({ subCatlist }) {
+    const history = useHistory();
+    const { handleSearchData } = useContext(SearchDataContext)
     return <SubcatWrapper>
         {
             subCatlist.map((el) => {
-                return <a href="google.com" key={uuid()} className="hirist-subcat fade-in-image">
+                return <a href="#" onClick={() => {
+                    handleSearchData(el.spanText)
+                    history.push('/SearchData')
+                }} key={uuid()} className="hirist-subcat fade-in-image">
 
                     <img src={el.src} alt="" />
                     <span>{el.spanText}</span>

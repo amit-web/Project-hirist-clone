@@ -13,6 +13,7 @@ export const CategoryCss = styled.div`
     background-color: #fff;
     position: relative;
     left: 1.2rem;
+    top: -5px;
     .category-child {
       display: grid;
       grid-template-columns: 1fr;
@@ -52,7 +53,7 @@ export const CategoryCss = styled.div`
     box-shadow: 0 6px 20px 0 rgb(0 0 0 / 6%);
     border: 1px solid #efefef;
     background-color: rgb(254, 250, 241);
-
+    margin-top: -6px;
     .sub-cat-list {
       min-height: 272px;
       width: 60%;

@@ -108,7 +108,7 @@ export const PremiumJobsCss = styled.div`
         display: none;
         button {
           width: 6rem;
-          height: 2rem;
+          height: 2.3rem;
           border: none;
           outline: none;
           color: white;
@@ -116,18 +116,19 @@ export const PremiumJobsCss = styled.div`
           background-color: rgb(233, 99, 12);
           border-radius: 5px;
           position: relative;
-          top: -2rem;
+          top: -3rem;
           left: -5rem;
+          text-align: center;
         }
       }
     }
-    .prem-jobs-card:hover{
-        .job-view-btn{
-            display: block;
-            button{
-                cursor: pointer;
-            }
+    .prem-jobs-card:hover {
+      .job-view-btn {
+        display: block;
+        button {
+          cursor: pointer;
         }
+      }
     }
   }
 `;
