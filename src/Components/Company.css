@@ -1,38 +1,104 @@
-.locations{
-    display:flex;
-    gap: 20px;
-    font-size: 14px;
-    margin-top:10px;
+.locations {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
-.category{
-   
-    display:flex;
-    gap: 5px;
-    margin-top:5px;
-     margin-left: -20px;
+.category {
+  display: flex;
+
+  margin-top: 5px;
+  margin-left: -20px;
 }
 
-.category>button{
-    font-size:12px;
-    border-radius:10px;
-    border: 0;
-    background-color:white;
-    color:grey;
-    padding:0px 0px 0px 5px;
-    height:25px;
-    width:120px;
+.category > button {
+  font-size: 12px;
+  border-radius: 15px;
+  border: 0;
+  background-color: white;
+  color: grey;
+  padding: 5px 10px 10px 10px;
+  height: 25px;
+  width: auto;
+}
+
+.posted {
+  font-size: 13px;
+  margin-top: 5px;
+}
+.designation {
+  font-weight: 540;
+  font-size: 30px;
+}
+.description {
+  margin-left: 40px;
+  color: white;
+}
+
+.responsibility_main {
+  padding: 40px;
+  width: 100%;
+  height: auto;
+  border: 1px solid red;
+  display: flex;
+  gap: 60px;
+  line-height: 2rem;
+}
+
+.role {
+  width: 60%;
+  height: auto;
+  background-color: #ffffff;
+  border: 1px solid green;
+  padding: 20px;
+  line-height: 2rem;
+}
+.apply-btn {
+  display: flex;
+  line-height: 2rem;
+}
+
+.apply-btn > button {
+  width: auto;
+
+  padding: 11.5px 27px;
+  border: 1px solid #e9630c;
+  color: #e9630c;
+  font-size: 16px;
+  outline: none;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.apply {
+  color: white !important;
+  background-color: #e9630c;
+}
+.insight:hover {
+  color: white !important;
+  background-color: #e9630c;
+}
+.follow-up:hover {
+  color: white !important;
+  background-color: #e9630c;
+}
+
+.postedby {
+  width: 35%;
+  height: auto;
+ 
+  border: 1px solid blue;
+  padding: 20px;
   
 }
-
-.posted{
-    font-size:13px;
-    margin-top:5px;
-}
-.designation{
-    font-weight: 540;
-    font-size:30px;
-}
-.description{
-    margin-left: 40px;
+.posteddata{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    border: 1px solid green;
+    padding: 10px;
+    border-radius:15px;
+    background-color: #ffffff;
 }

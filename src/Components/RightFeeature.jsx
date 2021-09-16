@@ -47,7 +47,7 @@ const RightFeeature = () => {
 };
 const RightSide = styled.div`
 height: 200px;
-    width: 320px;
+    width: 400px;
 
     display: flex;
   
@@ -75,7 +75,7 @@ height: 200px;
   `;
 const Second = styled.div`
     height: 140px;
-    width: 320px;
+    width: 400px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;

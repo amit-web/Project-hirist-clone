@@ -10,13 +10,15 @@ const DisplayJobs = ({ data }) => {
 
   const history = useHistory();
 
+  const handlecompanydes=(id)=>{
 
+    console.log(id)
+
+  }
   return (
     <>
       <JobsData>
-        <div className={styles.display} onClick={((e) => {
-          // history.push("/LoginForm")
-        })}>
+        <div className={styles.display}  onClick={()=>handlecompanydes(data.id)}>
           <input type="checkbox" style={{ marginRight: "25px", marginTop: "15px" }} />
           <div className={styles.company_image} style={{ height: "70px" }}>
 

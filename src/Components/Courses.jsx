@@ -78,7 +78,7 @@ const Courses = () => {
 };
 const RightSide = styled.div`
     height: auto;
-    width: 320px;
+    width: 400px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
@@ -114,12 +114,13 @@ const Main = styled.div`
     padding: 10px 20px 10px 10px;
   `;
 const GetApp = styled.div`
-    height: 200px;
-    width: 320px;
+    height: 300px;
+    width: 400px;
     background-color: white;
     margin-top: 20px;
     border-radius: 10px;
     padding: 10px 0px 10px 20px;
+    padding-left: 30px;
   `;
 const Icon = styled.div`
     display: flex;
@@ -158,6 +159,7 @@ const Mobile = styled.div`
     }
   `;
 const Download = styled.div`
+    
     p {
       font-size: 16px;
       color: grey;
