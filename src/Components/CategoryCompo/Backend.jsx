@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { v4 as uuid } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import { SearchDataContext } from "../../Context/searchDataContext";
 import { useHistory } from 'react-router-dom'
 import { useContext } from "react";
@@ -43,7 +43,7 @@ export function Backend({ subCatlist }) {
                 return <a href="#" onClick={() => {
                     handleSearchData(el.spanText)
                     history.push('/SearchData')
-                }} key={uuid()} className="hirist-subcat fade-in-image">
+                }} key={uuidv4()} className="hirist-subcat fade-in-image">
 
                     <img src={el.src} alt="" />
                     <span>{el.spanText}</span>
@@ -56,7 +56,7 @@ export function SubCatComp({ subcatCompPic }) {
 
     return <SubcatcomWrapper>
         {subcatCompPic.map((el) => {
-            return <div className="fade-in-image">
+            return <div key={uuidv4()} className="fade-in-image">
                 <img src={el.src} alt="" />
             </div>
         })}
