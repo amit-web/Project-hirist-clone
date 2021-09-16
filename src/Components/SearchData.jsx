@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "./searchData.css";
 import Searching from "./Searching";
-import axios from "axios";
 import RightFeeature from "./RightFeeature";
 import Courses from "./Courses";
 import { useHistory } from "react-router-dom";
@@ -14,6 +13,7 @@ import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { getAllJobs } from "../store/actions";
 import { mobileAppCat, frontendCat, backendCat } from '../Components/Data/jobsCatArr'
 import SimpleCard from "./Material-ui-compo/SimpleCard";
+import { v4 as uuidv4 } from 'uuid';
 const SearchData = () => {
   const history = useHistory();
   const { searchData, handleSearchData } = useContext(SearchDataContext)
@@ -29,10 +29,7 @@ const SearchData = () => {
   const [mobileApp, setMobileApp] = useState(false);
   const [frontend, setFrontend] = useState(false);
   const [backengJobs, setBackendJobs] = useState(false);
-  const [jobs, setJobs] = useState(false);
   const [allCards, setAllCards] = useState(false);
-  const [companies, setCompanies] = useState(false);
-  const [courses, setCourses] = useState(false)
   // const [empty, setEmpty] = useState("")
 
   const [showMobApp, setShowMobApp] = useState(false);
@@ -111,9 +108,7 @@ const SearchData = () => {
     setShowMobApp(false)
 
   }
-  const handleAllHover = () => {
-    setAllCards(false)
-  }
+
 
   return (
     <div style={{ backgroundColor: "#F2F5FA", height: "auto" }}>
@@ -192,6 +187,7 @@ const SearchData = () => {
             <div className="dropdown-content">
               {options.map((option) => (
                 <div
+                  key={uuidv4()}
                   onClick={(e) => {
                     setSelected(option);
 
@@ -220,6 +216,7 @@ const SearchData = () => {
             <div className="dropdowns-content">
               {options2.map((option) => (
                 <div
+                  key={uuidv4()}
                   onClick={(e) => {
                     setSelect(option);
                     setActive(false);
@@ -250,6 +247,7 @@ const SearchData = () => {
             <div className="dropdownd-content">
               {options3.map((option) => (
                 <div
+                  key={uuidv4}
                   onClick={(e) => {
                     setSelection(option);
                     setActivate(false);
@@ -283,7 +281,7 @@ const SearchData = () => {
       }}>
         <p>Search for - {searchData}</p>
         <I>
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
         </I>
         <div>
           <input
@@ -446,7 +444,7 @@ const Refine = styled.div`
       color: white;
     }
   `;
-const Clearall = styled.p`
+const Clearall = styled.div`
     margin-bottom: -20px;
     font-size: 15px;
     font-family: "Nunito Sans";

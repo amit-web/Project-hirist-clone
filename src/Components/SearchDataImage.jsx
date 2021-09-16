@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from "styled-components";
+import { v4 as uuidv4 } from 'uuid';
+
 function SearchDataImage({ photosData }) {
     return (
         <SearchDataImageStyled>
             {photosData.map((el) => {
-                return <div key={el.id}>
+                return <div key={uuidv4()}>
                     <img className="zoom" src={el.photo} alt="" />
                 </div>
             })}

@@ -2,6 +2,8 @@
 import DisplayJobs from "./DisplayJobs";
 import styled from "styled-components";
 import { shallowEqual, useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
+
 const Searching = ({ isLoading }) => {
   const { jobsData } = useSelector((state) => state.activities, shallowEqual);
 
@@ -13,7 +15,7 @@ const Searching = ({ isLoading }) => {
 
     <MainDiv>
       {jobsData.map((item) => {
-        return <DisplayJobs key={item.id} data={item} />;
+        return <DisplayJobs key={uuidv4()} data={item} />;
       })}
     </MainDiv>
   </div>

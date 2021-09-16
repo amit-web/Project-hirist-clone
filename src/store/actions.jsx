@@ -65,6 +65,23 @@ export const getDebouncing = (query = null) => dispatch => {
             dispatch(failureAction);
         });
 };
+export const getById = (query = null) => dispatch => {
+    const requestAction = jobsRequest();
+    console.log("hello from actions")
+    dispatch(requestAction);
+    if (!query) {
+        const failureAction = jobsFailure("no results");
+        dispatch(failureAction);
+    }
+    return axios.get(`http://localhost:8000/data/?id=${query}`)
+        .then((res) => {
+            dispatch(jobsSuccess(res.data, query));
+        })
+        .catch((err) => {
+            const failureAction = jobsFailure(err, query);
+            dispatch(failureAction);
+        });
+};
 
 // export const priceFilter = (payload, query, filterType = 'price') => dispatch => {
 //     dispatch(jobsRequest());

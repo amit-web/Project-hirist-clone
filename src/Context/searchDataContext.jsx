@@ -8,10 +8,10 @@ export const SearchDataProvider = ({ children }) => {
     const [experience, setExperience] = useState("")
     const [debouncing, setDebouncing] = useState("")
 
-    const [id,setId] = useState("")
+    const [id, setId] = useState(1)
 
-    const handleId = (id)=>{
-         setId(id)
+    const handleId = (id) => {
+        setId(id)
     }
     const handleSearchData = (par) => {
         setSearchData(par);
@@ -26,6 +26,6 @@ export const SearchDataProvider = ({ children }) => {
         setDebouncing(el)
     }
 
-    return <SearchDataContext.Provider value={{ searchData,handleId, handleSearchData, handleLocations, locations, experience, handleExperience, handleDebouncing, debouncing }}>{children}</SearchDataContext.Provider>
+    return <SearchDataContext.Provider value={{ searchData, handleId, id, handleSearchData, handleLocations, locations, experience, handleExperience, handleDebouncing, debouncing }}>{children}</SearchDataContext.Provider>
 }
 

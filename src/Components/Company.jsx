@@ -2,9 +2,30 @@ import React from "react";
 import styled from "styled-components";
 import "./Company.css";
 import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
 import Courses from "./Courses"
+import { useParams } from "react-router-dom";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { getById } from "../store/actions";
 const Company = () => {
-  const his = useHistory();
+  const params = useParams();
+
+  const dispatch = useDispatch()
+  const { jobsData } = useSelector((state) => state.activities, shallowEqual);
+
+
+  useEffect(() => {
+    // axios.get(`http://localhost:8000/data/${params.id}`).then(({ res }) => {
+    //   setObb(res)
+    //   console.log(res)
+    //   console.log(obb, "hii")
+    //   // console.log(res)
+    dispatch(getById(params.id))
+    // })
+
+    // console.log(obb, "hii")
+  }, [params.id])
+  const history = useHistory();
 
   return (
     <>
@@ -14,6 +35,9 @@ const Company = () => {
             height="30"
             src="https://job-static.hirist.com/V2/static/media/hirist_logo.03e14260.svg"
             alt=""
+            onClick={() => {
+              history.push("/Homepage")
+            }}
           />
           <p>Mobile Applications</p>
           <p>Frontend Developer</p>
@@ -32,7 +56,7 @@ const Company = () => {
           </Search>
           <button
             onClick={() => {
-              return his.push("/Homepage");
+              return history.push("/Homepage");
             }}
           >
             <img height="10" src="icons8-administrator-male-16.png" alt="" />{" "}
@@ -51,22 +75,22 @@ const Company = () => {
             src="icons8-chevron-right-30.png"
             alt=""
           />
-          <p>Data Analyst - Python/Data Mining</p>
+          <p>{jobsData[0].workat}</p>
         </Home>
 
         <Description>
           <img
             height="60"
             width="60"
-            src="https://staticlogo.hirist.com/1407-100X100.png"
+            src={jobsData[0].url}
             alt=""
           />
           <div className="description">
-            <p className="designation">Data Analyst - Python/Data Mining</p>
+            <p className="designation">{jobsData[0].jobs}</p>
             <div className="locations">
-              <p>Big Jobs</p>
-              <p>Multiple Location</p>
-              <p>1-3 years</p>
+              <p>{jobsData[0].companyname}</p>
+              <p>{jobsData[0].location}</p>
+              <p>{jobsData[0].experiance}</p>
             </div>
 
             <div className="category">
@@ -80,7 +104,7 @@ const Company = () => {
               <button>Data Mining</button>
             </div>
 
-            <p className="posted">Posted on : 23/07/2021</p>
+            <p className="posted">Posted on : {jobsData[0].postedon}</p>
           </div>
         </Description>
 
@@ -88,9 +112,22 @@ const Company = () => {
           <div className="role">
             <div className="role-res">
               <h3>Roles and Responsibilities</h3>
-              <p>`- ${}`</p>
-              <h3>Desired Candidate Profile</h3>
-              <p>`- ${}`</p>
+              <div>
+                <ul>
+                  <li>Deliver across the entire app life cycle -concept, design, build, deploy, test, release to app stores and support.</li>
+                  <li>Designs and oversees solutions for specific use cases that provide frameworks, interfaces, and services that can be extended and reused for future requirements</li>
+                  <li>Works with product, project, and engineering teams to deliver products on schedule</li>
+                  <li>Good knowledge of web programming concepts and good command over HTML, CSS, Bootstrap, JavaScript</li>
+                  <li>Good Expertise with AngularJS and React_ JS or Polymer</li>
+                  <li>Experience in developing Desktop applications using Electron.js and NW.js and good knowledge of the working of Chromium and Node.js</li>
+                  <li>Good understanding of GraphQL, Redux, React and web pack</li>
+                  <li> Good understanding of command-line build utilities and task runners like npm, grunt, and gulp</li>
+                  <li>Good understanding of asynchronous request handling, partial page updates, and AJAX</li>
+                  <li>Proficient understanding of cross-browser compatibility issues and ways to work around them</li>
+                  <li>Proficient understanding of code versioning tools, such as Git</li>
+                </ul>
+              </div>
+
               <hr />
 
               <div className="apply-btn">
@@ -112,17 +149,17 @@ const Company = () => {
               <p>Posted by</p>
 
               <div className="companydes">
-                <img src="" />
+                <img src={jobsData[0].url} />
 
                 <div>
-                  <h3>{}</h3>
-                  <p>{}</p>
+                  <h3>{jobsData[0].companyname}</h3>
+                  <p>{jobsData[0].jobs}</p>
                 </div>
               </div>
 
               <div className="jobviews">
                 <div>
-                  <h2>{}</h2>
+                  <h2>{ }</h2>
                   <p>JOB VIEWS</p>
                 </div>
               </div>
@@ -130,28 +167,29 @@ const Company = () => {
               <div className="postedin">
                 <p>Posted in</p>
 
-                <h4>{}</h4>
+                <h4>{jobsData[0].postedon}</h4>
               </div>
 
               <hr />
 
               <div className="recrutieraction">
                 <p>Recruiter Actions (what does this mean?)</p>
-                <h4>{}</h4>
+                <h4>{ }</h4>
               </div>
             </div>
 
-            <div style={{ width:"100%",marginTop:"20px"}}>
+            <div style={{ width: "100%", marginTop: "20px" }}>
 
-             <p>Cources</p>
+              <p>Courses</p>
 
-              <Courses/>
+              <Courses />
 
             </div>
 
-            
+
           </div>
         </div>
+
       </div>
     </>
   );

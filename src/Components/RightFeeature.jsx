@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import { v4 as uuidv4 } from 'uuid';
+
 const RightFeeature = () => {
   const [feature, setFeature] = useState([]);
   const [divercity, setDivercity] = useState([]);
@@ -25,7 +27,7 @@ const RightFeeature = () => {
       <RightSide>
         {feature.map((item) => {
           return (
-            <div>
+            <div key={uuidv4()}>
               <img height="50" width="50" src={item.url} alt="" />
 
             </div>
@@ -36,7 +38,7 @@ const RightFeeature = () => {
       <Second>
         {divercity.map((item) => {
           return (
-            <div>
+            <div key={uuidv4()}>
               <img height="50" width="50" src={item.url} alt="" />
             </div>
           );

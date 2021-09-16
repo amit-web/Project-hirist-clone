@@ -1,26 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import styles from "./Display.module.css";
+
 import { useHistory } from "react-router-dom";
+import { SearchDataContext } from "../Context/searchDataContext";
 import "./Search.css";
+import { useContext } from "react";
 
 const DisplayJobs = ({ data }) => {
-
-
+  const { handleId } = useContext(SearchDataContext)
 
   const history = useHistory();
 
-  const handlecompanydes=(id)=>{
 
-    console.log(id)
-
-  }
   return (
     <>
       <JobsData>
-        <div className={styles.display}  onClick={()=>handlecompanydes(data.id)}>
+        <div className={styles.display} >
           <input type="checkbox" style={{ marginRight: "25px", marginTop: "15px" }} />
-          <div className={styles.company_image} style={{ height: "70px" }}>
+          <div onClick={() => {
+            handleId(data.id);
+            history.push(`/SearchData/${data.id}`)
+          }} className={styles.company_image} style={{ height: "70px" }}>
 
             <div className="hover" style={{ marginLeft: "-50px", marginTop: "5px", background: "white", height: "50px", width: "50px", cursor: "pointer", borderRadius: "10px", border: "1px solid #ececec" }}>
 

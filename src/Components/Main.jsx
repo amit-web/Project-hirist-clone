@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
 
@@ -28,7 +27,7 @@ const Main = () => {
     }
     const getData = (e) => {
         e.preventDefault()
-        let list = localStorage.setItem("list", JSON.stringify(user))
+        // let list = localStorage.setItem("list", JSON.stringify(user))
         window.location = "/Recruter"
     }
     const [log, setLog] = useState({
@@ -164,8 +163,8 @@ const Main = () => {
                         <li>The ability to download resumes on your mobile device for detailed viewing and sharing</li><br />
                     </ul>
                     <p>Download our App</p><br />
-                    <button><span style={{ fontSize: "20px" }}><i class="fab fa-android"></i>Android</span></button>
-                    <button><span style={{ fontSize: "20px" }}><i class="fab fa-apple"></i>iPhones </span></button></div>
+                    <button><span style={{ fontSize: "20px" }}><i className="fab fa-android"></i>Android</span></button>
+                    <button><span style={{ fontSize: "20px" }}><i className="fab fa-apple"></i>iPhones </span></button></div>
 
             </div>
 

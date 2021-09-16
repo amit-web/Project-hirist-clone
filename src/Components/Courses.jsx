@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import styled from "styled-components";
+import { v4 as uuidv4 } from 'uuid';
 
 const Courses = () => {
   const [data, setData] = useState([]);
@@ -19,7 +20,7 @@ const Courses = () => {
         {data.map((item) => {
           return (
             <>
-              <Main>
+              <Main key={uuidv4()}>
                 <Image>
                   <img height="50" width="50" src={item.url} alt="" />
                 </Image>

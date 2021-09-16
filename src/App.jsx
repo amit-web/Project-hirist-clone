@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/SearchData" component={SearchData} />
           <Route exact path="/Regiform" component={RegiForm} />
           <Route exact path="/LoginForm" component={LoginForm} />
-          <Route exact path="/Company" component={Company} />
+          <Route exact path="/SearchData/:id" component={Company} />
         </Switch>
 
         {/* <Company/> */}

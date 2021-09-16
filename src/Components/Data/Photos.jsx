@@ -7,8 +7,7 @@ import fphoto2 from '../../logos/fphoto2.jpeg'
 import fphoto3 from '../../logos/fphoto3.jpeg'
 
 import bphoto1 from '../../logos/bphoto1.jpeg'
-import bphoto2 from '../../logos/bphoto2.jpeg'
-import bphoto3 from '../../logos/bphoto3.jpeg'
+
 
 export const MobileApp = [
     {

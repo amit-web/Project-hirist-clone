@@ -40,7 +40,6 @@
   padding: 40px;
   width: 100%;
   height: auto;
-  border: 1px solid red;
   display: flex;
   gap: 60px;
   line-height: 2rem;
@@ -50,13 +49,14 @@
   width: 60%;
   height: auto;
   background-color: #ffffff;
-  border: 1px solid green;
   padding: 20px;
   line-height: 2rem;
 }
 .apply-btn {
   display: flex;
   line-height: 2rem;
+  position: relative;
+  top: 4rem;
 }
 
 .apply-btn > button {
@@ -88,17 +88,14 @@
 .postedby {
   width: 35%;
   height: auto;
- 
-  border: 1px solid blue;
+
   padding: 20px;
-  
 }
-.posteddata{
-    width: 100%;
-    height: auto;
-    background-color: #ffffff;
-    border: 1px solid green;
-    padding: 10px;
-    border-radius:15px;
-    background-color: #ffffff;
+.posteddata {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #ffffff;
 }

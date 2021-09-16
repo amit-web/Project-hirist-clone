@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useFormik } from "formik";
 import * as yup from "yup";
 import { useState, useRef } from "react";
 import { PostDetails } from "./PostDetails";
@@ -243,7 +242,7 @@ export const PostForm = () => {
 
     value = type === "checkbox" ? checked : value;
     setData((prev) => ({ ...prev, [name]: value }));
-    console.log(name,value);
+    console.log(name, value);
   };
   const changeList = () => [setShowList(!showList)];
 

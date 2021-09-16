@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import styled from "styled-components";
 import { shallowEqual, useSelector } from "react-redux";
+import { v4 as uuidv4 } from 'uuid';
 
 const useStyles = makeStyles({
     root: {
@@ -46,9 +47,10 @@ export default function DebouncingCard({ jobsCatArr, setSearchtext, setBouncing 
                 <CardStyled>
                     <div>
                         {jobsData.map((el) => {
-                            return <div onClick={(e) => {
+                            return <div key={uuidv4()} onClick={(e) => {
                                 setSearchtext(e.target.textContent)
                                 setBouncing(true)
+
                             }}>{el.jobs}</div>;
                         })}
                     </div>
