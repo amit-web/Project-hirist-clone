@@ -27,6 +27,10 @@ const Company = () => {
   }, [params.id])
   const history = useHistory();
 
+  const handleLogin=()=>{
+    history.push("/LoginForm")
+  }
+
   return (
     <>
       <div style={{ width: "90%", margin: "auto" }}>
@@ -131,7 +135,7 @@ const Company = () => {
               <hr />
 
               <div className="apply-btn">
-                <button className="apply">Apply</button>
+                <button onClick={handleLogin} className="apply">Apply</button>
                 <button className="insight">Insights</button>
                 <button className="follow-up">Follow-up</button>
 
