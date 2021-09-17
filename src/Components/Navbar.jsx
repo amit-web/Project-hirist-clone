@@ -68,7 +68,7 @@ export function Navbar() {
             <div>
                 <span>Inspiring&nbsp;</span><div><span>
                     <span>
-                        Golang Developer</span>&nbsp;
+                        ReactJs Developer</span>&nbsp;
                 </span>Jobs for the future!</div>
             </div>
             <div className="navbarBottom-search-section">
