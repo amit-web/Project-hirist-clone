@@ -29,7 +29,7 @@ body {
   justify-content: space-between;
   border-radius: 15px;
   height: 28px;
-  width: 9rem;
+  width: auto;
   font-size: 14px;
 }
 

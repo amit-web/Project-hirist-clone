@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 const Courses = () => {
   const [data, setData] = useState([]);
   const CourcesData = async () => {
-    let courcedata = await axios.get("http://localhost:8000/courcesdata");
+    let courcedata = await axios.get(" https://first-heroku-app-test-amit.herokuapp.com/courcesdata");
     setData(courcedata.data);
   };
 

@@ -39,7 +39,7 @@ export const getAllJobs = (query = null) => dispatch => {
         const failureAction = jobsFailure("no results");
         dispatch(failureAction);
     }
-    return axios.get(`http://localhost:8000/data?q=${query}`)
+    return axios.get(` https://first-heroku-app-test-amit.herokuapp.com/data?q=${query}`)
         .then((res) => {
             dispatch(jobsSuccess(res.data, query));
         })
@@ -56,7 +56,7 @@ export const getDebouncing = (query = null) => dispatch => {
         const failureAction = jobsFailure("no results");
         dispatch(failureAction);
     }
-    return axios.get(`http://localhost:8000/jobsData?q=${query}`)
+    return axios.get(` https://first-heroku-app-test-amit.herokuapp.com/jobsData?q=${query}`)
         .then((res) => {
             dispatch(jobsSuccess(res.data, query));
         })
@@ -73,7 +73,7 @@ export const getById = (query = null) => dispatch => {
         const failureAction = jobsFailure("no results");
         dispatch(failureAction);
     }
-    return axios.get(`http://localhost:8000/data/?id=${query}`)
+    return axios.get(` https://first-heroku-app-test-amit.herokuapp.com/data/?id=${query}`)
         .then((res) => {
             dispatch(jobsSuccess(res.data, query));
         })

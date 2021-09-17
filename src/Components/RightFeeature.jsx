@@ -14,12 +14,12 @@ const RightFeeature = () => {
 
 
   const getfeatureData = async () => {
-    let feturedData = await axios.get("http://localhost:8000/featuredata");
+    let feturedData = await axios.get(" https://first-heroku-app-test-amit.herokuapp.com/featuredata");
     setFeature(feturedData.data);
   };
 
   const divercitydata = async () => {
-    let diveredata = await axios.get("http://localhost:8000/employerdata");
+    let diveredata = await axios.get(" https://first-heroku-app-test-amit.herokuapp.com/employerdata");
     setDivercity(diveredata.data);
   };
   return (

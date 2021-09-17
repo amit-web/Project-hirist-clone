@@ -21,7 +21,7 @@ After cloning the repo to get the JSON data from json-server, you should run bel
 **For data**
 
 ```
-json-server hiristData.json --port 8000
+ https://first-heroku-app-test-amit.herokuapp.com
 
 
 ```
