@@ -39,6 +39,10 @@ export function Navbar() {
 
     }
 
+    const handleLoginform = ()=>{
+        history.push('/Recruter')
+    }
+
 
     return <><NavbarWrapper>
         <div className="navbarTop">
@@ -55,7 +59,7 @@ export function Navbar() {
                 </div>
                 <div className="recruiter-anchor">
 
-                    <a href="/Recruter">  Recruiter Login</a>
+                    <a onClick={handleLoginform} href="/Recruter">  Recruiter Login</a>
 
                 </div>
                 <div className="jobseeker-anchor">
