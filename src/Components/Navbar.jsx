@@ -59,7 +59,7 @@ export function Navbar() {
                 </div>
                 <div className="recruiter-anchor">
 
-                    <a onClick={handleLoginform} href="/Recruter">  Recruiter Login</a>
+                    <a onClick={handleLoginform} >  Recruiter Login</a>
 
                 </div>
                 <div className="jobseeker-anchor">
