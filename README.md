@@ -67,25 +67,25 @@ npm run start
 1.Landing Page
 
 <h4>This is our landing page </h4>
-<img src="public/Screenshot (867).png" width="400"/>
+<img style="width:100%" src="public/Screenshot (867).png" width="400"/>
 
 2.Job searching page 
 
 <h4>Here user can search and filter the data as per their requirement:- </h4>
-<img src="public/Screenshot (869).png" width="400"/>
+<img   style="width:100%" src="public/Screenshot (869).png" width="400"/>
 
 3. Jobseeker Login & Signup Page
 <h4> Users Login page </h4>
-<img src="public/Screenshot (870).png" width="400"/>
+<img  style="width:100%" src="public/Screenshot (870).png" width="400"/>
 
 4.Company Description page
 <h4> Description page </h4>
-<img src="public/Screenshot (871).png" width="400"/>
+<img  style="width:100%" src="public/Screenshot (871).png" width="400"/>
 
 5. RecruiterLogin & Signup Page 
  <img src="public/Screenshot (872).png" width="400"/>
 6. Recruiter job posting page 
-<img src="public/Screenshot (874).png" width="400"/>
+<img  style="width:100%" src="public/Screenshot (874).png" width="400"/>
 
 
 
