@@ -1,6 +1,6 @@
 # Project-hirist-clone
 Hirist is a platform that helps jobseekers connect with their dream job. Hirist.com connected with over 13,00,000 jobseekers already and this is just the beginning...they feature some of the best jobs in Banking & Finance, Consulting, Research & Analytics, Sales & Marketing, HR, IT and Operations.And also on hirist.com recruiters can post their jobs here and choose the jobseeker with best skills.
-<img src="https://s3.ap-south-1.amazonaws.com/recruiter-hirist-static-content/images/linkedin_hirist_logo_550x337.png">  
+<img style="width:100%" src="https://s3.ap-south-1.amazonaws.com/recruiter-hirist-static-content/images/linkedin_hirist_logo_550x337.png">  
 
 **Our team was given a task to Clone the hirist.com Website.**
 
@@ -83,7 +83,7 @@ npm run start
 <img  style="width:100%" src="public/Screenshot (871).png" width="400"/>
 
 5. RecruiterLogin & Signup Page 
- <img src="public/Screenshot (872).png" width="400"/>
+ <img style="width:100%" src="public/Screenshot (872).png" width="400"/>
 6. Recruiter job posting page 
 <img  style="width:100%" src="public/Screenshot (874).png" width="400"/>
 
